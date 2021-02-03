@@ -1,27 +1,18 @@
 package LineDrawing;
 
 
+import javax.swing.*;
+
 public class Animator implements Runnable {
     private LiningPanel dpanel;
     private boolean stopped = false;
 
-    public Animator(LiningPanel apanel) {
-        dpanel = apanel;
+    public Animator(LiningPanel panel) {
+        dpanel = panel;
 
     }
 
-    public void run() {
-        while (true) {
-            if (!isStopped()) {
-                dpanel.repaint();
-                dpanel.increaseCounter();
-            }
-            try {
-                Thread.sleep(300);
-            } catch (Exception e) {
-            }
-        }
-    }
+
 
     public void setDpanel(LiningPanel dpanel) {
         this.dpanel = dpanel;
@@ -36,5 +27,19 @@ public class Animator implements Runnable {
     }
 
 
+    @Override
+    public void run() {
+        while (true) {
+            if (!isStopped()) {
+                dpanel.repaint();
+                dpanel.increaseCounter();
+            }
+            else
+                try {
+                    Thread.sleep(300);
+                } catch (Exception e) {
+                }
 
+        }
+    }
 }

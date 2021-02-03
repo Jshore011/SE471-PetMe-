@@ -7,14 +7,16 @@ import java.awt.event.ActionListener;
 public class Button extends javax.swing.JPanel implements ActionListener {
     private final String STOP = "Stop";
     private final String RESUME = "Resume";
-    private Animator animator = null;
+    private Animator animator;
     private JButton button = null;
     private boolean animationIsStopped = false;
+
 
     public Button(Animator animator) {
 
         this.animator = animator;
         this.configButton();
+
     }
 
     private void configButton()
@@ -26,21 +28,25 @@ public class Button extends javax.swing.JPanel implements ActionListener {
             this.add(this.button);
         }
 
-
-
     @Override
     public void actionPerformed(ActionEvent e) {
-        if(!animationIsStopped)
+        Thread newThread = new Thread(animator);//i think we need to start a new thread and pass the panel
+        if(animationIsStopped==true)
         {
-            animator.isStopped();
-            animator.setStopped(true);
-            button.setText(STOP);
+
+            animationIsStopped = false;
+            this.button.setText(STOP);
+            animator.setStopped(false);
+
 
         }
         else
-            //animator.isStopped();
-            animator.setStopped(false);
-            button.setText(RESUME);
+
+            animationIsStopped = true;
+            this.button.setText(RESUME);
+            animator.setStopped(true);
+            newThread.start();
 
     }
+
 }
