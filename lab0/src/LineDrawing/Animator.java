@@ -1,8 +1,5 @@
 package LineDrawing;
-import javax.swing.*;
-import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+
 
 public class Animator implements Runnable {
     private LiningPanel dpanel;
@@ -34,8 +31,8 @@ public class Animator implements Runnable {
         return stopped;
     }
 
-    public static void setStopped(boolean stopped) {
-        boolean stop = stopped;
+    public void setStopped(boolean stopped) {
+        this.stopped = stopped;
     }
 
 

@@ -2,13 +2,16 @@ package LineDrawing;
 
 import java.awt.Color;
 import java.awt.Graphics;
-import java.awt.Color;
 import java.util.Random;
 
-public class LiningPanel extends javax.swing.JPanel
-{
+public class LiningPanel extends javax.swing.JPanel  {
+    private int counter;
+    private int maxLines = 15;
+
     public LiningPanel()
     {
+
+
 
     }
 
@@ -41,7 +44,12 @@ public class LiningPanel extends javax.swing.JPanel
     }
     public void increaseCounter()
     {
-        int counter = 0;
-        counter++;
+        if(this.counter == maxLines)
+        {
+            this.counter = 1;
+        }
+        else
+            this.counter++;
     }
+
 }
