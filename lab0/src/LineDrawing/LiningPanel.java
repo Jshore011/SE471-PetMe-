@@ -5,42 +5,18 @@ import java.awt.Graphics;
 import java.awt.Color;
 import java.util.Random;
 
-public class LiningPanel extends javax.swing.JPanel implements Runnable
+public class LiningPanel extends javax.swing.JPanel
 {
-    private boolean stop = false;
-    @Override
-    public void run() {
-        while (resume())
-        {
-            System.out.println("Running");
-            try {
-                Thread.sleep(3L * 100L);
-            }
-            catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-        }
-    }
-
     public LiningPanel()
     {
 
     }
 
-    //for button
-    public synchronized void stop()
-    {
-        this.stop = true;
-    }
-    private synchronized boolean resume()
-    {
-        return this.stop == false;
-    }
 
     public void paintComponent(Graphics g)
     {
         super.paintComponent(g);
-        //Runnable myRunnable = new Runnable();
+
         int w = getWidth();
         int h = getHeight();
         
@@ -62,5 +38,10 @@ public class LiningPanel extends javax.swing.JPanel implements Runnable
             //top right
             g.drawLine(w, h - h2, w - w2, 0);
         }
+    }
+    public void increaseCounter()
+    {
+        int counter = 0;
+        counter++;
     }
 }

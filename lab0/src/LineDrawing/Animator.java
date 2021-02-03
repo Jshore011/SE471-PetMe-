@@ -1,36 +1,43 @@
 package LineDrawing;
-import java.awt.Graphics;
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class Animator implements Runnable {
-    private AnimatedLiningPanel dpanel;
+    private LiningPanel dpanel;
     private boolean stopped = false;
-    public Animator (AnimatedLiningPanel apanel)
-    {
+
+    public Animator(LiningPanel apanel) {
         dpanel = apanel;
+
     }
-    public void run()
-    {
-        while(true)
-        {
-            if (!isStopped())
-            {
+
+    public void run() {
+        while (true) {
+            if (!isStopped()) {
                 dpanel.repaint();
                 dpanel.increaseCounter();
             }
-            try { Thread.sleep(300);}
-            catch (Exception e) {}
+            try {
+                Thread.sleep(300);
+            } catch (Exception e) {
+            }
         }
     }
-    public void setDpanel(AnimatedLiningPanel dpanel)
-    {
+
+    public void setDpanel(LiningPanel dpanel) {
         this.dpanel = dpanel;
     }
-    public boolean isStopped()
-    {
+
+    public boolean isStopped() {
         return stopped;
     }
-    public void setStopped(boolean stopped)
-    {
-        this.stopped = stopped;
+
+    public static void setStopped(boolean stopped) {
+        boolean stop = stopped;
     }
+
+
+
 }
