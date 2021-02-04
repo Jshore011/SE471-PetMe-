@@ -8,18 +8,15 @@ public class Button extends javax.swing.JPanel implements ActionListener {
     private final String STOP = "Stop";
     private final String RESUME = "Resume";
     private Animator animator;
-    private JButton button = null;
+    private javax.swing.JButton button;
     private boolean animationIsStopped = false;
-    private LiningPanel panel;
-    public Thread th = new Thread();
-    public Button(Animator animator, LiningPanel panel) {
 
-        this.panel=panel;
-        this.animator = animator;
+    public Button(Animator animator1)
+    {
+        this.animator = animator1;
         this.configButton();
-
     }
-
+    //method to configure the button
     private void configButton()
         {
             this.button = new JButton();
@@ -28,26 +25,19 @@ public class Button extends javax.swing.JPanel implements ActionListener {
             this.button.addActionListener(this);
             this.add(this.button);
         }
-
+    //logic for when button is pressed
     @Override
     public void actionPerformed(ActionEvent e) {
-
-        if(animationIsStopped==true)
+        if(!animationIsStopped)
         {
-
-            animationIsStopped = false;
-            this.button.setText(this.STOP);
-            animator.setStopped(false);
-            th.start();
-
-        }
-        else
-
             animationIsStopped = true;
-            this.button.setText(this.RESUME);
+            button.setText(RESUME);
             animator.setStopped(true);
-
-
+        }
+        else {
+            animationIsStopped = false;
+            button.setText(STOP);
+            animator.setStopped(false);
+        }
     }
-
 }

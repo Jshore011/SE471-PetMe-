@@ -11,10 +11,7 @@ public class LineDrawingTest {
         JFrame application = new JFrame();
         LiningPanel panel = new LiningPanel();
         Animator animator = new Animator(panel);
-        Button cpanel = new Button(animator, panel);
-
-
-
+        Button cpanel = new Button(animator);
 
         application.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         application.getContentPane().add(cpanel, BorderLayout.NORTH);
@@ -25,9 +22,7 @@ public class LineDrawingTest {
         application.setTitle("Lining Art");
         application.setVisible(true);
 
-        animator.run();
-
-
+        animator.run();//starts/stops animation
 
     }
 }

@@ -1,8 +1,6 @@
 package LineDrawing;
 
 
-import javax.swing.*;
-
 public class Animator implements Runnable {
     private LiningPanel dpanel;
     private boolean stopped = false;
@@ -11,35 +9,31 @@ public class Animator implements Runnable {
         dpanel = panel;
 
     }
+    //run method
+    @Override
+    public void run() {
+        while (true) {
 
+            if (!isStopped()) {
+                dpanel.increaseCounter();
+                dpanel.repaint();
+            }
+            try {
 
+                Thread.sleep(300);
+            } catch (Exception e) {
+            }
 
-    public void setDpanel(LiningPanel dpanel) {
-        this.dpanel = dpanel;
+        }
+
     }
-
+    //returns whether it is stopped or not
     public boolean isStopped() {
         return stopped;
     }
-
+    //sets the bool value to true/false dependent upon if stopped or not
     public void setStopped(boolean stopped) {
         this.stopped = stopped;
     }
 
-
-    @Override
-    public void run() {
-        while (true) {
-            if (!isStopped()) {
-                dpanel.repaint();
-                dpanel.increaseCounter();
-            }
-            else
-                try {
-                    Thread.sleep(300);
-                } catch (Exception e) {
-                }
-
-        }
-    }
 }
