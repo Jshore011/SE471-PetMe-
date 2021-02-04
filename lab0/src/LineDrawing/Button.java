@@ -10,10 +10,11 @@ public class Button extends javax.swing.JPanel implements ActionListener {
     private Animator animator;
     private JButton button = null;
     private boolean animationIsStopped = false;
+    private LiningPanel panel;
+    public Thread th = new Thread();
+    public Button(Animator animator, LiningPanel panel) {
 
-
-    public Button(Animator animator) {
-
+        this.panel=panel;
         this.animator = animator;
         this.configButton();
 
@@ -30,22 +31,22 @@ public class Button extends javax.swing.JPanel implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        Thread newThread = new Thread(animator);//i think we need to start a new thread and pass the panel
+
         if(animationIsStopped==true)
         {
 
             animationIsStopped = false;
-            this.button.setText(STOP);
+            this.button.setText(this.STOP);
             animator.setStopped(false);
-
+            th.start();
 
         }
         else
 
             animationIsStopped = true;
-            this.button.setText(RESUME);
+            this.button.setText(this.RESUME);
             animator.setStopped(true);
-            newThread.start();
+
 
     }
 

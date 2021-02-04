@@ -11,7 +11,7 @@ public class LineDrawingTest {
         JFrame application = new JFrame();
         LiningPanel panel = new LiningPanel();
         Animator animator = new Animator(panel);
-        Button cpanel = new Button(animator);
+        Button cpanel = new Button(animator, panel);
 
 
 
