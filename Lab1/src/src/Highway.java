@@ -1,4 +1,4 @@
-public class Highway {
+public class Highway extends Route{
     private String startPt;
     private String endPt;
 

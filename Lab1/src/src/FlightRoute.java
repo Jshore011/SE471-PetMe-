@@ -1,4 +1,4 @@
-public class FlightRoute {
+public class FlightRoute extends Route{
     private String startPt;
     private String endPt;
 
