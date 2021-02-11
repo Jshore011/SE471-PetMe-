@@ -7,9 +7,17 @@ public class Trail extends Route{
         startPt = start_point;
         endPt = end_point;
     }
+    public void setStartPoint(String point)
+    {
+        startPt = point;
+    }
     public String getStartPoint()
     {
         return startPt;
+    }
+    public void setEndPoint(String point)
+    {
+        endPt = point;
     }
     public String getEndPoint()
     {

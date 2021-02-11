@@ -13,7 +13,14 @@ public class Route
         start_point = " ";
         end_point = " ";
     }
-
+    public void setSchedule(ArrayList<Schedule> sched)
+    {
+        schedule = sched;
+    }
+    public ArrayList<Schedule> getSchedule()
+    {
+        return schedule;
+    }
     public float calculateMiles() {
         return miles;
     }

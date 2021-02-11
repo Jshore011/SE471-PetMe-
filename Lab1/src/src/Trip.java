@@ -11,7 +11,10 @@ public class Trip {
         from = "";
         destination = "";
     }
-
+    public ArrayList<Schedule> getSchedule()
+    {
+        return schedule;
+    }
     public String getFrom()
     {
         return from;
