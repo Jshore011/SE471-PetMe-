@@ -21,10 +21,20 @@ public class Airplane extends Vehicle{
     {
         return type;
     }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
     public boolean getSeatsAvailible()
     {
         return seatsAvailible;
     }
+
+    public void setNumbSeats(int numbSeats) {
+        this.numbSeats = numbSeats;
+    }
+
     public int displayNumSeatsAvailible()
     {
         return numbSeats;
@@ -35,13 +45,25 @@ public class Airplane extends Vehicle{
         return make;
     }
 
+    public void setMake(String make) {
+        this.make = make;
+    }
+
     public String getModel()
     {
         return model;
     }
 
+    public void setModel(String model) {
+        this.model = model;
+    }
+
     public int getYear()
     {
         return year;
+    }
+
+    public void setYear(int year) {
+        this.year = year;
     }
 }

@@ -9,8 +9,18 @@ public class Vehicle {
 
     Vehicle()
     {
+
         make = " ";
         model = " ";
         year = 0;
+    }
+
+    public ArrayList<Schedule> getSchedule()
+    {
+        return vehicleSched;
+    }
+
+    public void setVehicleSched(ArrayList<Schedule> vehicleSched) {
+        this.vehicleSched = vehicleSched;
     }
 }
