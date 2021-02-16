@@ -1,9 +1,5 @@
 import java.util.ArrayList;
 
 public interface SortingIF {
-//need to check this
-    //default sort(ArrayList<Product> products)
-    //{
-
-    //}
+    public ArrayList<Product>sort(ArrayList<Product>products, SortingServiceProxy.sortType SortAlgorithm);
 }
