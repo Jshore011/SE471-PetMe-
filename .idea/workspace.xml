@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="31477e17-81b2-44fd-8f85-5d8ab113cc7d" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1oZuuPAkBlbQwkcYHwUYGqNMSCd" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="31477e17-81b2-44fd-8f85-5d8ab113cc7d" name="Default Changelist" comment="" />
+      <created>1613506658398</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1613506658398</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="459" y="94" key="#Project_Structure" timestamp="1613506666573">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="459" y="94" key="#Project_Structure/1920.-109.1920.1160/0.0.1920.1040@0.0.1920.1040" timestamp="1613506666573" />
+    <state x="751" y="322" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1613506746440">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="751" y="322" key="#com.intellij.fileTypes.FileTypeChooser/1920.-109.1920.1160/0.0.1920.1040@0.0.1920.1040" timestamp="1613506746440" />
+    <state x="758" y="261" key="FileChooserDialogImpl" timestamp="1613506787458">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="758" y="261" key="FileChooserDialogImpl/1920.-109.1920.1160/0.0.1920.1040@0.0.1920.1040" timestamp="1613506787458" />
+    <state x="361" y="203" key="new project wizard" timestamp="1613506793115">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="361" y="203" key="new project wizard/1920.-109.1920.1160/0.0.1920.1040@0.0.1920.1040" timestamp="1613506793115" />
+  </component>
+</project>
