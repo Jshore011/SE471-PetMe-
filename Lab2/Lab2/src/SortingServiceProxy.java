@@ -1,30 +1,20 @@
 import java.util.ArrayList;
 
-public class SortingServiceProxy implements SortingIF{
-    private Sort sort;
+public class SortingServiceProxy implements SortingIF {
     private SortingIF sortIF;
 
     public SortingServiceProxy()
     {
         this.sortIF = new SortingUtil();
     }
-    enum sortType
-    {
-        BUBBLESORT,
-        QUICKSORT
-    }
 
-    public ArrayList<Product>sort(ArrayList<Product>products, sortType sortingAlgorithm)
+
+    public ArrayList<Product>sort(ArrayList<Product>products, int sortType)
     {
-        sortIF.sort(products, sortingAlgorithm);
-        if(sortingAlgorithm == sortType.BUBBLESORT)
-        {
-            sort = new BubbleSort() {};
-        }
-        else if (sortingAlgorithm == sortType.QUICKSORT)
-        {
-            sort = new QuickSort() {};
-        }
-        return products;
+    sortIF.sort(products, sortType);
+    if(sortType == 1)
+    {
+       // sortIF = SortingUtil.bubbleSort
+    }
     }
 }
