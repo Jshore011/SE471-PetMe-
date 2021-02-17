@@ -1,23 +1,22 @@
 import java.util.ArrayList;
 
 public abstract class SortingServiceProxy implements SortingIF {
-    private SortingIF sortIF;
+    private SortingUtil sort;
 
-    public SortingServiceProxy()
+    public SortingServiceProxy(SortingUtil sort)
     {
-        sortIF = new SortingUtil() {
-            @Override
-            public ArrayList<Product> sort(ArrayList<Product> p) {
-                return null;
-            }
-        };
+        this.sort = sort;
     }
 
     @Override
     public ArrayList<Product>sort(ArrayList<Product> products, int sortType) {
-        sortIF.sort(products, sortType);
+        sort.sort(products, sortType);
         if (sortType == 1) {
-            //sortIF = SortingUtil.bubbleSort;
+            sort.bubblesort(products);
+        }
+        else if (sortType == 2)
+        {
+            sort(products);
         }
         return products;
     }

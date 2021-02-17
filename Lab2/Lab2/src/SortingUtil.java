@@ -2,7 +2,6 @@ import java.util.ArrayList;
 
 public abstract class SortingUtil implements SortingIF
 {
-    //public static SortingUtil.SortingIF bubbleSort;
 
     public SortingUtil()
     {
