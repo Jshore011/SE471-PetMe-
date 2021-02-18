@@ -26,18 +26,20 @@ public class SortingServiceProxy implements SortingIF {
 
     public  void bubbledisplay(ArrayList<Product> p){
         System.out.println("Using BubbleSort to sort the product list");
-        System.out.format("%-20s%-20s%-13s\n","Name","ID","Price");
+        System.out.format("%-13s%15s%15s\n","ID","Name","Price");
+        System.out.println("********************************************");
         for(Product products: p)
         {
-            System.out.format("%-2s %10s %12s", products.getProdID(), products.getName(), products.getPrice() + "\n");
+            System.out.format("%-13s%15s%15s", products.getProdID(), products.getName(), products.getPrice() + "\n");
         }
     }
 
     public void quickdisplay(ArrayList<Product>p){
         System.out.println("Using QuickSort to sort the product list");
-        System.out.format("%-20s%-20s%-13s\n","Name","ID","Price");
+        System.out.format("%-13s%15s%15s\n","Name","ID","Price");
+        System.out.println("********************************************");
         for(Product item:p){
-            System.out.format("%-2s%10s%13.2f",item.getName(),item.getProdID(),item.getPrice());
+            System.out.format("%-13s%15s%15.2f",item.getName(),item.getProdID(),item.getPrice());
             System.out.println();
         }
     }
