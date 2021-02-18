@@ -22,4 +22,12 @@ public class Product {
         return this.price;
     }
 
+    @Override
+    public String toString() {
+        return "Product{" +
+                "name='" + name + '\'' +
+                ", prodID=" + prodID +
+                ", price=" + price +
+                "}\n";
+    }
 }

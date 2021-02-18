@@ -1,13 +1,12 @@
 import java.util.ArrayList;
 
-public abstract class SortingUtil implements SortingIF
+public class SortingUtil implements SortingIF
 {
 
     public SortingUtil()
     {
 
     }
-
     public void bubblesort(ArrayList<Product>products)
     {
         int n=products.size();
@@ -21,10 +20,9 @@ public abstract class SortingUtil implements SortingIF
             }
         }
     }
-    @Override
-    public ArrayList<Product>sort(ArrayList<Product>p, int t){
-        quickSort(p,0,p.size()-1);
-        return p;
+
+    public void sort(ArrayList<Product> p) {
+        quickSort(p, 0, p.size()-1);
     }
     private void quickSort(ArrayList<Product>p,int first,int last){
         if(first<last){
@@ -66,10 +64,14 @@ public abstract class SortingUtil implements SortingIF
             swap(p,first,mid);
         }
     }
-    private void swap(ArrayList<Product>p, int index1,int index2){
+    private void swap(ArrayList<Product> p, int index1, int index2){
         Product temp=p.get(index1);
         p.set(index1,p.get(index2));
         p.set(index2,temp);
     }
 
+    @Override
+    public ArrayList<Product> sort(ArrayList<Product> products, int sortType) {
+        return null;
+    }
 }
