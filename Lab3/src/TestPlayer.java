@@ -1,9 +1,28 @@
 
 public class TestPlayer {
+
+    private IF_Character character;
+    private IF_Weapon weapon;
+
     private BeginnerMode beginnerMode;
 
 
+    public void createPlayer(final IF_PlayerModeFactory factory){
+        setWeapon(factory.createWeapon());
+        setCharacter(factory.createCharacter());
+    }
 
+    IF_Character getCharacter(final IF_PlayerModeFactory factory) {return factory.createCharacter();}
+
+    public IF_Character getCharacter() {return character; }
+
+    private void setCharacter(final IF_Character character) {this.character = character;}
+
+    IF_Weapon getWeapon(final IF_PlayerModeFactory factory) {return factory.createWeapon();}
+
+    public IF_Weapon getWeapon() {return weapon;}
+
+    private void setWeapon(final IF_Weapon weapon) {this.weapon = weapon;}
 
 
     //super help-desk class
