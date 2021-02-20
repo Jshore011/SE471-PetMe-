@@ -2,6 +2,6 @@
 public interface IF_Character
 {
 
-    getDescription();
+    String getDescription();
 
 }
