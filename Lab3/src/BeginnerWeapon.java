@@ -1,5 +1,5 @@
 
-public class BeginnerWeapon Implements IF_BeginnerMode
+public class BeginnerWeapon Implements IF_Weapon
 {
     static final String DESCRIPTION = "This is a Beginner Weapon!";
 
