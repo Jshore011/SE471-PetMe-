@@ -4,9 +4,6 @@ public class TestPlayer {
     private IF_Character character;
     private IF_Weapon weapon;
 
-    private BeginnerMode beginnerMode;
-
-
     public void createPlayer(final IF_PlayerModeFactory factory){
         setWeapon(factory.createWeapon());
         setCharacter(factory.createCharacter());
@@ -31,7 +28,7 @@ public class TestPlayer {
             BEGINNER, INTERMEDIATE, ADVANCED
         }
 
-        public static PlayerModeFactory makePlayerModeFactory(PlayerModeType type){
+        public static IF_PlayerModeFactory makePlayerModeFactory(PlayerModeType type){
             switch (type){
                 case BEGINNER:
                     return new BeginnerFactory();
@@ -40,7 +37,7 @@ public class TestPlayer {
                 case ADVANCED:
                     return new AdvancedFactory();
                 default:
-                    throw new IllegalArgumentException("Player Mode does not exist. Enter valid mode.")
+                    throw new IllegalArgumentException("Player Mode does not exist. Enter valid mode.");
             }
         }
     }

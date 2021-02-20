@@ -2,11 +2,11 @@ public class IntermediateFactory implements IF_PlayerModeFactory
 {
     public IF_Weapon createWeapon()
     {
-        return new IntermediateWeapon;
+        return new IntermediateWeapon();
     }
 
     public IF_Character createCharacter()
     {
-        return new IntermediateCharater;
+        return new IntermediateCharacter();
     }
 }
