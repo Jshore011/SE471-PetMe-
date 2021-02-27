@@ -6,7 +6,7 @@ public class FBI_Agent implements  Runnable{
     private boolean workingInProgress;
     private String myFootPrint;
 
-    public FBI_Agent(String footprint)
+    public FBI_Agent(FBI_Agent_Creator footprint)
     {
         this.myFootPrint=footprint;
     }

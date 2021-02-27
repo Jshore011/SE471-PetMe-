@@ -4,20 +4,25 @@ public class ObjectPool implements ObjectPool_IF{
     private Object lockObject;
     private int size;
     private int instanceCount;
-    private int maxinstances;
-    private ObjectPool poolInstance;
+    private int maxInstances;
+    private static ObjectPool poolInstance;
     private Object pool[];
+    private ObjectCreation_IF creator;
     
     ObjectPool(ObjectCreation_IF c, int max)
     {
-        
+        instanceCount=0;
+        creator = c;
+        maxInstances=max;
+        pool = new Object[maxInstances];
     }
     
-    public static final ObjectPool getPoolInstance(ObjectCreation_IF c, int max)
+    public static ObjectPool getPoolInstance(ObjectCreation_IF c, int max)
     {
-        // TODO: 2/26/2021 need to fill this in 
+        if (poolInstance==null)
+            poolInstance = new ObjectPool(c, max);
+        return poolInstance;
 
-        return null;
     }
     public int getSize()
     {
@@ -28,12 +33,12 @@ public class ObjectPool implements ObjectPool_IF{
     public int getCapacity()
     {
 
-        return maxinstances;
+        return maxInstances;
     }
     //set's how many objects can be created
     public int setCapacity(int c)
     {
-        return this.maxinstances;//i think this is right
+        return this.maxInstances;//i think this is right
     }
     
     public Object getObject()
@@ -46,7 +51,7 @@ public class ObjectPool implements ObjectPool_IF{
 // TODO: 2/26/2021 need to fill this in, until then return null 
         return null;
     }
-    
+
     private Object removeObject()
     {
         // TODO: 2/26/2021 need to fill in 

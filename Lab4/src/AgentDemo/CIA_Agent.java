@@ -6,7 +6,7 @@ public class CIA_Agent  implements Runnable {
     private boolean workingInProgress;
     private String myFootPrint;
 
-    CIA_Agent(String footprint)
+    CIA_Agent(CIA_AgentCreator footprint)
     {
         this.myFootPrint=footprint;
     }
