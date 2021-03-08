@@ -4,7 +4,7 @@ import Pool.ObjectCreation_IF;
 
 public class FBI_Agent_Creator implements ObjectCreation_IF {
     int index;
-    private FBI_Agent_Creator footPrints[];
+    private String footPrints[] ={"͞@͞3", "͞#͞3", "͞$͞3", "͞*͞3", "͞.͞3", "͞?͞3"};
 
 
     public Object create()
