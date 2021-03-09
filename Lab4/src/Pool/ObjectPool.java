@@ -1,13 +1,13 @@
 package Pool;
 
 public class ObjectPool implements ObjectPool_IF{
-    private Object lockObject = new Object();
+    private final Object lockObject = new Object();
     private int size;
     private int instanceCount;
-    private int maxInstances;
+    private final int maxInstances;
     private static ObjectPool poolInstance = null;
-    private Object pool[];
-    private ObjectCreation_IF creator;
+    private Object[] pool;
+    private final ObjectCreation_IF creator;
     
     ObjectPool(ObjectCreation_IF c, int max)
     {
@@ -17,12 +17,16 @@ public class ObjectPool implements ObjectPool_IF{
         pool = new Object[maxInstances];
     }
     
-    public static ObjectPool getPoolInstance(ObjectCreation_IF c, int max)
+    public synchronized static ObjectPool getPoolInstance(ObjectCreation_IF c, int max)
     {
         if (poolInstance==null)
-            poolInstance = new ObjectPool(c, max);
-        return poolInstance;
-
+        {
+            synchronized (ObjectPool.class) {
+                if (poolInstance == null) {
+                    poolInstance = new ObjectPool(c, max);
+                }
+            }
+        }return poolInstance;
     }
 
     public int getInstanceCount()
@@ -45,20 +49,17 @@ public class ObjectPool implements ObjectPool_IF{
         return pool.length;
     }
     //set's how many objects can be created
-    public int setCapacity(int c)
+    public void setCapacity(int c)
     {
-        if (c<=0)
-        {
-            String message = "Capacity Has to be greater than 0: " + c;
-            throw new IllegalArgumentException(message);
+        if (c <= 0) {
+            String msg = "Capacity must be greater than zero";
+            throw new IllegalArgumentException(msg);
         }
-        synchronized (lockObject)
-        {
+        synchronized (lockObject) {
             Object[] newPool = new Object[c];
-            System.arraycopy(pool, 0, newPool, 0 , c);
-            pool= newPool;
+            System.arraycopy(pool, 0, newPool, 0, c);
+            pool = newPool;
         }
-        return c;
     }
 
     public Object getObject()

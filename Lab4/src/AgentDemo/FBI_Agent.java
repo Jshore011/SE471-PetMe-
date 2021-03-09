@@ -4,8 +4,8 @@ import static java.lang.Thread.sleep;
 
 public class FBI_Agent implements  Agent_IF, Runnable{
     private boolean workingInProgress;
-    private String myFootPrint;
-    private int taskID;
+    private final String myFootPrint;
+    private int taskID=0;
 
     public FBI_Agent(String footprint)
     {
@@ -37,13 +37,15 @@ public class FBI_Agent implements  Agent_IF, Runnable{
     }
     private void processing()
     {
-        System.out.println(myFootPrint + "TaskID: "+ taskID);
+        System.out.println(myFootPrint + "TaskID: "+ taskID++);
     }
     public void startTask(){workingInProgress=true;}
     public void stopTask(){workingInProgress=false;}
 
     @Override
-    public void setTask(int id) {
-        this.taskID = id;
+    public void setTaskID(int i) {
+        taskID=i;
+
     }
+
 }

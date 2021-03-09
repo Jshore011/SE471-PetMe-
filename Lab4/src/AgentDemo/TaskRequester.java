@@ -2,24 +2,25 @@ package AgentDemo;
 
 import Pool.ObjectPool;
 import static java.lang.Thread.sleep;
-public class TaskRequester implements Runnable{
+public class TaskRequester implements  Runnable {
     private ObjectPool server;
-    private int taskID;
 
-    TaskRequester(ObjectPool p)
-    {
-        server=p;
+
+    TaskRequester(ObjectPool p) {
+        server = p;
     }
 
-    public void run()
-    {
+    public void run() {
+
         Agent_IF agent = null;
         try {
-            agent = (Agent_IF)server.waitForObject();
+            agent = (Agent_IF) server.waitForObject();
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        agent.startTask();
+        if (agent != null) {
+            agent.startTask();
+        }
         try {
             sleep(2000);
         } catch (InterruptedException e) {
@@ -27,10 +28,9 @@ public class TaskRequester implements Runnable{
         }
         agent.stopTask();
         server.release(agent);
+
     }
 
 
-    public void settask(int i) {
-        taskID=i;
-    }
+
 }

@@ -9,7 +9,7 @@ public class CIAAgentApp {
         for(int i = 0; i <10; i++)
         {
             TaskRequester tr = new TaskRequester(server);
-            tr.settask(i);
+
             Thread client = new Thread(tr);
             client.start();
         }
