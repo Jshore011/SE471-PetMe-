@@ -4,7 +4,7 @@ import Pool.ObjectCreation_IF;
 
 public class CIA_AgentCreator implements ObjectCreation_IF {
     private int index;
-    private String footPrints[]={"@", "#", "$", "*", ".", "?"};
+    private final String[] footPrints ={"@", "#", "$", "*", ".", "?"};
 
 
     public Object create()

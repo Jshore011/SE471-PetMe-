@@ -1,13 +1,13 @@
 package AgentDemo;
 
 import Pool.ObjectPool;
-import static java.lang.Thread.sleep;
-public class TaskRequester implements  Runnable {
+public class TaskRequester implements Agent_IF,  Runnable {
     private ObjectPool server;
 
 
     TaskRequester(ObjectPool p) {
-        server = p;
+
+        server=p;
     }
 
     public void run() {
@@ -18,19 +18,37 @@ public class TaskRequester implements  Runnable {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+
         if (agent != null) {
             agent.startTask();
         }
+
         try {
-            sleep(2000);
+            Thread.sleep(2000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        agent.stopTask();
+
+        if (agent != null) {
+            agent.stopTask();
+        }
         server.release(agent);
 
     }
 
 
+    @Override
+    public void startTask() {
 
+    }
+
+    @Override
+    public void stopTask() {
+
+    }
+
+    @Override
+    public void setTask(int i) {
+
+    }
 }

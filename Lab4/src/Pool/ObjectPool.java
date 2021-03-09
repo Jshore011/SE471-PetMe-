@@ -9,25 +9,20 @@ public class ObjectPool implements ObjectPool_IF{
     private Object[] pool;
     private final ObjectCreation_IF creator;
     
-    ObjectPool(ObjectCreation_IF c, int max)
+    private ObjectPool(ObjectCreation_IF c, int max)
     {
         instanceCount=0;
         creator = c;
         maxInstances=max;
         pool = new Object[maxInstances];
     }
-    
-    public synchronized static ObjectPool getPoolInstance(ObjectCreation_IF c, int max)
-    {
+
+    public static ObjectPool getPoolInstance(ObjectCreation_IF c, int max){
         if (poolInstance==null)
-        {
-            synchronized (ObjectPool.class) {
-                if (poolInstance == null) {
-                    poolInstance = new ObjectPool(c, max);
-                }
-            }
-        }return poolInstance;
+            poolInstance = new ObjectPool(c, max);
+        return poolInstance;
     }
+
 
     public int getInstanceCount()
     {
@@ -37,18 +32,18 @@ public class ObjectPool implements ObjectPool_IF{
     public int getMaxInstances() {
         return maxInstances;
     }
-
+    @Override
     public int getSize()
     {
         return size;
     }
-    
-    //gets how many objects that have been created
+
+    @Override
     public int getCapacity()
     {
         return pool.length;
     }
-    //set's how many objects can be created
+    @Override
     public void setCapacity(int c)
     {
         if (c <= 0) {
@@ -61,7 +56,7 @@ public class ObjectPool implements ObjectPool_IF{
             pool = newPool;
         }
     }
-
+    @Override
     public Object getObject()
     {
         synchronized (lockObject)
@@ -82,8 +77,8 @@ public class ObjectPool implements ObjectPool_IF{
     }
 
 
-
-    public Object waitForObject() throws InterruptedException
+    @Override
+    public synchronized Object waitForObject() throws InterruptedException
     {
         synchronized (lockObject)
         {

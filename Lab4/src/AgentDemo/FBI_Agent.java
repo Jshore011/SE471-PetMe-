@@ -11,7 +11,10 @@ public class FBI_Agent implements  Agent_IF, Runnable{
     {
         this.myFootPrint=footprint;
     }
-
+    @Override
+    public void setTask(int i) {
+        taskID=i;
+    }
     public void run()
     {
         while(true)
@@ -42,10 +45,6 @@ public class FBI_Agent implements  Agent_IF, Runnable{
     public void startTask(){workingInProgress=true;}
     public void stopTask(){workingInProgress=false;}
 
-    @Override
-    public void setTaskID(int i) {
-        taskID=i;
 
-    }
 
 }
