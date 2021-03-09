@@ -32,8 +32,7 @@ public class ObjectPool implements ObjectPool_IF{
     //gets how many objects that have been created
     public int getCapacity()
     {
-
-        return maxInstances;
+        return pool.length;
     }
     //set's how many objects can be created
     public int setCapacity(int c)
@@ -54,17 +53,32 @@ public class ObjectPool implements ObjectPool_IF{
 
     private Object removeObject()
     {
-        // TODO: 2/26/2021 need to fill in 
-        return null;
+        size--;
+
+        return pool[size];
     }
 
     @Override
     public void release(Object o) {
-        
+        if(o==null)
+        {
+            throw new NullPointerException();
+        }
+        synchronized (lockObject)
+        {
+            if(getSize()<getCapacity())
+            {
+                pool[size]=o;
+                size++;
+                lockObject.notify();
+            }
+        }
     }
     private Object createObject()
     {
-        // TODO: 2/26/2021 need to fill in this. 
-        return null;
+        Object newObject = creator.create();
+        instanceCount++;
+        return newObject;
+
     }
 }
