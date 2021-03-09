@@ -1,12 +1,12 @@
 package AgentDemo;
 
 import Pool.ObjectPool;
-import static java.lang.Thread.sleep;
+
 public class TaskRequester implements  Runnable {
     private ObjectPool server;
 
 
-    TaskRequester(ObjectPool p) {
+    TaskRequester(ObjectPool p) throws InterruptedException {
         server = p;
     }
 
@@ -18,19 +18,16 @@ public class TaskRequester implements  Runnable {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        if (agent != null) {
-            agent.startTask();
-        }
+        agent.startTask();
         try {
-            sleep(2000);
+            Thread.sleep(2000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
         agent.stopTask();
         server.release(agent);
-
     }
 
 
 
-}
+    }
