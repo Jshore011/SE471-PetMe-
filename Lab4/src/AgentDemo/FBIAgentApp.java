@@ -8,12 +8,7 @@ public class FBIAgentApp {
         for(int i = 0; i <10; i++)
         {
             TaskRequester tr = null;
-            try {
-                tr = new TaskRequester(server);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-
+            tr = new TaskRequester(server);
             Thread client = new Thread(tr);
             client.start();
         }
