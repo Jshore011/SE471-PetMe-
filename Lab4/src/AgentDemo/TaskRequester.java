@@ -1,8 +1,9 @@
 package AgentDemo;
 
 import Pool.ObjectPool;
+
 public class TaskRequester implements Agent_IF,  Runnable {
-    private ObjectPool server;
+    private final ObjectPool server;
 
 
     TaskRequester(ObjectPool p) {
@@ -33,7 +34,6 @@ public class TaskRequester implements Agent_IF,  Runnable {
             agent.stopTask();
         }
         server.release(agent);
-
     }
 
 
@@ -41,6 +41,7 @@ public class TaskRequester implements Agent_IF,  Runnable {
     public void startTask() {
 
     }
+
 
     @Override
     public void stopTask() {
@@ -52,3 +53,4 @@ public class TaskRequester implements Agent_IF,  Runnable {
 
     }
 }
+

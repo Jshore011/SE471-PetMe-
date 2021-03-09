@@ -92,9 +92,8 @@ public class ObjectPool implements ObjectPool_IF{
             }
             else
             {
-                do {
-                    wait();
-                }while (size <=0);
+                while (size <=0);
+                wait();
                 return removeObject();
             }
         }
