@@ -24,6 +24,16 @@ public class ObjectPool implements ObjectPool_IF{
         return poolInstance;
 
     }
+
+    public int getInstanceCount()
+    {
+        return instanceCount;
+    }
+
+    public int getMaxInstances() {
+        return maxInstances;
+    }
+
     public int getSize()
     {
         return size;
@@ -37,18 +47,61 @@ public class ObjectPool implements ObjectPool_IF{
     //set's how many objects can be created
     public int setCapacity(int c)
     {
-        return this.maxInstances;//i think this is right
+        if (c<=0)
+        {
+            String message = "Capacity Has to be greater than 0: " + c;
+            throw new IllegalArgumentException(message);
+        }
+        synchronized (lockObject)
+        {
+            Object[] newPool = new Object[c];
+            System.arraycopy(pool, 0, newPool, 0 , c);
+            pool= newPool;
+        }
+        return c;
     }
-    
+
     public Object getObject()
     {
-        return lockObject;//not sure about this
+        synchronized (lockObject)
+        {
+            if (size > 0)
+            {
+                return removeObject();
+            }
+            else if (getInstanceCount() < getMaxInstances())
+            {
+                return createObject();
+            }
+            else
+            {
+                return null;
+            }
+        }
     }
-    
-    public Object waitForObject()
+
+
+
+    public Object waitForObject() throws InterruptedException
     {
-// TODO: 2/26/2021 need to fill this in, until then return null 
-        return null;
+        synchronized (lockObject)
+        {
+            if (size > 0)
+            {
+                return removeObject();
+            }
+            else if (getInstanceCount() < getMaxInstances())
+            {
+                return createObject();
+            }
+            else
+            {
+                do {
+                    wait();
+                }while (size <=0);
+                return removeObject();
+            }
+        }
     }
 
     private Object removeObject()

@@ -12,7 +12,12 @@ public class TaskRequester implements Runnable{
 
     public void run()
     {
-        Agent_IF agent = (Agent_IF)server.waitForObject();
+        Agent_IF agent = null;
+        try {
+            agent = (Agent_IF)server.waitForObject();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         agent.startTask();
         try {
             sleep(2000);
