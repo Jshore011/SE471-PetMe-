@@ -4,10 +4,11 @@ import Pool.ObjectPool;
 import static java.lang.Thread.sleep;
 public class TaskRequester implements Runnable{
     private ObjectPool server;
+    private int taskID;
 
     TaskRequester(ObjectPool p)
     {
-        this.server=p;
+        server=p;
     }
 
     public void run()
@@ -26,5 +27,10 @@ public class TaskRequester implements Runnable{
         }
         agent.stopTask();
         server.release(agent);
+    }
+
+
+    public void settask(int i) {
+        taskID=i;
     }
 }

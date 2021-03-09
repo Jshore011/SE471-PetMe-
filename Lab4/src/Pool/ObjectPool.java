@@ -1,11 +1,11 @@
 package Pool;
 
 public class ObjectPool implements ObjectPool_IF{
-    private Object lockObject;
+    private Object lockObject = new Object();
     private int size;
     private int instanceCount;
     private int maxInstances;
-    private static ObjectPool poolInstance;
+    private static ObjectPool poolInstance = null;
     private Object pool[];
     private ObjectCreation_IF creator;
     

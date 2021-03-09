@@ -2,9 +2,10 @@ package AgentDemo;
 
 import static java.lang.Thread.sleep;
 
-public class FBI_Agent implements  Runnable{
+public class FBI_Agent implements  Agent_IF, Runnable{
     private boolean workingInProgress;
     private String myFootPrint;
+    private int taskID;
 
     public FBI_Agent(String footprint)
     {
@@ -22,7 +23,7 @@ public class FBI_Agent implements  Runnable{
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
-                System.out.println(myFootPrint);
+                processing();
             }
             else
             {
@@ -36,8 +37,13 @@ public class FBI_Agent implements  Runnable{
     }
     private void processing()
     {
-        // TODO: 2/26/2021 not sure what this does yet
+        System.out.println(myFootPrint + "TaskID: "+ taskID);
     }
     public void startTask(){workingInProgress=true;}
     public void stopTask(){workingInProgress=false;}
+
+    @Override
+    public void setTask(int id) {
+        this.taskID = id;
+    }
 }
