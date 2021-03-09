@@ -36,7 +36,7 @@ public class CIA_Agent  implements Runnable {
     }
     private void processing()
     {
-        // TODO: 2/26/2021 not sure what this does yet
+        System.out.print(myFootPrint);
     }
     public void startTask(){workingInProgress=true;}
     public void stopTask(){workingInProgress=false;}
