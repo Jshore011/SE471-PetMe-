@@ -81,7 +81,7 @@ public class ObjectPool implements ObjectPool_IF{
     @Override
     public Object waitForObject() throws InterruptedException {
         synchronized (lockObject){
-            if(size > 0){   
+            if(size > 0){
                 return removeObject();
             }
             if(instanceCount < maxInstances){
