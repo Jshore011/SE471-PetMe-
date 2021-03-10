@@ -14,6 +14,7 @@ public class ObjectPool implements ObjectPool_IF{
         instanceCount=0;
         creator = c;
         maxInstances=max;
+        size = 0;
         pool = new Object[maxInstances];
     }
 
@@ -33,14 +34,15 @@ public class ObjectPool implements ObjectPool_IF{
         return maxInstances;
     }
 
+    @Override
     public int getSize()
     {
-        return this.size;
+        return size;
     }
-
+    @Override
     public int getCapacity()
     {
-        return pool.length;
+        return maxInstances;
     }
     @Override
     public void setCapacity(int c)
@@ -77,18 +79,18 @@ public class ObjectPool implements ObjectPool_IF{
 
 
     @Override
-    public synchronized Object waitForObject() throws InterruptedException
+    public Object waitForObject() throws InterruptedException
     {
         synchronized (lockObject) {
-            if (getInstanceCount() < getMaxInstances()) {
-                return createObject();
+            if (size > 0) {
+                return removeObject();
             }
-            else if (size > 0) {
+            if (instanceCount < maxInstances) {
                 return removeObject();
             }
             else {
                 do {
-                    wait();
+                    lockObject.wait();
                 }
                 while (size <= 0);
                 return removeObject();
@@ -111,7 +113,7 @@ public class ObjectPool implements ObjectPool_IF{
         }
         synchronized (lockObject)
         {
-            if(getSize()<getCapacity())
+            if(size < maxInstances)
             {
                 pool[size]=o;
                 size++;
