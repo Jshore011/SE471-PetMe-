@@ -1,43 +1,49 @@
 package AgentDemo;
 
-public class CIA_Agent  implements Agent_IF,Runnable {
+import static java.lang.Thread.sleep;
+
+public class CIA_Agent implements Runnable, Agent_IF{
     private boolean workingInProgress;
     private String myFootPrint;
     private int taskID;
-
-    CIA_Agent(String footprint)
-    {
-        workingInProgress = false;
-        myFootPrint=footprint;
+    public CIA_Agent(String myFootPrint, int taskID){
+        this.myFootPrint = myFootPrint;
+        this.taskID = taskID;
     }
-    public void startTask(){workingInProgress=true;}
-    public void stopTask(){workingInProgress=false;}
-    public void setTask(int i) {
-        taskID=i;
-    }
-    private void processing()
-    {
-        System.out.println(myFootPrint + "TaskID: "+ taskID);
-    }
-
-    public void run()
-    {
+    @Override
+    public void run() {
         while (true) {
-            if (workingInProgress) {
-                try {
-                    Thread.sleep(100);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
+            try {
+                if (workingInProgress) {
+                    sleep(100);
+                    System.out.println("Agent:" + myFootPrint + " | " + "TaskID: " + taskID);
+                }else{
+                    sleep(500);
                 }
-                processing();
-            } else {
-                try {
-                    Thread.sleep(500);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
+            } catch (InterruptedException e) {
+                System.out.println("HERE");
+                e.printStackTrace();
             }
         }
     }
 
+    @Override
+    public void startTask() {
+        workingInProgress = true;
+    }
+
+    @Override
+    public void stopTask() {
+        workingInProgress = false;
+    }
+
+    @Override
+    public void setTask(int i) {
+        taskID=i;
+    }
+
+
+    public int getTaskID() {
+        return this.taskID;
+    }
 }
