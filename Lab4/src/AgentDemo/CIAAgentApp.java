@@ -8,8 +8,10 @@ public class CIAAgentApp {
         ObjectPool server = ObjectPool.getPoolInstance(new CIA_AgentCreator(), 5);
 
         for (int i = 0; i < 10; i++) {
-            Thread t1 = new Thread(new TaskRequester(server));
-            t1.start();
+            TaskRequester t1 = new TaskRequester(server);
+            t1.setTask(i);
+            Thread client = new Thread(t1);
+            client.start();
         }
     }
 }

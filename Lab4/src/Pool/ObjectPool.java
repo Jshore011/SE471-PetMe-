@@ -26,19 +26,18 @@ public class ObjectPool implements ObjectPool_IF{
 
     public int getInstanceCount()
     {
-        return instanceCount;
+        return this.instanceCount;
     }
 
     public int getMaxInstances() {
         return maxInstances;
     }
-    @Override
+
     public int getSize()
     {
-        return size;
+        return this.size;
     }
 
-    @Override
     public int getCapacity()
     {
         return pool.length;
@@ -80,20 +79,18 @@ public class ObjectPool implements ObjectPool_IF{
     @Override
     public synchronized Object waitForObject() throws InterruptedException
     {
-        synchronized (lockObject)
-        {
-            if (size > 0)
-            {
-                return removeObject();
-            }
-            else if (getInstanceCount() < getMaxInstances())
-            {
+        synchronized (lockObject) {
+            if (getInstanceCount() < getMaxInstances()) {
                 return createObject();
             }
-            else
-            {
-                while (size <=0);
-                wait();
+            else if (size > 0) {
+                return removeObject();
+            }
+            else {
+                do {
+                    wait();
+                }
+                while (size <= 0);
                 return removeObject();
             }
         }

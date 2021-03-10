@@ -2,18 +2,18 @@ package AgentDemo;
 
 import static java.lang.Thread.sleep;
 
-public class FBI_Agent implements  Agent_IF, Runnable{
-    private boolean workingInProgress;
+public class FBI_Agent implements  Agent_IF, Runnable {
+    private boolean workingInProgress =false;
     private final String myFootPrint;
-    private int taskID=0;
+    private int taskID;
 
     public FBI_Agent(String footprint)
     {
         this.myFootPrint=footprint;
     }
-    @Override
+
     public void setTask(int i) {
-        taskID=i;
+        this.taskID=i;
     }
     public void run()
     {
@@ -40,10 +40,10 @@ public class FBI_Agent implements  Agent_IF, Runnable{
     }
     private void processing()
     {
-        System.out.println(myFootPrint + "TaskID: "+ taskID++);
+        System.out.println("FBI Agent: " + myFootPrint +" | "  + "TaskID: "+ taskID);
     }
-    public void startTask(){workingInProgress=true;}
-    public void stopTask(){workingInProgress=false;}
+    public void startTask(){this.workingInProgress=true;}
+    public void stopTask(){this.workingInProgress=false;}
 
 
 

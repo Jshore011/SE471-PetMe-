@@ -2,9 +2,9 @@ package AgentDemo;
 
 import Pool.ObjectPool;
 
-public class TaskRequester implements Agent_IF,  Runnable {
+public class TaskRequester implements  Runnable {
     private final ObjectPool server;
-
+    public int taskID;
 
     TaskRequester(ObjectPool p) {
 
@@ -36,21 +36,12 @@ public class TaskRequester implements Agent_IF,  Runnable {
         server.release(agent);
     }
 
-
-    @Override
-    public void startTask() {
-
-    }
-
-
-    @Override
-    public void stopTask() {
-
-    }
-
-    @Override
     public void setTask(int i) {
+        this.taskID = i;
+    }
 
+    public int getTaskID() {
+        return taskID;
     }
 }
 

@@ -3,7 +3,7 @@ package AgentDemo;
 public class CIA_Agent  implements Agent_IF,Runnable {
     private boolean workingInProgress;
     private String myFootPrint;
-    private int taskID=0;
+    private int taskID;
 
     CIA_Agent(String footprint)
     {
@@ -12,13 +12,12 @@ public class CIA_Agent  implements Agent_IF,Runnable {
     }
     public void startTask(){workingInProgress=true;}
     public void stopTask(){workingInProgress=false;}
-    @Override
     public void setTask(int i) {
         taskID=i;
     }
     private void processing()
     {
-        System.out.println(myFootPrint + "TaskID: "+ taskID++);
+        System.out.println(myFootPrint + "TaskID: "+ taskID);
     }
 
     public void run()
