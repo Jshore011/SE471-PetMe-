@@ -2,49 +2,48 @@ package AgentDemo;
 
 import static java.lang.Thread.sleep;
 
-public class FBI_Agent implements  Agent_IF, Runnable {
-    private boolean workingInProgress =false;
-    private final String myFootPrint;
+public class FBI_Agent implements Runnable, Agent_IF{
+    private boolean workingInProgress;
+    private String myFootPrint;
     private int taskID;
-
-    public FBI_Agent(String footprint)
-    {
-        this.myFootPrint=footprint;
+    public FBI_Agent(String myFootPrint, int taskID){
+        this.myFootPrint = myFootPrint;
+        this.taskID = taskID;
     }
-
-    public void setTask(int i) {
-        this.taskID=i;
-    }
-    public void run()
-    {
-        while(true)
-        {
-            if(workingInProgress)
-            {
-                try {
+    @Override
+    public void run() {
+        while (true) {
+            try {
+                if (workingInProgress) {
                     sleep(100);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-                processing();
-            }
-            else
-            {
-                try {
+                    System.out.println("Agent:" + myFootPrint + " | " + "TaskID: " + taskID);
+                }else{
                     sleep(500);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
                 }
+            } catch (InterruptedException e) {
+                System.out.println("HERE");
+                e.printStackTrace();
             }
         }
     }
-    private void processing()
-    {
-        System.out.println("FBI Agent: " + myFootPrint +" | "  + "TaskID: "+ taskID);
+
+    @Override
+    public void startTask() {
+        workingInProgress = true;
     }
-    public void startTask(){this.workingInProgress=true;}
-    public void stopTask(){this.workingInProgress=false;}
+
+    @Override
+    public void stopTask() {
+        workingInProgress = false;
+    }
+
+    @Override
+    public void setTask(int i) {
+        taskID=i;
+    }
 
 
-
+    public int getTaskID() {
+        return this.taskID;
+    }
 }
