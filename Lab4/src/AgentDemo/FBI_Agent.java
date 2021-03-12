@@ -26,24 +26,14 @@ public class FBI_Agent implements Runnable, Agent_IF{
             }
         }
     }
+    @Override
+    public void startTask() { workingInProgress = true; }
 
     @Override
-    public void startTask() {
-        workingInProgress = true;
-    }
+    public void stopTask() { workingInProgress = false; }
 
     @Override
-    public void stopTask() {
-        workingInProgress = false;
-    }
+    public void setTask(int i) { taskID=i; }
 
-    @Override
-    public void setTask(int i) {
-        taskID=i;
-    }
-
-
-    public int getTaskID() {
-        return this.taskID;
-    }
+    public int getTaskID() { return this.taskID; }
 }

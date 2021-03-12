@@ -15,7 +15,6 @@ import java.time.OffsetDateTime;
 import java.time.ZoneOffset;
 import java.util.ArrayList;
 import java.util.Properties;
-
 public class DatabaseManager {
     private Connection connection;
     private String authenticatedUser;
@@ -25,6 +24,7 @@ public class DatabaseManager {
      */
     public DatabaseManager() {
         try {
+
             // load configuration file containing database creds
             Properties prop = new Properties();
             ClassLoader loader = Thread.currentThread().getContextClassLoader();
