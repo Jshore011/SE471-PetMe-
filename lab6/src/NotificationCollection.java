@@ -1,9 +1,6 @@
 public interface NotificationCollection extends NotificationCollectionIF {
-    
+    Notification items = null;
 
-    NotificationCollection(){
-
-    }
     public Notification getItem(int index)
     {
         return null;
@@ -14,7 +11,7 @@ public interface NotificationCollection extends NotificationCollectionIF {
 
     }
 
-    public int getLength()
+    public int getLength ()
     {
         return 0;
     }
