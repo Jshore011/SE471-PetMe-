@@ -1,6 +1,6 @@
 public interface NotificationIteratorIF {
 
-    public boolean hasNext(){}
+    boolean hasNext();
 
-    public Notification next(){}
+    Notification next();
 }
