@@ -1,3 +1,3 @@
 public interface NotificationCollectionIF {
-    private NotificationBar notifications;
+    NotificationIteratorIF createIterator();
 }

@@ -1,4 +1,9 @@
 public class NotificationBar {
+    private NotificationCollectionIF notifications;
+
+    public NotificationBar(NotificationCollectionIF notifications) {
+        this.notifications = notifications;
+    }
 
     public void printNotifications(){
         NotificationIteratorIF iterator = notifications.createIterator();
