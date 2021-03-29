@@ -1,9 +1,15 @@
-public interface NotificationCollection extends NotificationCollectionIF {
-    Notification items = null;
+public class NotificationCollection implements NotificationCollectionIF {
+    private Notification items;
+    private int length;
+    private int index;
 
+    NotificationCollection()
+    {
+
+    }
     public Notification getItem(int index)
     {
-        return null;
+        return this.items;
     }
 
     public void addItem(String str)
@@ -13,6 +19,6 @@ public interface NotificationCollection extends NotificationCollectionIF {
 
     public int getLength ()
     {
-        return 0;
+        return this.length;
     }
 }
