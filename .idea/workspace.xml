@@ -1,53 +1,122 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="31477e17-81b2-44fd-8f85-5d8ab113cc7d" name="Default Changelist" comment="" />
+    <list default="true" id="54a0f8d2-edb7-485e-8394-723aae0199ca" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/petme+2.0/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/petme+2.0/app/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/petme+2.0/app/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/petme+2.0/app/proguard-rules.pro" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/petme+2.0/app/src/androidTest/java/com/example/petme20/ExampleInstrumentedTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/petme+2.0/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/petme+2.0/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/petme+2.0/app/src/main/res/drawable/ic_launcher_background.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/petme+2.0/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/petme+2.0/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/petme+2.0/app/src/main/res/mipmap-hdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/petme+2.0/app/src/main/res/mipmap-hdpi/ic_launcher_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/petme+2.0/app/src/main/res/mipmap-mdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/petme+2.0/app/src/main/res/mipmap-mdpi/ic_launcher_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/petme+2.0/app/src/main/res/mipmap-xhdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/petme+2.0/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/petme+2.0/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/petme+2.0/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/petme+2.0/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/petme+2.0/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/petme+2.0/app/src/main/res/values-night/themes.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/petme+2.0/app/src/main/res/values/colors.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/petme+2.0/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/petme+2.0/app/src/main/res/values/themes.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/petme+2.0/app/src/test/java/com/example/petme20/ExampleUnitTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/petme+2.0/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/petme+2.0/gradle.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/petme+2.0/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/petme+2.0/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/petme+2.0/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/petme+2.0/settings.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/aws.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PetMe+/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/PetMe+/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectId" id="1oZuuPAkBlbQwkcYHwUYGqNMSCd" />
+  <component name="ProjectId" id="1pu830hvnVQrwzocJznX6jlPmAi" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="RunManager">
+    <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="31477e17-81b2-44fd-8f85-5d8ab113cc7d" name="Default Changelist" comment="" />
-      <created>1613506658398</created>
+      <changelist id="54a0f8d2-edb7-485e-8394-723aae0199ca" name="Default Changelist" comment="" />
+      <created>1616021411467</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1613506658398</updated>
+      <updated>1616021411467</updated>
     </task>
     <servers />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
   <component name="WindowStateProjectService">
-    <state x="459" y="94" key="#Project_Structure" timestamp="1613506666573">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="2608" y="201" key="FileChooserDialogImpl" timestamp="1616021682777">
+      <screen x="1920" y="-109" width="1920" height="1160" />
     </state>
-    <state x="459" y="94" key="#Project_Structure/1920.-109.1920.1160/0.0.1920.1040@0.0.1920.1040" timestamp="1613506666573" />
-    <state x="751" y="322" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1613506746440">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="751" y="322" key="#com.intellij.fileTypes.FileTypeChooser/1920.-109.1920.1160/0.0.1920.1040@0.0.1920.1040" timestamp="1613506746440" />
-    <state x="758" y="261" key="FileChooserDialogImpl" timestamp="1613506787458">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="758" y="261" key="FileChooserDialogImpl/1920.-109.1920.1160/0.0.1920.1040@0.0.1920.1040" timestamp="1613506787458" />
-    <state x="361" y="203" key="new project wizard" timestamp="1613506793115">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="361" y="203" key="new project wizard/1920.-109.1920.1160/0.0.1920.1040@0.0.1920.1040" timestamp="1613506793115" />
+    <state x="2608" y="201" key="FileChooserDialogImpl/1920.-109.1920.1160/0.0.1920.1040@1920.-109.1920.1160" timestamp="1616021682777" />
   </component>
 </project>
