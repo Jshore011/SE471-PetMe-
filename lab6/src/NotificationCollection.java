@@ -10,10 +10,13 @@ public class NotificationCollection implements NotificationCollectionIF {
     {
         notifications = new ArrayList<>();
     }
-    public int getItem(int index)
-    {
+    public int getItem(int index) {
         return notifications.get(index);
+    }
+    public void addItem(String str)
+    {
         
+    }
 
     public int getLength()
     {
