@@ -1,4 +1,4 @@
-public class Attachment {
+public abstract class Attachment {
 
 public void preview()
 {
