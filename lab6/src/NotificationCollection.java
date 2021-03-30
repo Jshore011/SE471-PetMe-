@@ -4,8 +4,6 @@ import java.util.ArrayList;
 
 public class NotificationCollection implements NotificationCollectionIF {
     private Notification items;
-    static final int MAX_ITEMS = 6;
-    int numberOfItems = 0;
     ArrayList<Notification> notifications;
 
     NotificationCollection()
@@ -20,14 +18,8 @@ public class NotificationCollection implements NotificationCollectionIF {
     }
     public void addItem(String str)
     {
-        Notification notification = new Notification(str);
-        if (numberOfItems >= MAX_ITEMS)
-            System.err.println("Full");
-        else
-        {
-            notifications.add(notification);
-            numberOfItems = numberOfItems + 1;
-        }
+        items = new Notification(str);
+        notifications.add(items);
     }
 
     public int getLength()
@@ -35,5 +27,5 @@ public class NotificationCollection implements NotificationCollectionIF {
         return notifications.size();
     }
 
-
+    
 }

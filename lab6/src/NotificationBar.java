@@ -1,3 +1,4 @@
+
 public class NotificationBar {
     private NotificationCollectionIF notifications;
 

@@ -6,6 +6,7 @@ public class Notification {
         this.notification = notification;
     }
 
+
     public String getContent()
     {
         return  notification;

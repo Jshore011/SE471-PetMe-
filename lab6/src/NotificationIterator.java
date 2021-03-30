@@ -1,13 +1,19 @@
+
 public class NotificationIterator implements NotificationIteratorIF{
     private NotificationCollection collection;
 
-    @Override
+
     public boolean hasNext() {
-        return false;
+        if(collection == null)
+        {
+            return false;
+        }
+        else
+            return true;
     }
 
-    @Override
-    public Notification next() {
-        return null;
+    public NotificationCollection next() {
+
+        return collection;
     }
 }
