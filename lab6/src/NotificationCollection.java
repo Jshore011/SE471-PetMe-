@@ -27,5 +27,13 @@ public class NotificationCollection implements NotificationCollectionIF {
         return notifications.size();
     }
 
+<<<<<<< HEAD
     
+=======
+
+    @Override
+    public NotificationIteratorIF createIterator() {
+        return null;
+    }
+>>>>>>> c3fe552f332296603286dfc8207846a3d8d7e53f
 }
