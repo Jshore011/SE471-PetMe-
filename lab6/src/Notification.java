@@ -1,13 +1,13 @@
 public class Notification {
     private Attachment attachment;
-
-    Notification(Attachment attachment)
+    String notification;
+    Notification(String notification)
     {
-        this.attachment=attachment;
+        this.notification = notification;
     }
 
     public String getContent()
     {
-        return attachment.toString();
+        return  notification;
     }
 }
