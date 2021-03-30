@@ -15,8 +15,7 @@ public class NotificationCollection implements NotificationCollectionIF {
     }
     public void addItem(String str)
     {
-        Notification notification = new Notification(str);
-        notifications.add(notification);
+        notifications.add(str);
     }
 
     public int getLength()
