@@ -1,3 +1,6 @@
 public interface NotificationCollectionIF {
-    NotificationIteratorIF createIterator();
+
+    default NotificationIteratorIF createIterator() {
+        return null;
+    }
 }
