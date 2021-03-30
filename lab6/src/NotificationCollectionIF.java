@@ -1,3 +1,8 @@
+import java.util.Iterator;
+
 public interface NotificationCollectionIF {
-    NotificationIteratorIF createIterator();
+    //-----------
+    Iterator iterator = notificationList.createIterator();
+
+    while (iterator.hasNext()) {Notification notification = iterator.next();}
 }

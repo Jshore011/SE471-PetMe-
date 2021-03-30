@@ -24,4 +24,8 @@ public class NotificationCollection implements NotificationCollectionIF {
     }
 
 
+    @Override
+    public NotificationIteratorIF createIterator() {
+        return null;
+    }
 }
