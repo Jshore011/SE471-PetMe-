@@ -12,6 +12,14 @@ public class Demo {
         nc.addItem("notification 2");
         nc.setAttachment(file1);
 
+        Attachment media2 = new MediaAttachment("Media attachment contains video");
+        nc.addItem("notification 3");
+        nc.setAttachment(media2);
+
+        Attachment file2 = new FileAttachment("File attachment contains grocery list");
+        nc.addItem("notification 4");
+        nc.setAttachment(file2);
+
         nb.printNotifications();
 
 
