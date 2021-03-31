@@ -1,15 +1,23 @@
 
 public class NotificationIterator implements NotificationIteratorIF{
     private NotificationCollection collection;
-
     //maintains current position
-    int pos=0;
+    private int pos;
 
-    public NotificationIterator(NotificationCollectionIF n){ this.collection = (NotificationCollection) n; }
-
-    public boolean hasNext() {
-        return (pos >= collection.getLength() || collection.getLength() <= 0);
+    public NotificationIterator(NotificationCollection collection)
+    {   this.collection = collection;
+        pos = 0;
     }
 
-    public Notification next() { return collection.getItem(pos ++ ); }
+    public boolean hasNext()
+    {
+        return pos < collection.getLength();
+    }
+
+    public Notification next()
+    {
+        Notification notification = collection.getItem(pos);
+        pos++;
+        return notification;
+    }
 }
