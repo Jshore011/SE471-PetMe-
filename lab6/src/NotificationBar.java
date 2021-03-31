@@ -9,7 +9,7 @@ public class NotificationBar {
 
     public void printNotifications(){
         NotificationIteratorIF iterator = notifications.createIterator();
-        System.out.println("---------------------------");
+        System.out.println("------------------------");
         while(iterator.hasNext())
         {
             Notification n = iterator.next();
