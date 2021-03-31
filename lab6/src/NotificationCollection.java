@@ -28,4 +28,9 @@ public class NotificationCollection implements NotificationCollectionIF {
     public NotificationIteratorIF createIterator() {
         return new NotificationIterator(this); // dependancy injection
     }
+
+    public void setAttachment(Attachment attachment)
+    {
+        items.setAttachment(attachment);
+    }
 }
