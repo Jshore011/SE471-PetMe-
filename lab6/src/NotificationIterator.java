@@ -20,4 +20,9 @@ public class NotificationIterator implements NotificationIteratorIF{
         pos++;
         return notification;
     }
+
+    public void resetCount()
+    {
+        pos=0;
+    }
 }
