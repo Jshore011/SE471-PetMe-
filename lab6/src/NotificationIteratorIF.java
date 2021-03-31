@@ -3,5 +3,5 @@ public interface NotificationIteratorIF {
 
     boolean hasNext();
 
-    NotificationCollection next();
+    Notification next();
 }
