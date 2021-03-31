@@ -6,6 +6,6 @@ public class Demo {
         nc.addItem("Item 2");
         NotificationBar nb = new NotificationBar(nc);
         nb.printNotifications();
-        System.out.println("here");
+
     }
 }

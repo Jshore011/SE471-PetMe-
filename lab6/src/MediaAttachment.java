@@ -1,7 +1,16 @@
 public class MediaAttachment extends Attachment{
-
-    public void preview()
-    {
-        System.out.println("This is a preview of a media attachment");
+    String type;
+    public MediaAttachment(String type) {
+        super(type);
+        this.type = type;
     }
+
+    public String preview(){
+        return type;
+    }
+
+    public MediaAttachment returnAttachment(){
+        return this;
+    }
+
 }
