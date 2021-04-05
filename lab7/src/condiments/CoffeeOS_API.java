@@ -4,15 +4,15 @@ import coffee.CoffeeIF;
 
 public class CoffeeOS_API {
 
+
     public void setCoffeeType(String str)
     {
-        // TODO: 4/4/2021  
+        System.out.println("Thank you for ordering %s"+str);
     }
     
-    public int setGrindingTime(int secs)
+    public void setGrindingTime(int secs)
     {
-        // TODO: 4/4/2021  
-        return secs;
+        System.out.println("Grinding for %d seconds"+ secs);
     }
     
     public CondimentIF addCondiment(CondimentIF type)
@@ -21,10 +21,9 @@ public class CoffeeOS_API {
         // TODO: 4/4/2021  
     }
     
-    public int setTemperature(int degree)
+    public void setTemperature(int degree)
     {
-        return degree;
-        // TODO: 4/4/2021  
+        System.out.println("Brewing at %d 's"+degree);
     }
     
     public int holdTemperature(int seconds)
@@ -39,16 +38,15 @@ public class CoffeeOS_API {
         // TODO: 4/4/2021  
     }
     
-    public int setPowerLED(int num)
+    public void setPowerLED(int num)
     {
-        return num;
-        // TODO: 4/4/2021  
+        System.out.println("Power LED set to %d" + num);
+
     }
     
-    public int setTypeLED(int num)
+    public void setTypeLED(int num)
     {
-        return num;
-        // TODO: 4/4/2021  
+        System.out.println("Type LED is %d"+num);
     }
     
     public CoffeeIF computePrice(CoffeeIF cif)
