@@ -2,42 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="be3892eb-727a-413f-8b4b-4bd92a2dd93c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../petme+2.0/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../petme+2.0/app/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../petme+2.0/app/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../petme+2.0/app/proguard-rules.pro" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../petme+2.0/app/src/androidTest/java/com/example/petme20/ExampleInstrumentedTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../petme+2.0/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../petme+2.0/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../petme+2.0/app/src/main/res/drawable/ic_launcher_background.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../petme+2.0/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../petme+2.0/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../petme+2.0/app/src/main/res/mipmap-hdpi/ic_launcher.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../petme+2.0/app/src/main/res/mipmap-hdpi/ic_launcher_round.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../petme+2.0/app/src/main/res/mipmap-mdpi/ic_launcher.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../petme+2.0/app/src/main/res/mipmap-mdpi/ic_launcher_round.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../petme+2.0/app/src/main/res/mipmap-xhdpi/ic_launcher.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../petme+2.0/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../petme+2.0/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../petme+2.0/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../petme+2.0/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../petme+2.0/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../petme+2.0/app/src/main/res/values-night/themes.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../petme+2.0/app/src/main/res/values/colors.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../petme+2.0/app/src/main/res/values/strings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../petme+2.0/app/src/main/res/values/themes.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../petme+2.0/app/src/test/java/com/example/petme20/ExampleUnitTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../petme+2.0/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../petme+2.0/gradle.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../petme+2.0/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../petme+2.0/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../petme+2.0/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../petme+2.0/settings.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/aws.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab6/src/Attachment.java" beforeDir="false" afterPath="$PROJECT_DIR$/../lab6/src/Attachment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab6/src/Demo.java" beforeDir="false" afterPath="$PROJECT_DIR$/../lab6/src/Demo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab6/src/NotificationCollection.java" beforeDir="false" afterPath="$PROJECT_DIR$/../lab6/src/NotificationCollection.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,7 +33,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../petme+2.0" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../SE370/Final Project" />
   </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -88,7 +55,7 @@
       </list>
     </recent_temporary>
   </component>
-  <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -106,35 +73,27 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="2544" y="38" key="#com.intellij.ide.util.MemberChooser" timestamp="1607833639125">
-      <screen x="1920" y="-109" width="1920" height="1160" />
+    <state x="739" y="261" key="FileChooserDialogImpl" timestamp="1617580962696">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="2544" y="38" key="#com.intellij.ide.util.MemberChooser/1920.-109.1920.1160/0.0.1920.1040@0.0.1920.1040" timestamp="1607833639125" />
-    <state x="2659" y="182" key="FileChooserDialogImpl" timestamp="1616021821967">
-      <screen x="1920" y="-109" width="1920" height="1160" />
-    </state>
-    <state x="739" y="261" key="FileChooserDialogImpl/1920.-109.1920.1160/0.0.1920.1040@0.0.1920.1040" timestamp="1615846099893" />
+    <state x="739" y="261" key="FileChooserDialogImpl/1920.-109.1920.1160/0.0.1920.1040@0.0.1920.1040" timestamp="1617580962696" />
     <state x="2659" y="182" key="FileChooserDialogImpl/1920.-109.1920.1160/0.0.1920.1040@1920.-109.1920.1160" timestamp="1616021821967" />
-    <state width="1904" height="286" key="GridCell.Tab.0.bottom" timestamp="1608178435203">
+    <state width="1921" height="313" key="GridCell.Tab.0.bottom" timestamp="1617580963829">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1904" height="286" key="GridCell.Tab.0.bottom/1920.-109.1920.1160/0.0.1920.1040@0.0.1920.1040" timestamp="1608178435203" />
-    <state width="1904" height="286" key="GridCell.Tab.0.center" timestamp="1608178435202">
+    <state width="1921" height="313" key="GridCell.Tab.0.bottom/1920.-109.1920.1160/0.0.1920.1040@0.0.1920.1040" timestamp="1617580963829" />
+    <state width="1921" height="313" key="GridCell.Tab.0.center" timestamp="1617580963828">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1904" height="286" key="GridCell.Tab.0.center/1920.-109.1920.1160/0.0.1920.1040@0.0.1920.1040" timestamp="1608178435202" />
-    <state width="1904" height="286" key="GridCell.Tab.0.left" timestamp="1608178435202">
+    <state width="1921" height="313" key="GridCell.Tab.0.center/1920.-109.1920.1160/0.0.1920.1040@0.0.1920.1040" timestamp="1617580963828" />
+    <state width="1921" height="313" key="GridCell.Tab.0.left" timestamp="1617580963828">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1904" height="286" key="GridCell.Tab.0.left/1920.-109.1920.1160/0.0.1920.1040@0.0.1920.1040" timestamp="1608178435202" />
-    <state width="1904" height="286" key="GridCell.Tab.0.right" timestamp="1608178435202">
+    <state width="1921" height="313" key="GridCell.Tab.0.left/1920.-109.1920.1160/0.0.1920.1040@0.0.1920.1040" timestamp="1617580963828" />
+    <state width="1921" height="313" key="GridCell.Tab.0.right" timestamp="1617580963829">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1904" height="286" key="GridCell.Tab.0.right/1920.-109.1920.1160/0.0.1920.1040@0.0.1920.1040" timestamp="1608178435202" />
-    <state x="2154" y="-75" width="1445" height="727" key="dock-window-1" timestamp="1607833118829">
-      <screen x="1920" y="-109" width="1920" height="1160" />
-    </state>
-    <state x="2154" y="-75" width="1445" height="727" key="dock-window-1/1920.-109.1920.1160/0.0.1920.1040@0.0.1920.1040" timestamp="1607833118829" />
+    <state width="1921" height="313" key="GridCell.Tab.0.right/1920.-109.1920.1160/0.0.1920.1040@0.0.1920.1040" timestamp="1617580963829" />
     <state x="342" y="203" key="new project wizard" timestamp="1615846104368">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

@@ -1,10 +1,11 @@
-
+import java.util.Scanner;
 
 import java.util.ArrayList;
 
 public class NotificationCollection implements NotificationCollectionIF {
     private Notification items;
     ArrayList<Notification> notifications ;
+    private Scanner input;
 
     NotificationCollection()
     {
@@ -31,6 +32,7 @@ public class NotificationCollection implements NotificationCollectionIF {
 
     public void setAttachment(Attachment attachment)
     {
-        items.setAttachment(attachment);
+
+        notifications.;
     }
 }
