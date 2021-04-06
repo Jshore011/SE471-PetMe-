@@ -1,7 +1,7 @@
 package condiments;
 
-import coffee.AbstractCoffee;
+import coffee.CoffeeServer;
 
 public interface CondimentIF {
-    AbstractCoffee coffee = null;
+    CoffeeServer coffee = null;
 }

@@ -1,8 +1,8 @@
 package condiments;
 
-import coffee.CoffeeIF;
+import coffee.CoffeeServer_IF;
 
-public class CoffeeOS_API {
+public interface CoffeeOS_API {
 
 
     public void setCoffeeType(String str)
