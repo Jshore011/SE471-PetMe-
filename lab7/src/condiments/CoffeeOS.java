@@ -6,6 +6,9 @@ import java.net.URLClassLoader;
 
 public class CoffeeOS implements CoffeeOS_API{
     private CoffeeServer_IF orderedCoffee;
+    Condiment_IF cream = new Cream();
+    Condiment_IF vanilla = new Vanilla();
+    Condiment_IF chocolate = new Chocolate();
 
     //run's the program
     public void run(String programName)

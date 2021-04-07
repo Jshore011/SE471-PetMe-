@@ -2,7 +2,7 @@ package condiments;
 
 import java.util.List;
 
-public class CoffeeWithChocolate extends Condiment_DecoratedCoffee{
+public abstract class CoffeeWithChocolate extends Condiment_DecoratedCoffee{
     private Condiment_IF condiment;
 
     CoffeeWithChocolate(Coffee_IF decoratedCoffee, Condiment_IF condiment) {
@@ -10,8 +10,12 @@ public class CoffeeWithChocolate extends Condiment_DecoratedCoffee{
         this.condiment = condiment;
     }
 
-    @Override
-    public List<Condiment_IF> getCondiment() {
-        return null;
-    }
+   public double getPrice(){
+        return super.getPrice()+condiment.returnPrice();
+   }
+
+   public String getType()
+   {
+       return super.getType();
+   }
 }
