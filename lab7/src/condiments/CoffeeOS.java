@@ -37,14 +37,14 @@ public class CoffeeOS implements CoffeeOS_API{
     @Override
     public int holdTemperature(int seconds)
     {
+        System.out.println("Holding Temperature for %d seconds" + seconds);
         return seconds;
-        // TODO: 4/4/2021
     }
     @Override
     public int wait(int seconds)
     {
-        return seconds;
-        // TODO: 4/4/2021
+       System.out.println("Watiing for %d seconds..." + seconds);
+       return seconds;
     }
     @Override
     public void setPowerLED(int num)
@@ -66,6 +66,6 @@ public class CoffeeOS implements CoffeeOS_API{
     @Override
     public void done()
     {
-        // TODO: 4/4/2021
+        System.out.println("Enjoy your Finished Coffee!");
     }
 }
