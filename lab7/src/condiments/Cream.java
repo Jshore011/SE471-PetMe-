@@ -1,4 +1,4 @@
 package condiments;
 
-public class Cream implements CondimentIF {
+public class Cream implements Condiment_IF {
 }

@@ -12,4 +12,60 @@ public class CoffeeOS implements CoffeeOS_API{
     {
         URLClassLoader classLoader;
     }
+
+    @Override
+    public void setCoffeeType(String str)
+    {
+        System.out.println("Thank you for ordering %s"+str);
+    }
+    @Override
+    public void setGrindingTime(int secs)
+    {
+        System.out.println("Grinding for %d seconds"+ secs);
+    }
+    @Override
+    public Condiment_IF addCondiment(Condiment_IF type)
+    {
+        return type;
+        // TODO: 4/4/2021
+    }
+    @Override
+    public void setTemperature(int degree)
+    {
+        System.out.println("Brewing at %d 's"+degree);
+    }
+    @Override
+    public int holdTemperature(int seconds)
+    {
+        return seconds;
+        // TODO: 4/4/2021
+    }
+    @Override
+    public int wait(int seconds)
+    {
+        return seconds;
+        // TODO: 4/4/2021
+    }
+    @Override
+    public void setPowerLED(int num)
+    {
+        System.out.println("Power LED set to %d" + num);
+
+    }
+    @Override
+    public void setTypeLED(int num)
+    {
+        System.out.println("Type LED is %d"+num);
+    }
+    @Override
+    public CoffeeServer_IF computePrice(CoffeeServer_IF cif)
+    {
+        return cif;
+        // TODO: 4/4/2021
+    }
+    @Override
+    public void done()
+    {
+        // TODO: 4/4/2021
+    }
 }

@@ -2,6 +2,6 @@ package condiments;
 
 import coffee.CoffeeServer;
 
-public interface CondimentIF {
+public interface Condiment_IF {
     CoffeeServer coffee = null;
 }
