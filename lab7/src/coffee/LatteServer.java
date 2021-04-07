@@ -14,7 +14,8 @@ public class LatteServer {
     public void start()
     {
         //1. Indicate the machine as running and display the purchased type of coffee to LED.
-        program.setTypeLED(1);
+       program.setPowerLED(1);
+        program.setTypeLED(3);
         // 2. Grind coffee beans for 9 seconds.
         program.setGrindingTime(9);
         // 3. Heat up the water to 175 degree F and hold the temperature for 3 seconds.

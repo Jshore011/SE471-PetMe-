@@ -14,7 +14,8 @@ public class EspressoServer {
     public void start()
     {
         //1. Indicate the machine as running and display the purchased type of coffee to LED.
-        program.setTypeLED(1);
+        program.setPowerLED(1);
+        program.setTypeLED(4);
         // 2. Grind coffee beans for 7 seconds.
         program.setGrindingTime(7);
         // 3. Heat up the water to 200 degree F and hold the temperature for 2 seconds.

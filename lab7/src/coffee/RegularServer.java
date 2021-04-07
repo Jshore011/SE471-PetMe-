@@ -14,6 +14,7 @@ public class RegularServer {
     public void start()
     {
         //1. Indicate the machine as running and display the purchased type of coffee to LED.
+        program.setPowerLED(1);
         program.setTypeLED(1);
         // 2. Grind coffee beans for 8 seconds.
         program.setGrindingTime(8);

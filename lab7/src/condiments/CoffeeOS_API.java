@@ -4,7 +4,7 @@ import coffee.CoffeeServer_IF;
 
 public interface CoffeeOS_API {
 
-    public void setCoffeeType(String str);
+    public void setCoffeeType(String str) throws ClassNotFoundException, IllegalAccessException, InstantiationException;
     public void setGrindingTime(int secs);
     public Condiment_IF addCondiment(Condiment_IF type);
     public void setTemperature(int degree);

@@ -17,7 +17,8 @@ public class MochaServer {
     public void start()
     {
         //1. Indicate the machine as running and display the purchased type of coffee to LED.
-        program.setTypeLED(1);
+        program.setPowerLED(1);
+        program.setTypeLED(2);
        // 2. Grind coffee beans for 5 seconds.
         program.setGrindingTime(5);
       //  3. Heat up the water to 200 degree F and hold the temperature for 5 seconds.
