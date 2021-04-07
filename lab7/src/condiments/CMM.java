@@ -1,7 +1,8 @@
 package condiments;
 
-import coffee.CoffeeIF;
+import coffee.CoffeeServer_IF;
 
-public class Main {
+public class CMM {
     CoffeeOS newCoffee = new CoffeeOS();
+
 }
