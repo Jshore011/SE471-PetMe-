@@ -12,14 +12,13 @@ import java.util.List;
 import java.util.Scanner;
 
 public class CoffeeOS implements CoffeeOS_API {
-    private CoffeeServer_IF orderedCoffee;
-    //Condiment_IF cream = new Cream();
-    //Condiment_IF vanilla = new Vanilla();
-    //Condiment_IF chocolate = new Chocolate();
-    private List<CoffeeServer_IF> transactions;
+    private CoffeeServer_IF current;
     public CoffeeOS(){
-
-        transactions = new ArrayList<>();
+        current = null;
+        //Condiment_IF cream = new Cream();
+        //Condiment_IF vanilla = new Vanilla();
+        //Condiment_IF chocolate = new Chocolate();
+        List<CoffeeServer_IF> transactions = new ArrayList<>();
     }
     //run's the program
     public void run() throws IllegalAccessException, InstantiationException, ClassNotFoundException, IOException, NoSuchMethodException, InvocationTargetException {
@@ -32,8 +31,7 @@ public class CoffeeOS implements CoffeeOS_API {
 
    }
 
-    @Override
-    public void setCoffeeType(String str) throws ClassNotFoundException, IllegalAccessException, InstantiationException, IOException, NoSuchMethodException, InvocationTargetException {
+    public void setCoffeeType(CoffeeServer_IF.CoffeeType type) throws ClassNotFoundException, IllegalAccessException, InstantiationException, IOException, NoSuchMethodException, InvocationTargetException {
 
         String compiledClassLocation = new File(".").getCanonicalPath();
 
@@ -44,29 +42,34 @@ public class CoffeeOS implements CoffeeOS_API {
 
 
         Class c = null;
-        switch (str) {
-            case "Regular":
-                c = cLoader.loadClass("coffee.RegularServer");
+        switch (type) {
+            case Regular:
+                c = cLoader.loadClass("CoffeeMaker.Coffee.Regular_Server");
                 break;
-            case "Mocha":
-                c = cLoader.loadClass("coffee.MochaServer");
+            case Mocha:
+                c = cLoader.loadClass("CoffeeMaker.Coffee.Mocha_Server");
                 break;
-            case "Latte":
-                c = cLoader.loadClass("coffee.LatteServer");
+            case Latte:
+                c = cLoader.loadClass("CoffeeMaker.Coffee.Latte_Server");
                 break;
-            case "Espresso":
-                c = cLoader.loadClass("coffee.EspressoServer");
+            case Espresso:
+                c = cLoader.loadClass("CoffeeMaker.Coffee.Espresso_Server");
                 break;
-            case "Cappuccino":
-                c = cLoader.loadClass("coffee.CappuccinoServer");
+            case Cappuccino:
+                c = cLoader.loadClass("CoffeeMaker.Coffee.Cappuccino_Server");
                 break;
         }
 
+        // set the coffee server's environment and start its program
         assert c != null;
+        current = (CoffeeServer_IF) c.newInstance();
+        current.setProgram(this);
+        current.start();
+    }
 
-        orderedCoffee = (CoffeeServer_IF)c.getDeclaredConstructor().newInstance();
-        orderedCoffee.setProgram(this);
-        orderedCoffee.start();
+    @Override
+    public void setCoffeeType(String str) throws ClassNotFoundException, IllegalAccessException, InstantiationException, IOException, NoSuchMethodException, InvocationTargetException {
+
     }
 
     @Override
