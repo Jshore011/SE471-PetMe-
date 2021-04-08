@@ -1,6 +1,8 @@
 package coffee;
-
+import condiments.Chocolate;
+import condiments.Cream;
 import condiments.Condiment_IF;
+import condiments.Vanilla;
 
 import java.io.File;
 import java.io.IOException;
@@ -13,33 +15,46 @@ import java.util.Scanner;
 
 public class CoffeeOS implements CoffeeOS_API {
     private CoffeeServer_IF current;
+    private CoffeeOS coffeeOS;
+
     public CoffeeOS(){
         current = null;
-        //Condiment_IF cream = new Cream();
-        //Condiment_IF vanilla = new Vanilla();
-        //Condiment_IF chocolate = new Chocolate();
+
         List<CoffeeServer_IF> transactions = new ArrayList<>();
     }
     //run's the program
-    public void run() throws IllegalAccessException, InstantiationException, ClassNotFoundException, IOException, NoSuchMethodException, InvocationTargetException {
+    public void run() throws IllegalAccessException, InstantiationException, ClassNotFoundException{
 
        String input = "";
        Scanner sc = new Scanner(System.in);
        System.out.println("What Kind of coffee Would you Like?\n");
+        System.out.println("Coffee Menu");
+        System.out.println("-----------");
+        System.out.println("[1] Regular");
+        System.out.println("[2] Mocha");
+        System.out.println("[3] Latte");
+        System.out.println("[4] Espresso");
+        System.out.println("[5] Cappuccino");
+        Scanner sc2 = new Scanner(System.in);
+        System.out.print("Enter selection: ");
+        int selection = sc2.nextInt();
+        System.out.println();
+
+        switch (selection) {
+            case 1 -> coffeeOS.setCoffeeType(CoffeeServer_IF.CoffeeType.Regular);
+            case 2 -> coffeeOS.setCoffeeType(CoffeeServer_IF.CoffeeType.Mocha);
+            case 3 -> coffeeOS.setCoffeeType(CoffeeServer_IF.CoffeeType.Latte);
+            case 4 -> coffeeOS.setCoffeeType(CoffeeServer_IF.CoffeeType.Espresso);
+            case 5 -> coffeeOS.setCoffeeType(CoffeeServer_IF.CoffeeType.Cappuccino);
+        }
+       System.out.println("What Kind of coffee Would you Like?\n");
        input = sc.nextLine();
-       setCoffeeType(input);
+
 
    }
 
-    public void setCoffeeType(CoffeeServer_IF.CoffeeType type) throws ClassNotFoundException, IllegalAccessException, InstantiationException, IOException, NoSuchMethodException, InvocationTargetException {
-
-        String compiledClassLocation = new File(".").getCanonicalPath();
-
-        System.out.println(compiledClassLocation);
-        URL[] classPath = {new File(compiledClassLocation).toURI().toURL()};
-        ClassLoader cLoader = new URLClassLoader(classPath);
-
-
+    public void setCoffeeType(CoffeeServer_IF.CoffeeType type) throws ClassNotFoundException, IllegalAccessException, InstantiationException{
+        ClassLoader cLoader = this.getClass().getClassLoader();
 
         Class c = null;
         switch (type) {
@@ -67,10 +82,7 @@ public class CoffeeOS implements CoffeeOS_API {
         current.start();
     }
 
-    @Override
-    public void setCoffeeType(String str) throws ClassNotFoundException, IllegalAccessException, InstantiationException, IOException, NoSuchMethodException, InvocationTargetException {
 
-    }
 
     @Override
     public void setGrindingTime(int secs)
@@ -93,6 +105,31 @@ public class CoffeeOS implements CoffeeOS_API {
     {
         System.out.println("Holding Temperature for %d seconds" + seconds);
         return seconds;
+    }
+    private void addCondiments() {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("\nAdd more condiments? [Y/N]: ");
+        String choice = sc.nextLine();
+
+        if (choice.equalsIgnoreCase("Y")) {
+            System.out.println("Condiments");
+            System.out.println("----------");
+            System.out.println("[1] Cream");
+            System.out.println("[2] Vanilla");
+            System.out.println("[3] Chocolate");
+
+            System.out.print("Enter selection: ");
+            int selection = sc.nextInt();
+
+            switch (selection) {
+                case 1 -> coffeeOS.addCondiment(new Cream());
+                case 2 -> coffeeOS.addCondiment(new Vanilla());
+                case 3 -> coffeeOS.addCondiment(new Chocolate());
+            }
+
+            // let user add more condiments if desired
+            addCondiments();
+        }
     }
     @Override
     public int wait(int seconds)

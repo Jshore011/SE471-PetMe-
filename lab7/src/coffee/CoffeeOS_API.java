@@ -9,7 +9,7 @@ import java.net.MalformedURLException;
 
 public interface CoffeeOS_API {
 
-    public void setCoffeeType(String str) throws ClassNotFoundException, IllegalAccessException, InstantiationException, IOException, NoSuchMethodException, InvocationTargetException;
+    public void setCoffeeType(CoffeeServer_IF.CoffeeType type) throws ClassNotFoundException, IllegalAccessException, InstantiationException, IOException, NoSuchMethodException, InvocationTargetException;
     public void setGrindingTime(int secs);
     public Condiment_IF addCondiment(Condiment_IF type);
     public void setTemperature(int degree);
