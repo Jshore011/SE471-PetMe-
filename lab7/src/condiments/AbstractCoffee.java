@@ -2,10 +2,10 @@ package condiments;
 
 import coffee.Coffee_IF;
 
-public abstract class Condiment_DecoratedCoffee implements Coffee_IF {
-    private Coffee_IF decoratedCoffee;
+public abstract class AbstractCoffee implements Coffee_IF {
+    private final Coffee_IF decoratedCoffee;
 
-    Condiment_DecoratedCoffee(Coffee_IF decoratedCoffee){
+    AbstractCoffee(Coffee_IF decoratedCoffee){
 
         this.decoratedCoffee=decoratedCoffee;
     }
