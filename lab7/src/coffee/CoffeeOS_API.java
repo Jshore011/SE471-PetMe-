@@ -1,10 +1,15 @@
-package condiments;
+package coffee;
 
 import coffee.CoffeeServer_IF;
+import condiments.Condiment_IF;
+
+import java.io.IOException;
+import java.lang.reflect.InvocationTargetException;
+import java.net.MalformedURLException;
 
 public interface CoffeeOS_API {
 
-    public void setCoffeeType(String str) throws ClassNotFoundException, IllegalAccessException, InstantiationException;
+    public void setCoffeeType(String str) throws ClassNotFoundException, IllegalAccessException, InstantiationException, IOException, NoSuchMethodException, InvocationTargetException;
     public void setGrindingTime(int secs);
     public Condiment_IF addCondiment(Condiment_IF type);
     public void setTemperature(int degree);

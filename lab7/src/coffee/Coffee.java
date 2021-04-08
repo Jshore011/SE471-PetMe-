@@ -1,8 +1,11 @@
-package condiments;
+package coffee;
+
+import coffee.Coffee_IF;
+import condiments.Condiment_IF;
 
 import java.util.List;
 
-public class Coffee implements Coffee_IF{
+public class Coffee implements Coffee_IF {
     private List<Condiment_IF> condiments;
     private String type;
     private double price;

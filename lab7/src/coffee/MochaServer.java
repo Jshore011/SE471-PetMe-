@@ -1,6 +1,5 @@
 package coffee;
 
-import condiments.CoffeeOS_API;
 import condiments.Condiment_IF;
 
 public class MochaServer {

@@ -1,7 +1,5 @@
 package coffee;
 
-import condiments.CoffeeOS_API;
-
 public class EspressoServer {
     private CoffeeOS_API program;
     //returns the name of the program

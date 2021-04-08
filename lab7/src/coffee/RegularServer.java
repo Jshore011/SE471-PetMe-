@@ -1,8 +1,6 @@
 package coffee;
 
-import condiments.CoffeeOS_API;
-
-public abstract class RegularServer extends CoffeeServer{
+public class RegularServer {
     private CoffeeOS_API program;
     //returns the name of the program
     public String getName()

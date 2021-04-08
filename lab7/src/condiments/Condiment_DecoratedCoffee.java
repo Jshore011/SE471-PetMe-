@@ -1,6 +1,8 @@
 package condiments;
 
-public abstract class Condiment_DecoratedCoffee implements Coffee_IF{
+import coffee.Coffee_IF;
+
+public abstract class Condiment_DecoratedCoffee implements Coffee_IF {
     private Coffee_IF decoratedCoffee;
 
     Condiment_DecoratedCoffee(Coffee_IF decoratedCoffee){

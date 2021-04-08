@@ -1,11 +1,15 @@
 package condiments;
 
 
+import coffee.CoffeeOS;
+
+import java.io.IOException;
+import java.lang.reflect.InvocationTargetException;
 import java.util.Scanner;
 
 public class CMM {
 
-    public static void main(String[] args) throws IllegalAccessException, ClassNotFoundException, InstantiationException {
+    public static void main(String[] args) throws IllegalAccessException, ClassNotFoundException, InstantiationException, IOException, NoSuchMethodException, InvocationTargetException {
         CoffeeOS coffeeMachine = new CoffeeOS();
 
 

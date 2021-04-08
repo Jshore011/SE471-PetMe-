@@ -1,18 +1,28 @@
-package condiments;
+package coffee;
 
-import coffee.CoffeeServer_IF;
+import condiments.Condiment_IF;
 
+import java.io.File;
+import java.io.IOException;
+import java.lang.reflect.InvocationTargetException;
+import java.net.URL;
 import java.net.URLClassLoader;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
-public class CoffeeOS implements CoffeeOS_API{
+public class CoffeeOS implements CoffeeOS_API {
     private CoffeeServer_IF orderedCoffee;
-    Condiment_IF cream = new Cream();
-    Condiment_IF vanilla = new Vanilla();
-    Condiment_IF chocolate = new Chocolate();
+    //Condiment_IF cream = new Cream();
+    //Condiment_IF vanilla = new Vanilla();
+    //Condiment_IF chocolate = new Chocolate();
+    private List<CoffeeServer_IF> transactions;
+    public CoffeeOS(){
 
+        transactions = new ArrayList<>();
+    }
     //run's the program
-    public void run() throws IllegalAccessException, InstantiationException, ClassNotFoundException {
+    public void run() throws IllegalAccessException, InstantiationException, ClassNotFoundException, IOException, NoSuchMethodException, InvocationTargetException {
 
        String input = "";
        Scanner sc = new Scanner(System.in);
@@ -23,8 +33,15 @@ public class CoffeeOS implements CoffeeOS_API{
    }
 
     @Override
-    public void setCoffeeType(String str)throws ClassNotFoundException, IllegalAccessException, InstantiationException {
-        ClassLoader cLoader = this.getClass().getClassLoader();
+    public void setCoffeeType(String str) throws ClassNotFoundException, IllegalAccessException, InstantiationException, IOException, NoSuchMethodException, InvocationTargetException {
+
+        String compiledClassLocation = new File(".").getCanonicalPath();
+
+        System.out.println(compiledClassLocation);
+        URL[] classPath = {new File(compiledClassLocation).toURI().toURL()};
+        ClassLoader cLoader = new URLClassLoader(classPath);
+
+
 
         Class c = null;
         switch (str) {
@@ -47,7 +64,7 @@ public class CoffeeOS implements CoffeeOS_API{
 
         assert c != null;
 
-        orderedCoffee = (CoffeeServer_IF) c.newInstance();
+        orderedCoffee = (CoffeeServer_IF)c.getDeclaredConstructor().newInstance();
         orderedCoffee.setProgram(this);
         orderedCoffee.start();
     }

@@ -1,6 +1,6 @@
 package condiments;
 
-import java.util.List;
+import coffee.Coffee_IF;
 
 public abstract class CoffeeWithCream extends Condiment_DecoratedCoffee {
     private Condiment_IF condiment;

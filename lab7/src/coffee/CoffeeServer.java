@@ -7,7 +7,7 @@ public abstract class CoffeeServer implements CoffeeServer_IF{
         this.program = program;
     }
 
-    protected CoffeeServer_IF getProgram()
+    public CoffeeServer_IF getProgram()
     {
         return program;
     }
