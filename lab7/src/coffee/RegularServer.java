@@ -1,13 +1,21 @@
 package coffee;
 
-public class RegularServer {
-    private CoffeeOS_API program;
-    //returns the name of the program
-    public String getName()
-    {
-        return "Regular Coffee";
-    }
+import condiments.*;
 
+import java.util.List;
+
+public class RegularServer extends CoffeeServer {
+    private CoffeeOS_API program;
+    private Coffee_IF coffee;
+
+    public RegularServer(){
+        program=null;
+        coffee=new Coffee("Regular");
+    }
+public void setProgram(CoffeeOS_API program)
+    {
+        this.program=program;
+    }
 
     //starts the Regular Coffee program
     public void start()
@@ -24,4 +32,23 @@ public class RegularServer {
         program.wait(15);
         program.setPowerLED(0);
     }
+
+    public void addCondiment(Condiment_IF condiment)
+    {
+        System.out.println("Adding " + "...");
+
+        if (condiment instanceof Cream) {
+            coffee = new CoffeeWithCream(coffee, condiment);
+        } else if (condiment instanceof Vanilla) {
+            coffee = new CoffeeWithVanilla(coffee, condiment);
+        } else if (condiment instanceof Chocolate) {
+            coffee = new CoffeeWithChocolate(coffee, condiment) {
+
+            };
+        }
+    }
+    public Coffee_IF getCoffee() {
+        return coffee;
+    }
+}
 }

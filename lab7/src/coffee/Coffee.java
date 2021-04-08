@@ -10,6 +10,9 @@ public class Coffee implements Coffee_IF {
     private String type;
     private double price;
 
+    public Coffee(String coffee) {
+    }
+
     @Override
     public double getPrice(){
         return price;
