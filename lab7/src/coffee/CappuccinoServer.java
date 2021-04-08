@@ -2,7 +2,7 @@ package coffee;
 
 import condiments.Condiment_IF;
 
-public class CappuccinoServer  implements CoffeeServer_IF{
+public class CappuccinoServer implements CoffeeServer_IF{
     private CoffeeOS_API program;
     private Coffee_IF coffee;
 

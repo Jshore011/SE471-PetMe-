@@ -35,7 +35,7 @@ public void setProgram(CoffeeOS_API program)
 
     public void addCondiment(Condiment_IF condiment)
     {
-        System.out.println("Adding " + condiment.getType()"...");
+        System.out.println("Adding " + condiment.getType()+"...");
 
         if (condiment instanceof Cream) {
             coffee = new CoffeeWithCream(coffee, condiment);
