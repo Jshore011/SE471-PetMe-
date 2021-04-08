@@ -1,6 +1,6 @@
 package condiments;
 
-public class Vanilla implements Condiment_IF {
+public abstract class Vanilla implements Condiment_IF {
     private final String type;
     private final double price;
 

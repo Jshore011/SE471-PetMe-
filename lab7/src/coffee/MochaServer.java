@@ -1,8 +1,8 @@
 package coffee;
 
-import condiments.Condiment_IF;
+import condiments.*;
 
-public class MochaServer implements CoffeeServer_IF{
+public abstract class MochaServer implements CoffeeServer_IF{
     private CoffeeOS_API program;
     private Coffee_IF coffee;
     //returns the name of the program
@@ -34,11 +34,11 @@ public class MochaServer implements CoffeeServer_IF{
         System.out.println("Adding " + condiment.getType() + "...");
 
         if (condiment instanceof Cream) {
-            coffee = new Coffee_With_Cream(coffee, condiment);
+            coffee = new CoffeeWithCream(coffee, condiment);
         } else if (condiment instanceof Vanilla) {
-            coffee = new Coffee_With_Vanilla(coffee, condiment);
+            coffee = new CoffeeWithVanilla(coffee, condiment);
         } else if (condiment instanceof Chocolate) {
-            coffee = new Coffee_With_Chocolate(coffee, condiment);
+            coffee = new CoffeeWithChocolate(coffee, condiment);
         }
     }
 

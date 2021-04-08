@@ -2,7 +2,7 @@ package coffee;
 
 import condiments.*;
 
-public class LatteServer implements CoffeeServer_IF{
+public abstract class LatteServer implements CoffeeServer_IF{
     private CoffeeOS_API program;
     private Coffee_IF coffee;
     //returns the name of the program

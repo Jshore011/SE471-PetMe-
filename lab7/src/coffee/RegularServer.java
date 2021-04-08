@@ -4,7 +4,7 @@ import condiments.*;
 
 import java.util.List;
 
-public class RegularServer implements CoffeeServer_IF {
+public abstract class RegularServer implements CoffeeServer_IF {
     private CoffeeOS_API program;
     private Coffee_IF coffee;
 

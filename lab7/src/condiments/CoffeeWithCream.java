@@ -2,11 +2,11 @@ package condiments;
 
 import coffee.Coffee_IF;
 
-public abstract class CoffeeWithCream extends AbstractCoffee {
+public class CoffeeWithCream extends AbstractCoffee {
     private Condiment_IF condiment;
     private Coffee_IF decoratedCoffee;
 
-    CoffeeWithCream(Coffee_IF decoratedCoffee, Condiment_IF condiment) {
+    public CoffeeWithCream(Coffee_IF decoratedCoffee, Condiment_IF condiment) {
         super(decoratedCoffee);
         this.decoratedCoffee=decoratedCoffee;
         this.condiment = condiment;
