@@ -2,10 +2,9 @@ package coffee;
 
 import condiments.Condiment_IF;
 
-public class MochaServer {
+public class MochaServer implements CoffeeServer_IF{
     private CoffeeOS_API program;
-    private Condiment_IF cream;
-    private Condiment_IF vanilla;
+    private Coffee_IF coffee;
     //returns the name of the program
     public String getName()
     {
@@ -24,10 +23,30 @@ public class MochaServer {
       program.setTemperature(200);
       program.holdTemperature(5);
         //  4. Add cream and vanilla once.
-        program.addCondiment(cream);
-        program.addCondiment(vanilla);
+        System.out.println("adding Cream...");
+        System.out.println("adding Vanilla...");
       //  5. After 15 seconds, set the LED to indicate the machine is not running.
         program.wait(15);
         program.setPowerLED(0);
+    }
+    @Override
+    public void addCondiment(Condiment_IF condiment) {
+        System.out.println("Adding " + condiment.getType() + "...");
+
+        if (condiment instanceof Cream) {
+            coffee = new Coffee_With_Cream(coffee, condiment);
+        } else if (condiment instanceof Vanilla) {
+            coffee = new Coffee_With_Vanilla(coffee, condiment);
+        } else if (condiment instanceof Chocolate) {
+            coffee = new Coffee_With_Chocolate(coffee, condiment);
+        }
+    }
+
+    /*
+     * Returns the coffee being produced by the server
+     */
+    @Override
+    public Coffee_IF getCoffee() {
+        return coffee;
     }
 }

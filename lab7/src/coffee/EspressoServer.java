@@ -1,13 +1,16 @@
 package coffee;
 
-public class EspressoServer {
+public class EspressoServer implements CoffeeServer_IF{
     private CoffeeOS_API program;
-    //returns the name of the program
-    public String getName()
-    {
-        return "Espresso";
-    }
+    private Coffee_IF coffee;
 
+    public EspressoServer() {
+        program = null;
+        coffee = new Coffee("Espresso");
+    }
+    public void setEnvironment(CoffeeOS_API program) {
+        this.program = program;
+    }
     //starts the Espresso program
     public void start()
     {
@@ -22,5 +25,21 @@ public class EspressoServer {
         // 4. After 10 seconds, set the LED to indicate the machine is not running.
         program.wait(10);
         program.setPowerLED(0);
+    }
+
+    public void addCondiment(Condiment_IF condiment) {
+        System.out.println("Adding " + condiment.getType() + "...");
+
+        if (condiment instanceof Cream) {
+            coffee = new Coffee_With_Cream(coffee, condiment);
+        } else if (condiment instanceof Vanilla) {
+            coffee = new Coffee_With_Vanilla(coffee, condiment);
+        } else if (condiment instanceof Chocolate) {
+            coffee = new Coffee_With_Chocolate(coffee, condiment);
+        }
+    }
+
+    public Coffee_IF getCoffee() {
+        return coffee;
     }
 }

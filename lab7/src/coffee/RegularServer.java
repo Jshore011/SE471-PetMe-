@@ -4,7 +4,7 @@ import condiments.*;
 
 import java.util.List;
 
-public class RegularServer extends CoffeeServer {
+public class RegularServer implements CoffeeServer_IF {
     private CoffeeOS_API program;
     private Coffee_IF coffee;
 
@@ -35,7 +35,7 @@ public void setProgram(CoffeeOS_API program)
 
     public void addCondiment(Condiment_IF condiment)
     {
-        System.out.println("Adding " + "...");
+        System.out.println("Adding " + condiment.getType()"...");
 
         if (condiment instanceof Cream) {
             coffee = new CoffeeWithCream(coffee, condiment);
@@ -51,4 +51,4 @@ public void setProgram(CoffeeOS_API program)
         return coffee;
     }
 }
-}
+

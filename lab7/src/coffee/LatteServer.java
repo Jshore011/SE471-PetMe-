@@ -1,13 +1,16 @@
 package coffee;
 
-public class LatteServer {
+public class LatteServer implements CoffeeServer_IF{
     private CoffeeOS_API program;
+    private Coffee_IF coffee;
     //returns the name of the program
-    public String getName()
-    {
-        return "Latte";
+    public LatteServer() {
+        program = null;
+        coffee = new Coffee("Latte");
     }
-
+    public void setEnvironment(CoffeeOS_API program) {
+        this.program = program;
+    }
     //starts the Latte program
     public void start()
     {
@@ -22,5 +25,19 @@ public class LatteServer {
         // 4. After 10 seconds, set the LED to indicate the machine is not running.
         program.wait(10);
         program.setPowerLED(0);
+    }
+    public void addCondiment(Condiment_IF condiment) {
+        System.out.println("Adding " + condiment.getType() + "...");
+
+        if (condiment instanceof Cream) {
+            coffee = new Coffee_With_Cream(coffee, condiment);
+        } else if (condiment instanceof Vanilla) {
+            coffee = new Coffee_With_Vanilla(coffee, condiment);
+        } else if (condiment instanceof Chocolate) {
+            coffee = new Coffee_With_Chocolate(coffee, condiment);
+        }
+    }
+    public Coffee_IF getCoffee() {
+        return coffee;
     }
 }

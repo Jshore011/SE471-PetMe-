@@ -2,14 +2,13 @@ package coffee;
 
 import condiments.Condiment_IF;
 
-public class CappuccinoServer  {
+public class CappuccinoServer  implements CoffeeServer_IF{
     private CoffeeOS_API program;
-    private Condiment_IF chocolate;
+    private Coffee_IF coffee;
 
-    //returns the name of the program
-    public String getName()
-    {
-        return "Cappuccino";
+    public CappuccinoServer() {
+        program = null;
+        coffee = new Coffee("Cappuccino");
     }
 
     //starts the cappuccino program
@@ -24,11 +23,27 @@ public class CappuccinoServer  {
         program.setTemperature(190);
         program.holdTemperature(5);
         //  4. Add chocolate twice.
-        program.addCondiment(chocolate);
-        program.addCondiment(chocolate);
+        System.out.println("Adding Chocolate...");
         //  5. After 20 seconds, set the LED to indicate the machine is not running.
         program.wait(20);
         program.setPowerLED(0);
 
+    }
+
+    public void addCondiment(Condiment_IF condiment) {
+        System.out.println("Adding " + condiment.getType() + "...");
+
+        if (condiment instanceof Cream) {
+            coffee = new Coffee_With_Cream(coffee, condiment);
+        } else if (condiment instanceof Vanilla) {
+            coffee = new Coffee_With_Vanilla(coffee, condiment);
+        } else if (condiment instanceof Chocolate) {
+            coffee = new Coffee_With_Chocolate(coffee, condiment);
+        }
+    }
+
+    @Override
+    public Coffee_IF getCoffee() {
+        return coffee;
     }
 }
