@@ -44,19 +44,19 @@ public class CoffeeOS implements CoffeeOS_API {
         Class c = null;
         switch (type) {
             case Regular:
-                c = cLoader.loadClass("CoffeeMaker.Coffee.Regular_Server");
+                c = cLoader.loadClass("coffee.RegularServer");
                 break;
             case Mocha:
-                c = cLoader.loadClass("CoffeeMaker.Coffee.Mocha_Server");
+                c = cLoader.loadClass("coffee.MochaServer");
                 break;
             case Latte:
-                c = cLoader.loadClass("CoffeeMaker.Coffee.Latte_Server");
+                c = cLoader.loadClass("coffee.LatteServer");
                 break;
             case Espresso:
-                c = cLoader.loadClass("CoffeeMaker.Coffee.Espresso_Server");
+                c = cLoader.loadClass("coffee.EspressoServer");
                 break;
             case Cappuccino:
-                c = cLoader.loadClass("CoffeeMaker.Coffee.Cappuccino_Server");
+                c = cLoader.loadClass("coffee.CappuccinoServer");
                 break;
         }
 
