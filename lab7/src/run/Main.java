@@ -1,12 +1,13 @@
-package CoffeeMachine;
+package run;
+
+
 
 import java.util.Scanner;
 
-
-public class CMM{
+public class Main {
     public static void main(String[] args) throws IllegalAccessException, InstantiationException, ClassNotFoundException {
         // create a new instance of a CoffeeMachine
-        Brewing coffeeMachine = new Brewing();
+        Brewer coffeeMachine = new Brewer();
 
         // do this until the user decides to quit the program
         while (true) {
@@ -25,4 +26,4 @@ public class CMM{
         }
     }
 }
-
+}

@@ -7,6 +7,5 @@ public interface Condiment_IF {
     public String getType();
 
     String returnType();
-
     double returnPrice();
 }

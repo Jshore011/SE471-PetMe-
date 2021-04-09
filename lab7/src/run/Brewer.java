@@ -1,11 +1,14 @@
-package CoffeeMachine;
+package run;
 
-import coffee.*;
+import coffee.Coffee_IF;
+import coffee.CoffeeServer_IF;
 import condiments.*;
+
+import java.io.IOException;
+import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.Scanner;
-
-public class Brewing {
+public class Brewer {
     private CoffeeOS coffeeOS;
     private ArrayList<Coffee_IF> salesrecord;
     private ArrayList<Double> pricerecord;
@@ -13,13 +16,16 @@ public class Brewing {
     /*
      * Constructor
      */
-    public Brewing() {
+    public Brewer() {
         coffeeOS = new CoffeeOS();
         salesrecord = new ArrayList<>();
         pricerecord = new ArrayList<>();
     }
 
-    public void run() throws IllegalAccessException, ClassNotFoundException, InstantiationException {
+    /*
+     * Beings the coffee machine
+     */
+    public void run() throws IllegalAccessException, ClassNotFoundException, InstantiationException, NoSuchMethodException, IOException, InvocationTargetException {
         displayMenu();
         begin();
         selectCondiments();
@@ -42,18 +48,18 @@ public class Brewing {
     /*
      * Takes in user input and sets the chosen coffee type
      */
-    private void begin() throws IllegalAccessException, InstantiationException, ClassNotFoundException {
+    private void begin() throws IllegalAccessException, InstantiationException, ClassNotFoundException, NoSuchMethodException, IOException, InvocationTargetException {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter selection: ");
         int selection = sc.nextInt();
         System.out.println();
 
         switch (selection) {
-            case 1 -> coffeeOS.setChosenCoffeeType(CoffeeServer_IF.CoffeeType.Regular);
-            case 2 -> coffeeOS.setChosenCoffeeType(CoffeeServer_IF.CoffeeType.Mocha);
-            case 3 -> coffeeOS.setChosenCoffeeType(CoffeeServer_IF.CoffeeType.Latte);
-            case 4 -> coffeeOS.setChosenCoffeeType(CoffeeServer_IF.CoffeeType.Espresso);
-            case 5 -> coffeeOS.setChosenCoffeeType(CoffeeServer_IF.CoffeeType.Cappuccino);
+            case 1 -> coffeeOS.setCoffeeType(CoffeeServer_IF.CoffeeType.Regular);
+            case 2 -> coffeeOS.setCoffeeType(CoffeeServer_IF.CoffeeType.Mocha);
+            case 3 -> coffeeOS.setCoffeeType(CoffeeServer_IF.CoffeeType.Latte);
+            case 4 -> coffeeOS.setCoffeeType(CoffeeServer_IF.CoffeeType.Espresso);
+            case 5 -> coffeeOS.setCoffeeType(CoffeeServer_IF.CoffeeType.Cappuccino);
         }
     }
 
@@ -116,6 +122,4 @@ public class Brewing {
                     + String.format("%.2f", pricerecord.get(i)));
         }
     }
-
 }
-

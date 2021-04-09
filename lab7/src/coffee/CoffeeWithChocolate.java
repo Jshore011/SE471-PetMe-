@@ -1,7 +1,6 @@
 package coffee;
 
-import coffee.AbstractCoffee;
-import coffee.Coffee_IF;
+
 import condiments.Condiment_IF;
 
 public class CoffeeWithChocolate extends AbstractCoffee {

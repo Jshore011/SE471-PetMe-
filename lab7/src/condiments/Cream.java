@@ -1,6 +1,6 @@
 package condiments;
 
-public class Cream implements Condiment_IF {
+public abstract class Cream implements Condiment_IF {
     private final String type;
     private final double price;
 
@@ -8,6 +8,7 @@ public class Cream implements Condiment_IF {
         price = 0.25;
         type = "Cream";
     }
+
 
     public String returnType() {
         return null;
@@ -26,5 +27,6 @@ public class Cream implements Condiment_IF {
     public String getType() {
         return type;
     }
+
 
 }

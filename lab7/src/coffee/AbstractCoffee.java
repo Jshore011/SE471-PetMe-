@@ -1,29 +1,22 @@
 package coffee;
 
+import coffee.Coffee_IF;
+
 public abstract class AbstractCoffee implements Coffee_IF {
-    private Coffee_IF decoratee;
+    private final Coffee_IF decoratedCoffee;
 
-    /*
-     * Constructor
-     */
-    public AbstractCoffee(Coffee_IF decoratee) {
-        this.decoratee = decoratee;
+    AbstractCoffee(Coffee_IF decoratedCoffee){
+
+        this.decoratedCoffee=decoratedCoffee;
     }
-
-    /*
-     * Returns the decoratee's type
-     */
-    @Override
-    public String getType() {
-        return decoratee.getType();
+    public String getType()
+    {
+        return decoratedCoffee.getType();
     }
-
-    /*
-     * Returns the decoratee's price
-     */
     @Override
     public double getPrice() {
-        return decoratee.getPrice();
+        return decoratedCoffee.getPrice();
     }
+
 
 }

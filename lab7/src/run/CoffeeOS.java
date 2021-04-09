@@ -1,19 +1,25 @@
-package CoffeeMachine;
+package run;
 
 import coffee.*;
-import condiments.*;
+import condiments.Condiment_IF;
 
 public class CoffeeOS implements CoffeeOS_API {
-    private CoffeeServer_IF current;
+    private CoffeeServer_IF currentCoffee;
     private char[] LED;
 
+    /*
+     * Constructor
+     */
     public CoffeeOS() {
-        current = null;
+        currentCoffee = null;
         LED = new char[]{'1', '0'};
     }
 
-    @Override
-    public void setChosenCoffeeType(CoffeeServer_IF.CoffeeType type) throws ClassNotFoundException, IllegalAccessException, InstantiationException {
+    /*
+     * Sets the coffee server program appropriately
+     */
+
+    public void setCoffeeType(CoffeeServer_IF.CoffeeType type) throws ClassNotFoundException, IllegalAccessException, InstantiationException {
         //String compiledClassLocation = new File(".").getCanonicalPath();
         //System.out.println(compiledClassLocation);
         //URL[] classPath = { new File(compiledClassLocation).toURI().toURL() };
@@ -32,21 +38,21 @@ public class CoffeeOS implements CoffeeOS_API {
                 c = cLoader.loadClass("coffee.MochaServer");
                 break;
             case Latte:
-                c = cLoader.loadClass("coffee.LatteServer");
+                c = cLoader.loadClass("coffee.Latte_Server");
                 break;
             case Espresso:
-                c = cLoader.loadClass("coffee.EspressoServer");
+                c = cLoader.loadClass("coffee.Espresso_Server");
                 break;
             case Cappuccino:
-                c = cLoader.loadClass("coffee.CappuccinoServer");
+                c = cLoader.loadClass("coffee.Cappuccino_Server");
                 break;
         }
 
         // set the coffee server's environment and start its program
         assert c != null;
-        current = (CoffeeServer_IF)c.newInstance();
-        current.setEnvironment(this);
-        current.start();
+        currentCoffee = (CoffeeServer_IF) c.newInstance();
+        currentCoffee.setProgram(this);
+        currentCoffee.start();
     }
 
     /*
@@ -62,7 +68,7 @@ public class CoffeeOS implements CoffeeOS_API {
      */
     @Override
     public void addCondiment(Condiment_IF type) {
-        current.addCondiment(type);
+        currentCoffee.addCondiment(type);
     }
 
     /*
@@ -129,15 +135,15 @@ public class CoffeeOS implements CoffeeOS_API {
     @Override
     public double computePrice(Coffee_IF cif) {
         double coffeeBasePrice = 0.00;
-        if (current instanceof RegularServer)
+        if (currentCoffee instanceof RegularServer)
             coffeeBasePrice = 1.00;
-        else if (current instanceof MochaServer)
+        else if (currentCoffee instanceof MochaServer)
             coffeeBasePrice = 2.00;
-        else if (current instanceof LatteServer)
+        else if (currentCoffee instanceof LatteServer)
             coffeeBasePrice = 3.00;
-        else if (current instanceof EspressoServer)
+        else if (currentCoffee instanceof EspressoServer)
             coffeeBasePrice = 4.00;
-        else if (current instanceof CappuccinoServer)
+        else if (currentCoffee instanceof CappuccinoServer)
             coffeeBasePrice = 5.00;
 
         return cif.getPrice() + coffeeBasePrice;
@@ -148,14 +154,13 @@ public class CoffeeOS implements CoffeeOS_API {
      */
     @Override
     public Coffee_IF done() {
-        return current.getCoffee();
+        return currentCoffee.getCoffee();
     }
 
     /*
      * Returns the current CoffeeServerIF object
      */
     public CoffeeServer_IF getCurrentCoffeeServer() {
-        return current;
+        return currentCoffee;
     }
-
 }

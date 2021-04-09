@@ -1,48 +1,34 @@
 package coffee;
 
-import CoffeeMachine.CoffeeOS_API;
 import condiments.*;
+import run.CoffeeOS_API;
 
-public class LatteServer implements CoffeeServer_IF {
+public abstract class LatteServer implements CoffeeServer_IF{
     private CoffeeOS_API program;
     private Coffee_IF coffee;
-
-    /*
-     * Constructor
-     */
+    //returns the name of the program
     public LatteServer() {
         program = null;
         coffee = new Coffee("Latte");
     }
-
-    /*
-     * Sets the environment (CoffeeOS)
-     */
-    @Override
     public void setEnvironment(CoffeeOS_API program) {
         this.program = program;
     }
-
-    /*
-     * Starts the server's program (makes the coffee)
-     */
-    @Override
-    public void start() {
-        // Indicate the machine is running and display the purchased type of coffee to LED
-        program.setPowerLED(0);                     // indicate machine is on
-        program.setTypeLED(3);                      // 3 represents a Latte coffee
-        program.setGrindingTime(14);                // time in seconds
-        program.setTemperature(185);                // degrees F
-        program.holdTemperature(3);         // time in seconds
-        System.out.println("Adding Cream...");  // add condiment
-        program.wait(20);                   // time in seconds
-        program.setPowerLED(1);                     // indicate machine is no longer running
+    //starts the Latte program
+    public void start()
+    {
+        //1. Indicate the machine as running and display the purchased type of coffee to LED.
+       program.setPowerLED(1);
+        program.setTypeLED(3);
+        // 2. Grind coffee beans for 9 seconds.
+        program.setGrindingTime(9);
+        // 3. Heat up the water to 175 degree F and hold the temperature for 3 seconds.
+        program.setTemperature(175);
+        program.holdTemperature(3);
+        // 4. After 10 seconds, set the LED to indicate the machine is not running.
+        program.wait(10);
+        program.setPowerLED(0);
     }
-
-    /*
-     * Adds the desired condiment to the current coffee (make a new decorated object)
-     */
-
     public void addCondiment(Condiment_IF condiment) {
         System.out.println("Adding " + condiment.getType() + "...");
 
@@ -54,11 +40,6 @@ public class LatteServer implements CoffeeServer_IF {
             coffee = new CoffeeWithChocolate(coffee, condiment);
         }
     }
-
-    /*
-     * Returns the coffee being produced by the server
-     */
-    @Override
     public Coffee_IF getCoffee() {
         return coffee;
     }
