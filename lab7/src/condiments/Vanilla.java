@@ -6,25 +6,24 @@ public class Vanilla implements Condiment_IF {
 
     public Vanilla() {
         price = 0.50;
-        type = "Chocolate";
+        type = "Vanilla";
     }
 
-    @Override
-    public double getPrice() {
+    public String returnType() {
+        return null;
+    }
+
+    public double returnPrice() {
         return 0;
     }
 
     @Override
-    public String getType() {
-        return null;
+    public double getPrice() {
+        return price;
     }
 
     @Override
-    public String returnType() {
+    public String getType() {
         return type;
-    }
-    @Override
-    public double returnPrice(){
-        return price;
     }
 }

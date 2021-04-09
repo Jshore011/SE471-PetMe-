@@ -42,6 +42,7 @@ public class RegularServer implements CoffeeServer_IF {
      * Adds the desired condiment to the current coffee (make a new decorated object)
      */
     public void addCondiment(Condiment_IF condiment) {
+
         System.out.println("Adding " + condiment.getType() + "...");
 
         if (condiment instanceof Cream) {

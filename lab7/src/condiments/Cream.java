@@ -9,22 +9,22 @@ public class Cream implements Condiment_IF {
         type = "Cream";
     }
 
-    @Override
-    public double getPrice() {
+    public String returnType() {
+        return null;
+    }
+
+    public double returnPrice() {
         return 0;
     }
 
     @Override
-    public String getType() {
-        return null;
-    }
-
-    //@Override
-    public String returnType() {
-        return type;
-    }
-    //@Override
-    public double returnPrice(){
+    public double getPrice() {
         return price;
     }
+
+    @Override
+    public String getType() {
+        return type;
+    }
+
 }
