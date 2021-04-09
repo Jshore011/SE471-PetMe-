@@ -11,20 +11,20 @@ public class Cream implements Condiment_IF {
 
     @Override
     public double getPrice() {
-        return 0;
+        return price;
     }
 
     @Override
     public String getType() {
-        return null;
+        return type;
     }
 
     //@Override
     public String returnType() {
-        return type;
+        return null;
     }
     //@Override
     public double returnPrice(){
-        return price;
+        return 0;
     }
 }
