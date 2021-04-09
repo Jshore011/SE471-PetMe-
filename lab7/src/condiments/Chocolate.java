@@ -8,22 +8,23 @@ public class Chocolate implements Condiment_IF {
         price = 1.00;
         type = "Chocolate";
     }
-    public String returnType() {
-        return null;
-    }
 
-    public double returnPrice() {
+    @Override
+    public double getPrice() {
         return 0;
     }
 
     @Override
-    public double getPrice() {
-        return price;
+    public String getType() {
+        return null;
     }
 
     @Override
-    public String getType() {
+    public String returnType() {
         return type;
     }
-
+    @Override
+    public double returnPrice(){
+        return price;
+    }
 }
