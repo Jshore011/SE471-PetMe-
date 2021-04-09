@@ -1,10 +1,8 @@
-package coffee;
+package condiments;
 
-import coffee.AbstractCoffee;
 import coffee.Coffee_IF;
-import condiments.Condiment_IF;
 
-public class CoffeeWithVanilla extends AbstractCoffee {
+public class CoffeeWithVanilla extends AbstractCoffee{
     private Condiment_IF condiment;
     private Coffee_IF decoratedCoffee
             ;
