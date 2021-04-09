@@ -1,6 +1,6 @@
 package condiments;
 
-public abstract class Vanilla implements Condiment_IF {
+public class Vanilla implements Condiment_IF {
     private final String type;
     private final double price;
 
@@ -9,12 +9,10 @@ public abstract class Vanilla implements Condiment_IF {
         type = "Vanilla";
     }
 
-
     @Override
     public double getPrice() {
         return price;
     }
-
 
     @Override
     public String getType() {
