@@ -67,10 +67,7 @@ public class CoffeeOS implements CoffeeOS_API {
         current.start();
     }
 
-    @Override
-    public void setCoffeeType(String str) throws ClassNotFoundException, IllegalAccessException, InstantiationException, IOException, NoSuchMethodException, InvocationTargetException {
 
-    }
 
     @Override
     public void setGrindingTime(int secs)

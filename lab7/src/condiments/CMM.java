@@ -10,7 +10,7 @@ import java.util.Scanner;
 public class CMM {
 
     public static void main(String[] args) throws IllegalAccessException, ClassNotFoundException, InstantiationException, IOException, NoSuchMethodException, InvocationTargetException {
-        CoffeeOS coffeeMachine = new CoffeeOS();
+        CoffeeOS coffeeMachine = new CoffeeOS()
 
 
                 String input = " ";
