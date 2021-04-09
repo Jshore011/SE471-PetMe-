@@ -10,14 +10,6 @@ public abstract class Cream implements Condiment_IF {
     }
 
 
-    public String returnType() {
-        return null;
-    }
-
-    public double returnPrice() {
-        return 0;
-    }
-
     @Override
     public double getPrice() {
         return price;

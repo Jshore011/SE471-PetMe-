@@ -9,13 +9,6 @@ public abstract class Chocolate implements Condiment_IF {
         type = "Chocolate";
     }
 
-    public String returnType() {
-        return null;
-    }
-
-    public double returnPrice() {
-        return 0;
-    }
 
     @Override
     public double getPrice() {
@@ -26,4 +19,12 @@ public abstract class Chocolate implements Condiment_IF {
         return type;
     }
 
+    //@Override
+    public String returnType() {
+        return null;
+    }
+    //@Override
+    public double returnPrice(){
+        return 0;
+    }
 }

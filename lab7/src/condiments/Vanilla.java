@@ -10,14 +10,6 @@ public abstract class Vanilla implements Condiment_IF {
     }
 
 
-    public String returnType() {
-        return null;
-    }
-
-    public double returnPrice() {
-        return 0;
-    }
-
     @Override
     public double getPrice() {
         return price;
@@ -27,5 +19,14 @@ public abstract class Vanilla implements Condiment_IF {
     @Override
     public String getType() {
         return type;
+    }
+
+    //@Override
+    public String returnType() {
+        return null;
+    }
+    //@Override
+    public double returnPrice(){
+        return 0;
     }
 }
