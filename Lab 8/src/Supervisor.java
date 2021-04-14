@@ -1,19 +1,23 @@
 import java.util.ArrayList;
 
+
 public class Supervisor  {
+
+public class Supervisor extends DirectAdministrator{
+
 	private String name;
-	private ArrayList<Employee> employeesList;
+	private ArrayList<Supervisor> employeesList;
 	private Manager manager;
 	
-	public Supervisor(String name, ArrayList<Employee> employeesList, Manager manager) {
+	public Supervisor(String name, ArrayList<Supervisor> employeesList, Manager manager) {
 		this.manager = manager;
 		this.name = name;
 		this.employeesList = employeesList;
 	}
 	
-	public void seeDanger() 
+	public void seeDanger(HReporter_IF r, Hazard h)
 	{
-		manager.seeDanger();
+		manager.seeDanger(r, h);
 		fixIt();
 	}
 	
@@ -25,11 +29,11 @@ public class Supervisor  {
 			employeesList.get(i).fixIt();
 		}
 	}
-	
-	public boolean getFeedback() 
+
+	public boolean getFeedback()
 	{
 		System.out.println("Feedback by "+name);
-		return true;
+		return false;
 	}
 	
 	public void evacuate() 

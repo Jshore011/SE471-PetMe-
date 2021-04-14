@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class Manager {
+public class Manager extends Administrator {
 	private String name;
 	private ArrayList<Supervisor> supervisorList;
 	private ArrayList<ProjectLeader> projectLeaderList;
@@ -14,7 +14,7 @@ public class Manager {
 	}
 	
 	@Override
-	void seeDanger(HReporter_IF r, Hazard h)
+	public void seeDanger(HReporter_IF r, Hazard h)
 	{
 		int trueCount = 0;
 		int falseCount = 0;
@@ -45,11 +45,11 @@ public class Manager {
 		
 		if(falseCount == 0)
 		{
-			ceo.seeDanger();
+			ceo.seeDanger(r, h);
 		}
 		
 	}
-	
+	@Override
 	public void evacuate() 
 	{
 		for(int i =0;i<supervisorList.size();i++) 
@@ -62,14 +62,6 @@ public class Manager {
 		}
 		System.out.println("The employee "+name+" is evacuating.");
 	}
-	
-	public Decision suggestDecision(Hazard h) 
-	{
-		if(h == Hazard.Water || h == Hazard.Electrcity) 
-		{
-			return Decision.FileReport;
-		}
-		return Decision.Evacuation;
-	}
+
 	
 }

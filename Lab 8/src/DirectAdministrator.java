@@ -1,2 +1,5 @@
-public class DirectAdministrator {
+public abstract class DirectAdministrator {
+    public boolean getFeedback() {
+        return false;
+    }
 }
