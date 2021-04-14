@@ -1,18 +1,18 @@
 import java.util.ArrayList;
 
-public class ProjectLeader {
+public class ProjectLeader extends Administrator{
 	private String name;
-	private ArrayList<Leads> leadsList;
+	private ArrayList<ProjectLeader> leadsList;
 	private Manager manager;
 	
-	public ProjectLeader(String name, ArrayList<Leads> leadsList, Manager manager) {
+	public ProjectLeader(String name, ArrayList<ProjectLeader> leadsList, Manager manager) {
 		this.name = name;
 		this.leadsList = leadsList;
 		this.manager = manager;
 	}
-	public void seeDanger() 
+	public void seeDanger(HReporter_IF r, Hazard h)
 	{
-		manager.seeDanger();
+		manager.seeDanger(r,h);
 		fixIt();
 	}
 	
