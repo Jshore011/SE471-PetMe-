@@ -1,32 +1,24 @@
 
 public class Employee {
 	private String name;
-    private Supervisor supervisor;
-	public Employee(String name, Supervisor supervisor) {
-		this.name = name;
-		this.supervisor = supervisor;
-	}
 	
-	public void seeDanger() 
+	public void seeDanger(HReporter_IF r, Hazard h)
 	{
-		supervisor.seeDanger();
+
 	}
-	
-	public void fixIt() 
-	{
-		System.out.println("The employee "+name+" is fixing it.");
-	}
-	
-	public boolean getFeedback() 
-	{
-		System.out.println("Feedback by "+name);
-		return true;
-	}
-	
-	
+
 	public void evacuate() 
 	{
-		System.out.println("The employee "+name+" is evacuating.");
+		System.out.println("The employee "+ name + "is evacuating.");
 	}
-	
+
+	// Getter
+	public String getDirectOverseer() {
+		return name;
+	}
+
+	// Setter
+	public void setDirectOverseer(String newName) {
+		this.name = newName;
+	}
 }
