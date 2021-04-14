@@ -1,5 +1,6 @@
 import java.util.ArrayList;
-import java.util.List;
+import java.util.Collections;
+import java.util.*;
 
 public class CEO extends Administrator {
 
@@ -8,12 +9,18 @@ public class CEO extends Administrator {
 	}
 
 	public void implementDecision(ArrayList<Decision> ds) {
-		//implement the first two decisions after sorting the list be priority
+		ds =sortByPriority(ds);
+		Decision d =ds.get(0);
+		d.execute(this);
+
+		d = ds.get(1);
+		d.execute(this);
 
 	}
 
 	private ArrayList<Decision> sortByPriority(ArrayList<Decision> ds) {
 		//need to add a sorting algo
+		Collections.sort(ds); //not sure about this
 		return ds;
 	}
 
