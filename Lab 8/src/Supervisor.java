@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class Supervisor {
+public class Supervisor  {
 	private String name;
 	private ArrayList<Employee> employeesList;
 	private Manager manager;
