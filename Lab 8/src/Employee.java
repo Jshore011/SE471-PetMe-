@@ -1,10 +1,16 @@
 
 public class Employee {
 	private String name;
-	
+	private Administrator overseer;
+
+	public Employee(String name, Administrator overseer)
+	{
+		this.name=name;
+		this.overseer=overseer;
+	}
 	public void seeDanger(HReporter_IF r, Hazard h)
 	{
-
+		r.seeDanger(r.getDirectOverseer(), h);
 	}
 
 	public void evacuate() 
