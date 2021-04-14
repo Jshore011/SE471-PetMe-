@@ -3,7 +3,7 @@ public abstract class Employee implements HReporter_IF{
 	private String name;
 
 	//private HReporter_IF overseer;
-	private Administrator overseer;
+	Administrator overseer;
 
 
 	public Employee(String name)
