@@ -11,5 +11,5 @@ public abstract class Decision {
 		this.hazard=hazard;
 	}
 
-	public abstract CEO execute(CEO commander);
+	public abstract void execute(CEO commander);
 }
