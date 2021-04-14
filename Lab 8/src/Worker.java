@@ -1,7 +1,10 @@
 public class Worker extends Employee{
 
 
-    public Worker(){}
+    public Worker(){
+        super();
+
+    }
     public void seeDanger(HReporter_IF r, Hazard h)
     {
 
