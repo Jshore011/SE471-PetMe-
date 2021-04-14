@@ -7,6 +7,6 @@ public class Manager extends Administrator {
 	}
 
 	public ArrayList<Decision> suggestDecisions(Hazard h) {
-		
+
 	}
 }

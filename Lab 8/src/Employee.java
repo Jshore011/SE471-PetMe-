@@ -18,8 +18,6 @@ public class Employee {
 		System.out.println("The employee "+ name + "is evacuating.");
 	}
 
-	public Employee() {
-	}
 
 	// Getter
 	public String getDirectOverseer() {
