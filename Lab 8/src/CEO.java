@@ -25,7 +25,7 @@ public class CEO extends Administrator {
 		ArrayList<Decision> decisions = new ArrayList<>();
 		for (Employee e : members) {
 			Manager m = (Manager) e;
-			m.suggestDecisions(h); ///this wouldn't work with append
+			decisions.add(m.suggestDecisions(h));
 		}
 		implementDecision(decisions);
 	}
