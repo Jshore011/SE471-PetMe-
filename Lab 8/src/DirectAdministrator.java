@@ -1,5 +1,5 @@
 public abstract class DirectAdministrator {
-    public void getFeedback() {
-
+    public boolean getFeedback() {
+        return false;
     }
 }
