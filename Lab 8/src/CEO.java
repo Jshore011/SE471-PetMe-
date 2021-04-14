@@ -19,7 +19,7 @@ public class CEO extends Administrator {
 	}
 
 	private ArrayList<Decision> sortByPriority(ArrayList<Decision> ds) {
-		//need to add a sorting algo
+
 		Collections.sort(ds); //not sure about this
 		return ds;
 	}
