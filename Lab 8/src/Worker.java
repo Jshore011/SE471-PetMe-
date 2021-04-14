@@ -11,7 +11,7 @@ public class Worker extends Employee{
 
     public void evacuate()
     {
-
+        System.out.println("The  worker employee is evacuating.");
     }
 
     public void fixIt()
