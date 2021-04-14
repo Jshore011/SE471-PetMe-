@@ -1,6 +1,6 @@
-import java.util.ArrayList;
 
-public class ProjectLeader extends Administrator{
+
+public class ProjectLeader extends DirectAdministrator{
 	public boolean getFeedback()
 	{
 		System.out.println("Feedback by Project Leader");

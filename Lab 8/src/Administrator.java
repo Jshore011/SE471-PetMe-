@@ -1,7 +1,8 @@
 public abstract class Administrator extends Employee{
+    private Employee members;
 
-
-    public Administrator() {
+    public Administrator(Employee members) {
+        this.members=members;
 
     }
 

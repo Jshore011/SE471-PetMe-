@@ -1,8 +1,6 @@
 public abstract class DirectAdministrator {
-
-    private boolean hasFeedback;
-
+    private boolean feedback = false;
     public boolean getFeedback() {
-        return false;
+        return feedback;
     }
 }

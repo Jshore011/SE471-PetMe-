@@ -1,5 +1,5 @@
 
-public class Employee {
+public abstract class Employee {
 	private String name;
 	private Administrator overseer;
 

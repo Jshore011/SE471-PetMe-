@@ -9,6 +9,7 @@ public class CEO extends Administrator{
 
 	public void implementDecision(ArrayList<Decision> ds)
 	{
+		//implement the first two decisions after sorting the list be priority
 
 	}
 
@@ -19,4 +20,9 @@ public class CEO extends Administrator{
 	}
 
 	public void report(){}
+
+	@Override
+	public void seeDanger(HReporter_IF r, Hazard h) {
+
+	}
 }
