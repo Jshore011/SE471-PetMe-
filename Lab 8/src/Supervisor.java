@@ -8,4 +8,8 @@ public class Supervisor extends DirectAdministrator{
 		return true;
 	}
 
+	@Override
+	public void seeDanger(HReporter_IF r, Hazard h) {
+
+	}
 }

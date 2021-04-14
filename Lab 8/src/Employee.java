@@ -1,31 +1,27 @@
 
-public abstract class Employee {
+public abstract class Employee implements HReporter_IF{
 	private String name;
-	private HReporter_IF overseer;
+	//private HReporter_IF overseer;
+	private Administrator overseer;
 
 	public Employee(String name)
 	{
 		this.name=name;
-
-	}
-	public abstract seeDanger(HReporter_IF r, Hazard h)
-	{
-		r.getDirectOverseer();
-
 	}
 
-	public abstract evacuate()
-	{
-		System.out.println("The employee "+ name + "is evacuating.");
+	public Employee() {
 	}
 
+	public abstract void seeDanger(HReporter_IF r, Hazard h);
+
+	public abstract void evacuate();
 
 	public HReporter_IF getDirectOverseer() {
 		return overseer;
 	}
 
 
-	public HReporter_IF setDirectOverseer(HReporter_IF overseer) {
-		return this.overseer;
+	public void setDirectOverseer(HReporter_IF overseer) {
+		setDirectOverseer(overseer);
 	}
 }
