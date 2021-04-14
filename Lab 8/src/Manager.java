@@ -4,9 +4,9 @@ public class Manager {
 	private String name;
 	private ArrayList<Supervisor> supervisorList;
 	private ArrayList<ProjectLeader> projectLeaderList;
-	private Ceo ceo;
+	private CEO ceo;
 	
-	public Manager(String name, ArrayList<Supervisor> supervisorList, ArrayList<ProjectLeader> projectLeaderList, Ceo ceo) {
+	public Manager(String name, ArrayList<Supervisor> supervisorList, ArrayList<ProjectLeader> projectLeaderList, CEO ceo) {
 		this.name = name;
 		this.supervisorList = supervisorList;
 		this.projectLeaderList = projectLeaderList;

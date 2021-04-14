@@ -1,11 +1,11 @@
 import java.util.ArrayList;
 
-public class Ceo {
+public class CEO {
 	private String name;
 	private ArrayList<Manager> managerList;
 	private ArrayList<Decision> decisionList;
 	
-	public Ceo(String name, ArrayList<Manager> managerList) {
+	public CEO(String name, ArrayList<Manager> managerList) {
 		this.name = name;
 		this.managerList = managerList;
 		decisionList = new ArrayList<Decision>();
