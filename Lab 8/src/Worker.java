@@ -6,9 +6,23 @@ public class Worker extends Employee{
     }
     @Override
     public void seeDanger(HReporter_IF r, Hazard h) {
+        if(r!=null)
+        {
+            fixIt();
+        }
+        else
+        {
+            fixIt();
+            getDirectOverseer().seeDanger(this, new Hazard("gas leak", "large tank", 5));
+        }
+    }
 
+    @Override
+    public void evacuate() {
+        this.evacuate();
+    }
 
-    public void evacuate() { }
-
-    public void fixIt(){ }
+    public void fixIt(){
+        System.out.println("The Employee is fixing it");
+    }
 }
