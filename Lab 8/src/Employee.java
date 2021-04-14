@@ -8,14 +8,17 @@ public class Employee {
 		this.name=name;
 		this.overseer=overseer;
 	}
-	public void seeDanger(HReporter_IF r, Hazard h)
+	public abstract seeDanger(HReporter_IF r, Hazard h)
 	{
 		r.seeDanger(r.getDirectOverseer(), h);
 	}
 
-	public void evacuate() 
+	public abstract evacuate()
 	{
 		System.out.println("The employee "+ name + "is evacuating.");
+	}
+
+	public Employee() {
 	}
 
 	// Getter

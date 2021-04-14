@@ -1,8 +1,8 @@
 public abstract class Administrator extends Employee{
 
 
-    public Administrator(String name, Administrator overseer) {
-        super(name, overseer);
+    public Administrator() {
+
     }
 
     public abstract void seeDanger(HReporter_IF r, Hazard h);
