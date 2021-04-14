@@ -13,8 +13,8 @@ public class Manager {
 		this.ceo = ceo;
 	}
 	
-	
-	void seeDanger() 
+	@Override
+	void seeDanger(HReporter_IF r, Hazard h)
 	{
 		int trueCount = 0;
 		int falseCount = 0;

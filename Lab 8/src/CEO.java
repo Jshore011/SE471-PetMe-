@@ -1,6 +1,7 @@
 import java.util.ArrayList;
+import java.util.List;
 
-public class CEO {
+public class CEO extends Administrator{
 	private String name;
 	private ArrayList<Manager> managerList;
 	private ArrayList<Decision> decisionList;
@@ -10,8 +11,9 @@ public class CEO {
 		this.managerList = managerList;
 		decisionList = new ArrayList<Decision>();
 	}
-	
-	public void seeDanger() 
+
+	@Override
+	public void seeDanger(HReporter_IF r, Hazard h)
 	{
 		for(int i =0;i<managerList.size();i++)
 		{
@@ -40,8 +42,9 @@ public class CEO {
 			fileReport();
 		}
 	}
-	
-	public void evacuate() 
+
+	@Override
+	public void evacuate()
 	{
 		for(int i =0;i<managerList.size();i++) 
 		{
@@ -50,8 +53,15 @@ public class CEO {
 		System.out.println("The employee "+name+" is evacuating.");
 	}
 	
-	public void fileReport() 
-	{
-		System.out.println("The city environmental department is notified");
+	public void implementDecision(List<Decision> ds){
+
+	}
+
+	private List<Decision> sortByPriority(List<Decision> ds){
+		return ds; //need to do...
+	}
+
+	public void report(){
+
 	}
 }
