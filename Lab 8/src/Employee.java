@@ -1,16 +1,17 @@
 
 public abstract class Employee {
 	private String name;
-	private Administrator overseer;
+	private HReporter_IF overseer;
 
-	public Employee(String name, Administrator overseer)
+	public Employee(String name)
 	{
 		this.name=name;
-		this.overseer=overseer;
+
 	}
 	public abstract seeDanger(HReporter_IF r, Hazard h)
 	{
-		r.seeDanger(r.getDirectOverseer(), h);
+		r.getDirectOverseer();
+
 	}
 
 	public abstract evacuate()
@@ -19,13 +20,12 @@ public abstract class Employee {
 	}
 
 
-	// Getter
-	public String getDirectOverseer() {
-		return name;
+	public HReporter_IF getDirectOverseer() {
+		return overseer;
 	}
 
-	// Setter
-	public void setDirectOverseer(String newName) {
-		this.name = newName;
+
+	public HReporter_IF setDirectOverseer(HReporter_IF overseer) {
+		return this.overseer;
 	}
 }
