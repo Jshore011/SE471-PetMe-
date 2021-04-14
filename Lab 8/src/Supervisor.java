@@ -2,10 +2,10 @@ import java.util.ArrayList;
 
 public class Supervisor {
 	private String name;
-	private ArrayList<RegularEmployees> employeesList;
+	private ArrayList<Employee> employeesList;
 	private Manager manager;
 	
-	public Supervisor(String name, ArrayList<RegularEmployees> employeesList, Manager manager) {
+	public Supervisor(String name, ArrayList<Employee> employeesList, Manager manager) {
 		this.manager = manager;
 		this.name = name;
 		this.employeesList = employeesList;

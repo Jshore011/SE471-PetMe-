@@ -1,8 +1,8 @@
 
-public class RegularEmployees {
+public class Employee {
 	private String name;
     private Supervisor supervisor;
-	public RegularEmployees(String name, Supervisor supervisor) {
+	public Employee(String name, Supervisor supervisor) {
 		this.name = name;
 		this.supervisor = supervisor;
 	}
