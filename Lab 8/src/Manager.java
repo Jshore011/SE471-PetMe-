@@ -7,12 +7,14 @@ public class Manager extends Administrator {
 		super();
 	}
 
+
 	@Override
 	public void seeDanger(HReporter_IF r, Hazard h) {
 
 	}
 
 	public ArrayList<Decision> suggestDecisions(Hazard h) {
-	return ds;
+		return ds;
 	}
+
 }
