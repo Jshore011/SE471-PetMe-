@@ -1,15 +1,10 @@
+import java.util.List;
 
+public class Supervisor extends DirectAdministrator {
 
-public class Supervisor extends DirectAdministrator{
-
-	public boolean getFeedback()
-	{
-		System.out.println("Feedback by Supervisor");
-		return true;
+	//ctr
+	public Supervisor(String name, List<Employee> members) {
+		super(name, members);
 	}
 
-	@Override
-	public void seeDanger(HReporter_IF r, Hazard h) {
-
-	}
 }

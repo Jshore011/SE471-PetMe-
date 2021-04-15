@@ -3,24 +3,29 @@ import java.util.List;
 public abstract class Administrator extends Employee{
     public List<Employee> members;
 
-    public Administrator(List<Employee> members) {
+        //ctr
+    public Administrator(String name, List<Employee> members) {
+        super(name);
         this.members=members;
 
     }
 
-    public Administrator() {
-
-        super();
-    }
-
-
+    //abstract method seeDanger
     public abstract void seeDanger(HReporter_IF r, Hazard h);
 
+    //method telling employees to evacuate
     public void evacuate() {
     for(Employee e:members)
     {
         e.evacuate();
+        System.out.println("The Employee " + getName() + " is evacuating");
     }
-    this.evacuate();
+
+    }
+
+    //getter for employee's in the list
+    public List<Employee> getMembers()
+    {
+        return members;
     }
 }

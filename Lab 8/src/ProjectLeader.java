@@ -1,14 +1,10 @@
+import java.util.List;
 
+public class ProjectLeader extends DirectAdministrator {
 
-public class ProjectLeader extends DirectAdministrator{
-	public boolean getFeedback()
-	{
-		System.out.println("Feedback by Project Leader");
-		return true;
+//ctr
+	public ProjectLeader(String name, List<Employee> members) {
+		super(name, members);
 	}
 
-	@Override
-	public void seeDanger(HReporter_IF r, Hazard h) {
-
-	}
 }
