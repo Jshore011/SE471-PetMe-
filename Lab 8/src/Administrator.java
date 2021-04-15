@@ -15,11 +15,11 @@ public abstract class Administrator extends Employee{
 
     //method telling employees to evacuate
     public void evacuate() {
-    for(Employee e:members)
-    {
-        e.evacuate();
-        System.out.println("The Employee " + getName() + " is evacuating");
-    }
+        for(Employee e:members)
+        {
+            e.evacuate();
+           // System.out.println("The Employee " + getName() + " is evacuating");
+        }
 
     }
 
