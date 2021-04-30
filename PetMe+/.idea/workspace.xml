@@ -2,19 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="be3892eb-727a-413f-8b4b-4bd92a2dd93c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../Lab 8/src/Administrator.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab 8/src/Administrator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab 8/src/CEO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab 8/src/CEO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab 8/src/Decision.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab 8/src/Decision.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab 8/src/DirectAdministrator.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab 8/src/DirectAdministrator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab 8/src/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab 8/src/Employee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab 8/src/Evacuation.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab 8/src/Evacuation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab 8/src/FileReport.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab 8/src/FileReport.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab 8/src/Hazard.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab 8/src/Hazard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab 8/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab 8/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab 8/src/Manager.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab 8/src/Manager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab 8/src/ProjectLeader.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab 8/src/ProjectLeader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab 8/src/Supervisor.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab 8/src/Supervisor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab 8/src/Worker.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab 8/src/Worker.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
