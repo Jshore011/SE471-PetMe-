@@ -8,7 +8,7 @@
       <root url="jar://$PROJECT_DIR$/JTattoo-1.6.13.jar!/" />
       <root url="jar://$PROJECT_DIR$/easytable-0.8.2.jar!/" />
       <root url="jar://$PROJECT_DIR$/commons-logging-1.2.jar!/" />
-      <root url="jar://$PROJECT_DIR$/jBCrypt-0.4.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/jBCrypt-0.4.1.jar!/" />
       <root url="jar://$PROJECT_DIR$/intellij_forms_rt.jar!/" />
     </CLASSES>
     <JAVADOC />

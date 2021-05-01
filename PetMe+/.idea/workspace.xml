@@ -2,12 +2,38 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="be3892eb-727a-413f-8b4b-4bd92a2dd93c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../PetMe+Updated/src/ReportBuilder/GenerateReport_IF.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/JTattoo_1_6_13.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/JTattoo_1_6_13.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/LoginWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/LoginWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PetMe+Updated/.idea/libraries/PetMe_Updated.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../PetMe+Updated/.idea/libraries/PetMe_Updated.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PetMe+Updated/src/API/API_IF.java" beforeDir="false" afterPath="$PROJECT_DIR$/../PetMe+Updated/src/API/API_IF.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PetMe+Updated/src/API/Groomers_ServiceProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/../PetMe+Updated/src/API/Groomers_ServiceProvider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PetMe+Updated/src/API/Veterinary_ServiceProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/../PetMe+Updated/src/API/Veterinary_ServiceProvider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PetMe+Updated/src/LoginManager/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/../PetMe+Updated/src/LoginManager/Login.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PetMe+Updated/src/LoginManager/LoginManagerProxy.java" beforeDir="false" afterPath="$PROJECT_DIR$/../PetMe+Updated/src/LoginManager/LoginManagerProxy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PetMe+Updated/src/LoginManager/Login_Manager.java" beforeDir="false" afterPath="$PROJECT_DIR$/../PetMe+Updated/src/LoginManager/Login_Manager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PetMe+Updated/src/LoginManager/Login_Manager_IF.java" beforeDir="false" afterPath="$PROJECT_DIR$/../PetMe+Updated/src/LoginManager/Login_Manager_IF.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PetMe+Updated/src/PetManager/AbstractPetCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/../PetMe+Updated/src/PetManager/AbstractPetCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PetMe+Updated/src/PetManager/AddPetCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/../PetMe+Updated/src/PetManager/AddPetCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PetMe+Updated/src/PetManager/AddPetLogCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/../PetMe+Updated/src/PetManager/AddPetLogCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PetMe+Updated/src/PetManager/DeletePetCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/../PetMe+Updated/src/PetManager/DeletePetCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PetMe+Updated/src/PetManager/DeletePetLogCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/../PetMe+Updated/src/PetManager/DeletePetLogCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PetMe+Updated/src/PetManager/PetCommandFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/../PetMe+Updated/src/PetManager/PetCommandFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PetMe+Updated/src/PetManager/PetCommandManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/../PetMe+Updated/src/PetManager/PetCommandManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PetMe+Updated/src/ReportBuilder/GeneratePeport_IF.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PetMe+Updated/src/ReportBuilder/JPEG_generator.java" beforeDir="false" afterPath="$PROJECT_DIR$/../PetMe+Updated/src/ReportBuilder/JPEG_generator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PetMe+Updated/src/ReportBuilder/PDF_generator.java" beforeDir="false" afterPath="$PROJECT_DIR$/../PetMe+Updated/src/ReportBuilder/PDF_generator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PetMe+Updated/src/sql/DatabaseManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/../PetMe+Updated/src/sql/DatabaseManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PetMe+Updated/src/sql/PetLogData.java" beforeDir="false" afterPath="$PROJECT_DIR$/../PetMe+Updated/src/sql/PetLogData.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">

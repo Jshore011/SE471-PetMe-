@@ -207,7 +207,7 @@ public class DatabaseManager {
      * @return PetLogData
      * @throws SQLException throws if pet logs were unable to be fetched
      */
-    public PetLogData getPetLogs(int pet_id) throws SQLException {
+    public PetLog getPetLogs(int pet_id) throws SQLException {
         PetLog diet = new PetLog(PetLogType.Diet, new ArrayList<>());
         PetLog medicine = new PetLog(PetLogType.Medicine, new ArrayList<>());
         PetLog poop = new PetLog(PetLogType.Exercise, new ArrayList<>());
@@ -233,7 +233,7 @@ public class DatabaseManager {
         // free our mem and ret
         stmt.close();
         results.close();
-        return new PetLogData(diet, poop, medicine);
+        return new PetLog(diet, poop, medicine);
     }
 
     /**

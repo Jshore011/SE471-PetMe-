@@ -109,7 +109,7 @@ public class LoginWindow extends JFrame {
         panel1 = new JPanel();
         panel1.setLayout(new com.intellij.uiDesigner.core.GridLayoutManager(1, 1, new Insets(0, 0, 0, 0), -1, -1));
         final JPanel panel2 = new JPanel();
-        panel2.setLayout(new com.intellij.uiDesigner.core.GridLayoutManager(9, 4, new Insets(25, 25, 25, 25), -1, -1));
+        panel2.setLayout(new GridLayoutManager(9, 4, new Insets(25, 25, 25, 25), -1, -1));
         panel2.setAutoscrolls(false);
         panel2.setForeground(new Color(-1549));
         panel1.add(panel2, new com.intellij.uiDesigner.core.GridConstraints(0, 0, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_BOTH, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_SHRINK | com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_GROW, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_SHRINK | com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_GROW, null, null, null, 0, true));
@@ -133,7 +133,8 @@ public class LoginWindow extends JFrame {
         Font label2Font = this.$$$getFont$$$("Nirmala UI", Font.BOLD, 20, label2.getFont());
         if (label2Font != null) label2.setFont(label2Font);
         label2.setText("Welcome to PetMe+");
-        panel2.add(label2, new com.intellij.uiDesigner.core.GridConstraints(0, 1, 1, 2, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_NONE, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
+        panel2.add(label2,
+                new com.intellij.uiDesigner.core.GridConstraints(0, 1, 1, 2, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_NONE, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
         signUpButton = new JButton();
         Font signUpButtonFont = this.$$$getFont$$$("Segoe UI", -1, 14, signUpButton.getFont());
         if (signUpButtonFont != null) signUpButton.setFont(signUpButtonFont);
@@ -185,4 +186,6 @@ public class LoginWindow extends JFrame {
     public JComponent $$$getRootComponent$$$() {
         return panel1;
     }
+
+
 }
