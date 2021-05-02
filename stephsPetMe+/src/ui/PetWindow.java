@@ -1,7 +1,7 @@
 package ui;
 
 import PetManager_original.Pet;
-import ReportBuilder.ReportBuilder;
+import ReportBuilder_original.ReportBuilder;
 import sql.DatabaseManager;
 
 import javax.imageio.ImageIO;

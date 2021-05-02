@@ -1,6 +1,6 @@
 package PetManager;
 
-import ReportBuilder.GenerateReport_IF;
+import ReportBuilder_original.GenerateReport_IF;
 
 public class PetCommandManager {
     private PetCommandManager petManager;

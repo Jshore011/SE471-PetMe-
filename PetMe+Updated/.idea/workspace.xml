@@ -1,46 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7c442f85-6747-4683-987a-9fee349ed0f5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/New folder/julie.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/New folder/owner.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/New folder/rocky.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/owner.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/report.docx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rocky.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rocky.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/LocationManager/LocationManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/dog-food.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/dog-walk.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/medicine.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/print-24px.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ui/PetServicesWindow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PetMe+/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../PetMe+/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PetMe+/src/ui/LoginWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/../PetMe+/src/ui/LoginWindow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/aws.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/PetMe_Updated.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Petmanage.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/lib.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PetMe+Updated.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/built-jar.properties" beforeDir="false" afterPath="$PROJECT_DIR$/build/built-jar.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nbproject/private/private.properties" beforeDir="false" afterPath="$PROJECT_DIR$/nbproject/private/private.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nbproject/private/private.xml" beforeDir="false" afterPath="$PROJECT_DIR$/nbproject/private/private.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pet_manager.sql" beforeDir="false" afterPath="$PROJECT_DIR$/pet_manager.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/API/API_IF.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/API/Groomers_ServiceProvider.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/API/Veterinary_ServiceProvider.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sql/DatabaseManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sql/DatabaseManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sql/PetLogData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sql/PetLogData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/DashboardWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/DashboardWindow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/PetWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/PetWindow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/Constants.java" afterDir="false" />
-    </list>
+    <list default="true" id="7c442f85-6747-4683-987a-9fee349ed0f5" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
