@@ -5,17 +5,15 @@
  */
 package LocationManager;
 
-import PetManager_original.PetService;
+import PetManager.PetService;
 import java.sql.SQLException;
 import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import sql.DatabaseManager;
 
-
 public class LocationManager {
-    String API_Key = "AIzaSyDIwkqxovZzUtbmj-ZKvEyO6LvUxDmvJMg";
-    String URL = "https://maps.googleapis.com/maps/api/staticmap?center=40.714%2c%20-73.998&zoom=12&size=400x400&key=AIzaSyDIwkqxovZzUtbmj-ZKvEyO6LvUxDmvJMg";
+
     private static LocationManager object = null;
     private DatabaseManager databaseManager = new DatabaseManager();
     

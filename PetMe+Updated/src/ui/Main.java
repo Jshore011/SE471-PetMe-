@@ -20,6 +20,7 @@ public class Main {
     public static JFrame medicationPopUpWindow = null;
     public static JFrame addPetWindow = null;
     public static JFrame dashboardWindow = null;
+    public static JFrame petServicesWindow = null;
 
     public static void main(String[] args) {
         try {
@@ -62,6 +63,8 @@ public class Main {
             SwingUtilities.updateComponentTreeUI(Main.medicationPopUpWindow);
         if (Main.petWindow != null)
             SwingUtilities.updateComponentTreeUI(Main.petWindow);
+        if (Main.petServicesWindow != null)
+            SwingUtilities.updateComponentTreeUI(Main.petServicesWindow);
     }
 
     public static void openRegistrationWindow(DatabaseManager sql) {
@@ -98,5 +101,9 @@ public class Main {
 
     public static void openAddPetWindow(DatabaseManager sql, DashboardWindow dash, PetManager pm) {
         addPetWindow = AddPetWindow.spawn(sql, dash, pm);
+    }
+    
+    public static void openLocatePetServicesWindow(DatabaseManager sql, DashboardWindow dash, PetManager pm) {
+        petServicesWindow = PetServicesWindow.spawn(sql, dash, pm);
     }
 }

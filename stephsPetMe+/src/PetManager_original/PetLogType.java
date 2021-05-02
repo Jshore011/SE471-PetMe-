@@ -1,4 +1,4 @@
-package PetManager;
+package PetManager_original;
 
 /**
  * Enum type to represent types of pete logs

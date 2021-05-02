@@ -71,4 +71,10 @@ public class Constants {
     public static final String INSERT_NEW_USER = "INSERT INTO `profile_data` (email, name, hash, salt, lightmode) VALUES(?, ?, ?, ?, 1)";
     public static final String INSERT_PET = "INSERT INTO `pet_data` (name, tracking_id, owner, age, breed, gender, city, type, icon) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?);";
     public static final String INSERT_PET_LOG = "INSERT INTO `pet_logs` (owner, date, text, type, pet_id) VALUES(?, ?, ?, ?, ?)";
+    
+    //Pet services
+    public static final String GET_PET_SERVICE_NAMES = "SELECT id, servicename FROM `pet_services` where `type` = ?";
+    public static final String GET_PET_SERVICE_ADDRESS = "SELECT servicename, address, phonenumber FROM `pet_services` where `id` = ?";
 }
+
+

@@ -1,19 +1,15 @@
 package ui;
 
-import PetManager.LogEntry;
-import PetManager.Pet;
-import PetManager.PetLogType;
+import PetManager_original.LogEntry;
+import PetManager_original.Pet;
+import PetManager_original.PetLogType;
 import sql.DatabaseManager;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.sql.Date;
 import java.time.*;
-import java.util.Locale;
 import javax.swing.JComboBox;
-import javax.swing.plaf.FontUIResource;
-import javax.swing.text.StyleContext;
 
 public class DietPopUpWindow {
     private JButton saveButton;

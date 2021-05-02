@@ -219,7 +219,7 @@ public class PetWindow {
         dietBttn = new JButton();
         Font dietBttnFont = this.$$$getFont$$$(null, -1, 22, dietBttn.getFont());
         if (dietBttnFont != null) dietBttn.setFont(dietBttnFont);
-        dietBttn.setIcon(new ImageIcon(getClass().getResource("/dog-food.png")));
+        dietBttn.setIcon(new ImageIcon(getClass().getResource("/resources/dog-food.png")));
         dietBttn.setText("");
         panel1.add(dietBttn, new com.intellij.uiDesigner.core.GridConstraints(3, 2, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_HORIZONTAL, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_SHRINK | com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_GROW, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
         final JLabel label2 = new JLabel();
@@ -230,7 +230,7 @@ public class PetWindow {
         exerciseBttn = new JButton();
         Font exerciseBttnFont = this.$$$getFont$$$(null, -1, 22, exerciseBttn.getFont());
         if (exerciseBttnFont != null) exerciseBttn.setFont(exerciseBttnFont);
-        exerciseBttn.setIcon(new ImageIcon(getClass().getResource("/dog-walk.png")));
+        exerciseBttn.setIcon(new ImageIcon(getClass().getResource("/resources/dog-walk.png")));
         exerciseBttn.setText("");
         panel1.add(exerciseBttn, new com.intellij.uiDesigner.core.GridConstraints(4, 2, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_HORIZONTAL, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_SHRINK | com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_GROW, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
         final JLabel label3 = new JLabel();
@@ -241,7 +241,7 @@ public class PetWindow {
         medicationBttn = new JButton();
         Font medicationBttnFont = this.$$$getFont$$$(null, -1, 22, medicationBttn.getFont());
         if (medicationBttnFont != null) medicationBttn.setFont(medicationBttnFont);
-        medicationBttn.setIcon(new ImageIcon(getClass().getResource("/medicine.png")));
+        medicationBttn.setIcon(new ImageIcon(getClass().getResource("/resources/medicine.png")));
         medicationBttn.setText("");
         panel1.add(medicationBttn, new com.intellij.uiDesigner.core.GridConstraints(5, 2, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_HORIZONTAL, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_SHRINK | com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_GROW, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
         final JLabel label4 = new JLabel();
@@ -252,7 +252,7 @@ public class PetWindow {
         addPhoto = new JButton();
         Font addPhotoFont = this.$$$getFont$$$(null, -1, 22, addPhoto.getFont());
         if (addPhotoFont != null) addPhoto.setFont(addPhotoFont);
-        addPhoto.setIcon(new ImageIcon(getClass().getResource("/print-24px.png")));
+        addPhoto.setIcon(new ImageIcon(getClass().getResource("/resources/print-24px.png")));
         addPhoto.setText("");
         panel1.add(addPhoto, new com.intellij.uiDesigner.core.GridConstraints(6, 2, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_HORIZONTAL, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_SHRINK | com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_GROW, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
         petNameGoesHere = new JLabel();

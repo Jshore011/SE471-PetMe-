@@ -1,4 +1,4 @@
-package LoginManager;
+package LoginManager_original;
 
 import sql.DatabaseManager;
 

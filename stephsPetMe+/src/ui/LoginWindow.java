@@ -1,18 +1,14 @@
 package ui;
 
-import LoginManager.LoginManager;
+import LoginManager_original.LoginManager;
 import sql.DatabaseManager;
 
 import javax.swing.*;
 import javax.swing.border.TitledBorder;
-import javax.swing.plaf.FontUIResource;
-import javax.swing.text.StyleContext;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.io.File;
 import java.sql.SQLException;
-import java.util.Locale;
 
 public class LoginWindow extends JFrame {
     protected JPanel panel1;

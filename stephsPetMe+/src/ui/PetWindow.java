@@ -1,25 +1,18 @@
 package ui;
 
-import PetManager.Pet;
+import PetManager_original.Pet;
 import ReportBuilder.ReportBuilder;
 import sql.DatabaseManager;
 
 import javax.imageio.ImageIO;
 import javax.swing.*;
 import javax.swing.filechooser.FileNameExtensionFilter;
-import javax.swing.plaf.FontUIResource;
-import javax.swing.text.StyleContext;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.image.BufferedImage;
 import java.io.*;
-import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.time.Year;
-import java.time.ZoneId;
-import java.util.Date;
-import java.util.Locale;
 
 public class PetWindow {
     private JLabel nameLabel;

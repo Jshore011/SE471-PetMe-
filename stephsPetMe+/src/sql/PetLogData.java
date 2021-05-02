@@ -1,6 +1,6 @@
 package sql;
 
-import PetManager.PetLog;
+import PetManager_original.PetLog;
 
 /**
  * Helper class to pack PetLogData conveniently

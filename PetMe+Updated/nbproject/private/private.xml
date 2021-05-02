@@ -2,15 +2,6 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group>
-            <file>file:/E:/jfx/Petmanage/src/sql/UserProfile.java</file>
-            <file>file:/E:/jfx/Petmanage/src/sql/PetLogData.java</file>
-            <file>file:/E:/jfx/Petmanage/src/utils/Constants.java</file>
-            <file>file:/E:/jfx/Petmanage/src/ui/LoginWindow.java</file>
-            <file>file:/E:/jfx/Petmanage/src/LoginManager/LoginManager.java</file>
-            <file>file:/E:/jfx/Petmanage/src/sql/DatabaseManager.java</file>
-            <file>file:/E:/jfx/Petmanage/src/ui/DashboardWindow.java</file>
-            <file>file:/E:/jfx/Petmanage/src/ui/Main.java</file>
-        </group>
+        <group/>
     </open-files>
 </project-private>

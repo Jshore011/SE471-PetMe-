@@ -1,21 +1,15 @@
 package ui;
 
-import PetManager.Pet;
-import PetManager.PetManager;
+import PetManager_original.Pet;
+import PetManager_original.PetManager;
 import sql.DatabaseManager;
 
 import javax.swing.*;
-import javax.swing.plaf.FontUIResource;
-import javax.swing.text.StyleContext;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.Year;
-import java.time.ZoneId;
-import java.util.Date;
-import java.util.Locale;
 
 public class AddPetWindow {
     private JPanel panel1;

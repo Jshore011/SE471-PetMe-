@@ -1,8 +1,8 @@
 package ReportBuilder;
 
-import PetManager.LogEntry;
-import PetManager.Pet;
-import PetManager.PetLog;
+import PetManager_original.LogEntry;
+import PetManager_original.Pet;
+import PetManager_original.PetLog;
 import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.pdmodel.PDPage;
 import org.apache.pdfbox.pdmodel.PDPageContentStream;
@@ -16,8 +16,6 @@ import org.vandeseer.easytable.structure.cell.TextCell;
 import java.awt.*;
 import java.io.IOException;
 import java.time.Year;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 /**
  * Report builder that constructs our PDF

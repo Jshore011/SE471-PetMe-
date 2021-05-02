@@ -37,7 +37,7 @@ CREATE TABLE `pet_data` (
   `gender` varchar(255) NOT NULL,
   `city` varchar(255) NOT NULL,
   `type` varchar(255) NOT NULL,
-  `icon` varchar(255) NOT NULL
+  `icon` varchar(255) NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -57,6 +57,43 @@ CREATE TABLE `pet_logs` (
 
 -- --------------------------------------------------------
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `pet_services`
+--
+
+CREATE TABLE `pet_services` (
+  `id` int(10) NOT NULL,
+  `type` varchar(255) NOT NULL,
+  `servicename` varchar(255) NOT NULL,
+  `address` varchar(255) NOT NULL,
+  `phonenumber` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `pet_services`
+--
+
+INSERT INTO `pet_services` (`id`, `type`, `servicename`, `address`, `phonenumber`) VALUES (1, 'VETERINARY', 'Gotham Veterinary Center', '700 Columbus Ave, New York, NY 10025, United States', '+1 212-222-1900');
+INSERT INTO `pet_services` (`id`, `type`, `servicename`, `address`, `phonenumber`) VALUES (2, 'VETERINARY', 'Abingdon Square Veterinary Clinic', '130 W 10th St, New York, NY 10014, United States', '+1 212-242-9169');
+INSERT INTO `pet_services` (`id`, `type`, `servicename`, `address`, `phonenumber`) VALUES (3, 'VETERINARY', 'Downtown Veterinary Clinic', '244 9th Ave, New York, NY 10011, United States', '+1 212-463-8705');
+INSERT INTO `pet_services` (`id`, `type`, `servicename`, `address`, `phonenumber`) VALUES (4, 'VETERINARY', 'Pearly Bites Veterinary', '162 W 21st St 4th Floor, New York, NY 10011, United States', '+1 646-828-9270');
+INSERT INTO `pet_services` (`id`, `type`, `servicename`, `address`, `phonenumber`) VALUES (5, 'VETERINARY', 'Rivergate Veterinary Clinic', '403 E 37th St, New York, NY 10016, United States', '+1 212-213-9885');
+INSERT INTO `pet_services` (`id`, `type`, `servicename`, `address`, `phonenumber`) VALUES (6, 'GROOMING', 'American Academy of Pet Grooming', '202 E 25th St, New York, NY 10010, United States', '+1 212-686-3890');
+INSERT INTO `pet_services` (`id`, `type`, `servicename`, `address`, `phonenumber`) VALUES (7, 'GROOMING', 'Cats & Dogs Grooming School', '73 E 21st St, Bayonne, NJ 07002, United States', '+1 201-437-0016');
+INSERT INTO `pet_services` (`id`, `type`, `servicename`, `address`, `phonenumber`) VALUES (8, 'GROOMING', 'House Pet Grooming and Trainer', '1327 Clinton Ave, The Bronx, NY 10456, United States', '+1 347-552-7354');
+INSERT INTO `pet_services` (`id`, `type`, `servicename`, `address`, `phonenumber`) VALUES (9, 'GROOMING', 'New York Dog Nanny Inc', '126 Lexington Ave 2nd fl, New York, NY 10016, United States', '+1 917-261-7333');
+INSERT INTO `pet_services` (`id`, `type`, `servicename`, `address`, `phonenumber`) VALUES (10, 'GROOMING', 'Towne House Grooming', '288 8th Ave, New York, NY 10001, United States', '+1 212-929-2910');
+INSERT INTO `pet_services` (`id`, `type`, `servicename`, `address`, `phonenumber`) VALUES (11, 'PARK', 'Riverside Park', ' New York, NY, United States', '+1 212-870-3070');
+INSERT INTO `pet_services` (`id`, `type`, `servicename`, `address`, `phonenumber`) VALUES (12, 'PARK', 'Theodore Roosevelt Park', '200 Central Park West, New York, NY 10024, United States', '+1 212-639-9675');
+INSERT INTO `pet_services` (`id`, `type`, `servicename`, `address`, `phonenumber`) VALUES (13, 'PARK', 'Inwood Hill Park', 'Payson Ave. &, Seaman Ave, New York, NY 10034, United States', '+1 212-639-9675');
+INSERT INTO `pet_services` (`id`, `type`, `servicename`, `address`, `phonenumber`) VALUES (14, 'PARK', 'Fort Washington Park', 'Hudson River Greenway, New York, NY 10032, United States', '+1 212-639-9675');
+INSERT INTO `pet_services` (`id`, `type`, `servicename`, `address`, `phonenumber`) VALUES (15, 'PARK', 'Marcus Garvey Park', '6316, Mt Morris Park W, New York, NY 10027, United States', '+1 212-639-9675');
+
+
+-- --------------------------------------------------------
+
 --
 -- Table structure for table `profile_data`
 --
@@ -67,6 +104,8 @@ CREATE TABLE `profile_data` (
   `name` varchar(255) NOT NULL,
   `hash` varchar(255) NOT NULL,
   `salt` varchar(255) NOT NULL,
+  `icon` varchar(255) NULL,
+  `phone` varchar(255) NULL,
   `lightmode` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -74,8 +113,8 @@ CREATE TABLE `profile_data` (
 -- Dumping data for table `profile_data`
 --
 
-INSERT INTO `profile_data` (`id`, `email`, `name`, `hash`, `salt`, `lightmode`) VALUES
-(1, 'praty@gmail.com', 'praty', 'IJCGbgds7mA/WJrgepYpxT3B2xx5Piy', '$2a$12$QLY3.hz2ngvDx1WWDzveh.', '1');
+INSERT INTO `profile_data` (`id`, `email`, `name`, `hash`, `salt`, `icon`, `phone`, `lightmode`) VALUES
+(1, 'praty@gmail.com', 'praty', 'IJCGbgds7mA/WJrgepYpxT3B2xx5Piy', '$2a$12$QLY3.hz2ngvDx1WWDzveh.', '', '', '1');
 
 --
 -- Indexes for dumped tables
@@ -93,6 +132,12 @@ ALTER TABLE `pet_data`
 ALTER TABLE `pet_logs`
   ADD PRIMARY KEY (`id`);
 
+--
+-- Indexes for table `pet_services`
+--
+ALTER TABLE `pet_services`
+  ADD PRIMARY KEY (`id`);
+  
 --
 -- Indexes for table `profile_data`
 --

@@ -4,16 +4,11 @@ import PetManager.*;
 
 import utils.Constants;
 import utils.DateUtils;
-import javax.swing.*;
-import java.io.File;
-import java.io.IOException;
-import java.io.InputStream;
 import java.sql.*;
-import java.time.Instant;
 import java.time.LocalDateTime;
-import java.time.OffsetDateTime;
-import java.time.ZoneOffset;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Properties;
 public class DatabaseManager {
     private Connection connection;
@@ -40,7 +35,7 @@ public class DatabaseManager {
             Class.forName("com.mysql.jdbc.Driver");
 
 //            this.connection = DriverManager.getConnection("jdbc:mysql://"+host+"/"+dbname, user, pass);
-            this.connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/pet_manager", "root", "");
+            this.connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/pet_manager", "root", "P@$$w0rd");
             this.createTables();
         }
         catch (SQLException e) {
@@ -207,7 +202,7 @@ public class DatabaseManager {
      * @return PetLogData
      * @throws SQLException throws if pet logs were unable to be fetched
      */
-    public PetLog getPetLogs(int pet_id) throws SQLException {
+    public PetLogData getPetLogs(int pet_id) throws SQLException {
         PetLog diet = new PetLog(PetLogType.Diet, new ArrayList<>());
         PetLog medicine = new PetLog(PetLogType.Medicine, new ArrayList<>());
         PetLog poop = new PetLog(PetLogType.Exercise, new ArrayList<>());
@@ -233,7 +228,7 @@ public class DatabaseManager {
         // free our mem and ret
         stmt.close();
         results.close();
-        return new PetLog(diet, poop, medicine);
+        return new PetLogData(diet, poop, medicine);
     }
 
     /**
@@ -358,5 +353,56 @@ public class DatabaseManager {
 
         stmt.executeUpdate();
         stmt.close();
+    }
+    
+     /**
+     * Gets pet services data.
+     * @param type  to grab data for
+     * @return pet services
+     * @throws SQLException throws on failed fetch
+     */
+    public Map<String, Integer> getPetServiceNamesByType(String type) throws SQLException {
+                
+        java.sql.PreparedStatement stmt = this.connection.prepareStatement(Constants.GET_PET_SERVICE_NAMES);
+        stmt.setString(1, type);
+
+        ResultSet results = stmt.executeQuery();
+        
+        Map<String, Integer> serviceNameMap = new HashMap<String, Integer>();
+        
+        while(results.next())
+        {
+            serviceNameMap.put(results.getString(2), results.getInt(1));
+        }
+
+        stmt.close();
+        return serviceNameMap;
+    }
+    
+     /**
+     * Gets pet service address.
+     * @param id to grab data for
+     * @return PetService
+     * @throws SQLException throws on failed fetch
+     */
+    public PetService getPetServiceDetailsById(int id) throws SQLException {
+                
+        java.sql.PreparedStatement stmt = this.connection.prepareStatement(Constants.GET_PET_SERVICE_ADDRESS);
+        stmt.setInt(1, id);
+
+        ResultSet results = stmt.executeQuery();
+        
+        PetService petService = new PetService();
+               
+        while(results.next())
+        {
+            petService.setId(id);
+            petService.setName(results.getString(1));
+            petService.setAddress(results.getString(2));
+            petService.setPhoneNumber(results.getString(3));
+        }
+
+        stmt.close();
+        return petService;
     }
 }

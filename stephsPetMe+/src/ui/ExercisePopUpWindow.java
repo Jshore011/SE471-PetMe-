@@ -1,21 +1,15 @@
 package ui;
 
-import PetManager.LogEntry;
-import PetManager.Pet;
-import PetManager.PetLogType;
+import PetManager_original.LogEntry;
+import PetManager_original.Pet;
+import PetManager_original.PetLogType;
 import sql.DatabaseManager;
 import javax.swing.JComboBox;
 import javax.swing.*;
-import javax.swing.plaf.FontUIResource;
-import javax.swing.text.StyleContext;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.lang.reflect.Array;
-import java.sql.Date;
 import java.time.LocalDateTime;
-import java.time.ZoneId;
-import java.util.Locale;
 
 public class ExercisePopUpWindow {
     private JComboBox month;

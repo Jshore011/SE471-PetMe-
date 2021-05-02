@@ -1,8 +1,8 @@
 package ui;
 
 import LocationManager.LocationManager;
-import PetManager_original.PetManager;
-import PetManager_original.PetService;
+import PetManager.PetManager;
+import PetManager.PetService;
 import sql.DatabaseManager;
 
 import javax.swing.*;
@@ -166,7 +166,7 @@ public class PetServicesWindow {
         submitButton.setText("Get Service Details");
         panel1.add(submitButton, new com.intellij.uiDesigner.core.GridConstraints(3, 0, 1, 2, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_HORIZONTAL, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_SHRINK | com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_GROW, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
         final JLabel label7 = new JLabel();
-        Font label7Font = this.fonts(null, -1, 36, label7.getFont());
+        Font label7Font = this.$$$getFont$$$(null, -1, 36, label7.getFont());
         if (label7Font != null) label7.setFont(label7Font);
         label7.setText("Pet Services");
         panel1.add(label7, new com.intellij.uiDesigner.core.GridConstraints(0, 1, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_NONE, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
@@ -177,7 +177,7 @@ public class PetServicesWindow {
     /**
      * @noinspection ALL
      */
-    private Font fonts(String fontName, int style, int size, Font currentFont) {
+    private Font $$$getFont$$$(String fontName, int style, int size, Font currentFont) {
         if (currentFont == null) return null;
         String resultName;
         if (fontName == null) {

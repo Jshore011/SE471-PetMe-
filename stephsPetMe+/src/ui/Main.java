@@ -1,8 +1,8 @@
 package ui;
 
-import LoginManager.LoginManager;
-import PetManager.Pet;
-import PetManager.PetManager;
+import LoginManager_original.LoginManager;
+import PetManager_original.Pet;
+import PetManager_original.PetManager;
 import sql.DatabaseManager;
 import sql.UserProfile;
 
