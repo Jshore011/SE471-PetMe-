@@ -1,5 +1,6 @@
-package PetManager;
+package PetManager2;
 
+import PetManager.PetLog;
 import java.time.LocalDateTime;
 
 /**

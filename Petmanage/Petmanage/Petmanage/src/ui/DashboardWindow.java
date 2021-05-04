@@ -1,5 +1,7 @@
 package ui;
 
+import PetManager2.PetCommandManager;
+import PetManager2.Pet;
 import sql.DatabaseManager;
 import PetManager.*;
 import sql.UserProfile;
@@ -28,7 +30,7 @@ public class DashboardWindow {
     private JLabel displayname;
     private JPanel imagepanel;
     private DatabaseManager sql;
-    private PetManager pm;
+    private PetCommandManager pm;
     private UserProfile user;
     public DefaultListModel<String> listModel;
 
@@ -46,7 +48,7 @@ public class DashboardWindow {
                 this.addIcon(new File(user.icon));
             }
 
-            this.pm = new PetManager(sql);
+            this.pm = new PetCommandManager(sql);
             for (Pet p : this.pm.pets) {
                 System.out.println("adding pet: " + p.name);
                 listModel.addElement(p.name);

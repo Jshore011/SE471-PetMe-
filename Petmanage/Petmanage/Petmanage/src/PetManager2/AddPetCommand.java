@@ -13,13 +13,27 @@ import java.util.Date;
  */
 public class AddPetCommand {
     String name;
-    String Breed;
+    String breed;
     int ID;
     String city;
     Date birthday;
     String petType;
      AddPetCommand(String name, String Breed, int ID, String city, Date birthday, String petType)
      {
+         this.name=name;
+         this.breed=breed;
+         this.ID=ID;
+         this.city=city;
+         this.birthday=birthday;
+         this.petType=petType;
+         
+     }
+     
+     public void addPet(){
+         
+     }
+     
+     public void undoAddPet(){
          
      }
 }

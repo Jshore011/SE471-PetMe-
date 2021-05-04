@@ -1,8 +1,8 @@
 package ui;
 
 import PetManager.LogEntry;
-import PetManager.Pet;
-import PetManager.PetLogType;
+import PetManager2.Pet;
+import PetManager2.PetLogType;
 import sql.DatabaseManager;
 
 import javax.swing.*;

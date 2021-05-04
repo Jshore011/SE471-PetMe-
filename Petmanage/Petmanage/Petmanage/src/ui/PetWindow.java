@@ -1,6 +1,6 @@
 package ui;
 
-import PetManager.Pet;
+import PetManager2.Pet;
 import ReportBuilder.ReportBuilder;
 import sql.DatabaseManager;
 

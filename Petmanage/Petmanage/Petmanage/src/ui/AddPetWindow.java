@@ -1,7 +1,7 @@
 package ui;
 
-import PetManager.Pet;
-import PetManager.PetManager;
+import PetManager2.Pet;
+import PetManager2.PetCommandManager;
 import sql.DatabaseManager;
 
 import javax.swing.*;
@@ -29,10 +29,10 @@ public class AddPetWindow {
     private JComboBox typeCombo;
     private JComboBox genderCombo;
     private DatabaseManager sql;
-    private PetManager pm;
+    private PetCommandManager pm;
     private DashboardWindow dash;
 
-    public AddPetWindow(DatabaseManager sql, DashboardWindow dash, PetManager pm) {
+    public AddPetWindow(DatabaseManager sql, DashboardWindow dash, PetCommandManager pm) {
         this.pm = pm;
         this.sql = sql;
         this.dash = dash;
@@ -117,7 +117,7 @@ public class AddPetWindow {
         }
     }
 
-    public static JFrame spawn(DatabaseManager sql, DashboardWindow dash, PetManager pm) {
+    public static JFrame spawn(DatabaseManager sql, DashboardWindow dash, PetCommandManager pm) {
         JFrame frame = new JFrame("PetMe+ Add Pet Window");
         frame.setContentPane(new AddPetWindow(sql, dash, pm).panel1);
         frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);

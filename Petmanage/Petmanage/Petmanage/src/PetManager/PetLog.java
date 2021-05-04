@@ -1,5 +1,6 @@
 package PetManager;
 
+import PetManager2.PetLogType;
 import java.util.ArrayList;
 
 /**

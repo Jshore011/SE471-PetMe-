@@ -1,8 +1,8 @@
 package ui;
 
 import LoginManager.LoginManager;
-import PetManager.Pet;
-import PetManager.PetManager;
+import PetManager2.Pet;
+import PetManager2.PetCommandManager;
 import sql.DatabaseManager;
 import sql.UserProfile;
 
@@ -99,11 +99,11 @@ public class Main {
         medicationPopUpWindow = MedicationPopUpWindow.spawn(sql, pet);
     }
 
-    public static void openAddPetWindow(DatabaseManager sql, DashboardWindow dash, PetManager pm) {
+    public static void openAddPetWindow(DatabaseManager sql, DashboardWindow dash, PetCommandManager pm) {
         addPetWindow = AddPetWindow.spawn(sql, dash, pm);
     }
     
-    public static void openLocatePetServicesWindow(DatabaseManager sql, DashboardWindow dash, PetManager pm) {
+    public static void openLocatePetServicesWindow(DatabaseManager sql, DashboardWindow dash, PetCommandManager pm) {
         petServicesWindow = PetServicesWindow.spawn(sql, dash, pm);
     }
 }

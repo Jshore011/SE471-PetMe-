@@ -1,7 +1,7 @@
-package PetManager;
+package PetManager2;
 
 /**
- * Enum type to represent types of pete logs
+ * Enum type to represent types of pet logs
  */
 public enum PetLogType {
     Diet,

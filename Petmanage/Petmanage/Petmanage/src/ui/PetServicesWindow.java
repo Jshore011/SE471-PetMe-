@@ -1,7 +1,7 @@
 package ui;
 
 import LocationManager.LocationManager;
-import PetManager.PetManager;
+import PetManager2.PetCommandManager;
 import PetManager.PetService;
 import sql.DatabaseManager;
 
@@ -25,13 +25,13 @@ public class PetServicesWindow {
     private JLabel serviceAddressLabel;
     private JLabel servicePhoneNumberLabel;
     private DatabaseManager sql;
-    private PetManager pm;
+    private PetCommandManager pm;
     private DashboardWindow dash;
     private LocationManager locationManager = LocationManager.newInstanace();
     private Map<String, Integer> serviceNames;
     
 
-    public PetServicesWindow(DatabaseManager sql, DashboardWindow dash, PetManager pm) {
+    public PetServicesWindow(DatabaseManager sql, DashboardWindow dash, PetCommandManager pm) {
         this.pm = pm;
         this.sql = sql;
         this.dash = dash;
@@ -99,7 +99,7 @@ public class PetServicesWindow {
         }
     }
 
-    public static JFrame spawn(DatabaseManager sql, DashboardWindow dash, PetManager pm) {
+    public static JFrame spawn(DatabaseManager sql, DashboardWindow dash, PetCommandManager pm) {
         JFrame frame = new JFrame("PetMe+ Pet Services Window");
         frame.setContentPane(new PetServicesWindow(sql, dash, pm).panel1);
         frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
