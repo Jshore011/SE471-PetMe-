@@ -1,5 +1,7 @@
 package sql;
 
+import PetManager2.Pet;
+import PetManager2.PetLogType;
 import PetManager.*;
 
 import utils.Constants;
