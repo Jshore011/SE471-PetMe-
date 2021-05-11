@@ -1,0 +1,225 @@
+package ui;
+
+import API.GoogleLocationServiceProvider;
+import API.Groomers_ServiceProvider;
+import API.LocationServiceProvider;
+import API.Park_ServiceProvider;
+import API.Veterinary_ServiceProvider;
+import PetManager.PetManager;
+import PetManager.PetService;
+import sql.DatabaseManager;
+
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.ItemEvent;
+import java.awt.event.ItemListener;
+import java.util.Map;
+import java.util.Set;
+
+
+public class PetServicesWindow {
+    private JPanel panel1;
+    private JButton submitButton;
+    private JComboBox serviceTypeCombo;
+    private JComboBox servicesCombo;
+    private JLabel servicesLabel;
+    private JLabel serviceNameLabel;
+    private JLabel serviceVicinityLabel;
+    private JLabel serviceRatingsLabel;
+    private JLabel serviceOperationalStatusLabel;
+    private DatabaseManager sql;
+    private PetManager pm;
+    private DashboardWindow dash;
+    private GoogleLocationServiceProvider locationManager = GoogleLocationServiceProvider.newInstanace();
+    private LocationServiceProvider serviceProvider = null;
+    private Map<String, PetService> serviceNames;
+    
+
+    public PetServicesWindow(DatabaseManager sql, DashboardWindow dash, PetManager pm) {
+        this.pm = pm;
+        this.sql = sql;
+        this.dash = dash;
+
+        addToServiceTypeCombo();
+
+
+        submitButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+                String serviceName = (String) PetServicesWindow.this.servicesCombo.getSelectedItem();
+                try {
+                    if(serviceNames != null)
+                    {
+                        PetService petService = serviceNames.get(serviceName);
+                                                                   
+                        serviceNameLabel.setText("Name: " + petService.getName());
+                        serviceVicinityLabel.setText("Address: " + petService.getVicinity());
+                        serviceRatingsLabel.setText("Ratings: " + petService.getRatings());
+                        serviceOperationalStatusLabel.setText("Business Status: " + petService.getBusinessStatus());
+                    }
+                } catch (Exception ex) {
+                    JOptionPane.showMessageDialog(null, "Error adding pet.. Please try again!", "Error!", JOptionPane.ERROR_MESSAGE);
+                    ex.printStackTrace();
+                    return;
+                }
+            }
+
+        });
+        
+        serviceTypeCombo.addItemListener(new ItemListener(){
+            @Override
+            public void itemStateChanged(ItemEvent event) {
+                if(event.getStateChange() == ItemEvent.SELECTED){
+                    String serviceType = (String) event.getItem();
+                    servicesLabel.setText("Select " + serviceType.toLowerCase() + " service");
+                    
+                    switch(serviceType)
+                    {
+                        case "Veterinary":
+                            serviceProvider = new Veterinary_ServiceProvider();
+                            break;
+                            
+                        case "Grooming":
+                            serviceProvider = new Groomers_ServiceProvider();
+                            break;
+                            
+                        case "Park":
+                            serviceProvider = new Park_ServiceProvider();
+                            break;
+                    }
+                    
+                    serviceNames = serviceProvider.getNearestServicesLocation();
+                    addToServicesCombo(serviceNames);
+                }
+            }
+        
+        });
+    }
+
+    public void addToServiceTypeCombo() {
+        String[] petType = {
+                "Veterinary", "Grooming", "Park"
+        };
+        for (int i = 0; i < petType.length; i++) {
+            serviceTypeCombo.addItem(petType[i]);
+        }
+    }
+    
+    public void addToServicesCombo(Map<String, PetService> serviceNames) {
+        Set<String> names = serviceNames.keySet();
+        
+        if(names != null)
+            servicesCombo.removeAllItems();
+        
+        for (String name : names) {
+            servicesCombo.addItem(name);
+        }
+    }
+
+    public static JFrame spawn(DatabaseManager sql, DashboardWindow dash, PetManager pm) {
+        JFrame frame = new JFrame("PetMe+ Pet Services Window");
+        frame.setContentPane(new PetServicesWindow(sql, dash, pm).panel1);
+        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        frame.setSize(500, 500);
+        frame.setPreferredSize(new Dimension(650, 650));
+        frame.pack();
+        frame.setLocationRelativeTo(null);
+        frame.setVisible(true);
+        return frame;
+    }
+
+    {
+// GUI initializer generated by IntelliJ IDEA GUI Designer
+// >>> IMPORTANT!! <<<
+// DO NOT EDIT OR ADD ANY CODE HERE!
+        $$$setupUI$$$();
+    }
+
+    /**
+     * Method generated by IntelliJ IDEA GUI Designer
+     * >>> IMPORTANT!! <<<
+     * DO NOT edit this method OR call it in your code!
+     *
+     * @noinspection ALL
+     */
+    private void $$$setupUI$$$() {
+        panel1 = new JPanel();
+        panel1.setLayout(new com.intellij.uiDesigner.core.GridLayoutManager(4, 2, new Insets(30, 30, 30, 30), -1, -1));
+        final JPanel panel2 = new JPanel();
+        panel2.setLayout(new com.intellij.uiDesigner.core.GridLayoutManager(14, 3, new Insets(0, 0, 0, 0), -1, -1));
+        panel1.add(panel2, new com.intellij.uiDesigner.core.GridConstraints(2, 0, 1, 2, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_BOTH, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_SHRINK | com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_GROW, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
+        final JLabel label4 = new JLabel();
+        label4.setText("Select service type");
+        panel2.add(label4, new com.intellij.uiDesigner.core.GridConstraints(4, 0, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_WEST, com.intellij.uiDesigner.core.GridConstraints.FILL_NONE, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
+        serviceTypeCombo = new JComboBox();
+        panel2.add(serviceTypeCombo, new com.intellij.uiDesigner.core.GridConstraints(5, 0, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_WEST, com.intellij.uiDesigner.core.GridConstraints.FILL_HORIZONTAL, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_GROW, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
+
+        servicesLabel = new JLabel();
+        servicesLabel.setText("Select veterinary service");
+        panel2.add(servicesLabel, new com.intellij.uiDesigner.core.GridConstraints(6, 0, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_WEST, com.intellij.uiDesigner.core.GridConstraints.FILL_NONE, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
+        servicesCombo = new JComboBox();
+        panel2.add(servicesCombo, new com.intellij.uiDesigner.core.GridConstraints(7, 0, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_WEST, com.intellij.uiDesigner.core.GridConstraints.FILL_HORIZONTAL, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_GROW, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
+        
+        
+        final com.intellij.uiDesigner.core.Spacer spacer2 = new com.intellij.uiDesigner.core.Spacer();
+        panel2.add(spacer2, new com.intellij.uiDesigner.core.GridConstraints(8, 0, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_NONE, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
+        
+        serviceNameLabel = new JLabel();
+        serviceNameLabel.setText("");
+        panel2.add(serviceNameLabel, new com.intellij.uiDesigner.core.GridConstraints(9, 0, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_WEST, com.intellij.uiDesigner.core.GridConstraints.FILL_NONE, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
+                
+        serviceVicinityLabel = new JLabel();
+        serviceVicinityLabel.setText("");
+        panel2.add(serviceVicinityLabel, new com.intellij.uiDesigner.core.GridConstraints(10, 0, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_WEST, com.intellij.uiDesigner.core.GridConstraints.FILL_NONE, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
+             
+        serviceRatingsLabel = new JLabel();
+        serviceRatingsLabel.setText("");
+        panel2.add(serviceRatingsLabel, new com.intellij.uiDesigner.core.GridConstraints(11, 0, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_WEST, com.intellij.uiDesigner.core.GridConstraints.FILL_NONE, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
+                       
+        serviceOperationalStatusLabel = new JLabel();
+        serviceOperationalStatusLabel.setText("");
+        panel2.add(serviceOperationalStatusLabel, new com.intellij.uiDesigner.core.GridConstraints(13, 0, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_WEST, com.intellij.uiDesigner.core.GridConstraints.FILL_NONE, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
+        
+        
+        submitButton = new JButton();
+        submitButton.setText("Get Service Details");
+        panel1.add(submitButton, new com.intellij.uiDesigner.core.GridConstraints(3, 0, 1, 2, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_HORIZONTAL, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_SHRINK | com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_GROW, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
+        final JLabel label7 = new JLabel();
+        Font label7Font = this.$$$getFont$$$(null, -1, 36, label7.getFont());
+        if (label7Font != null) label7.setFont(label7Font);
+        label7.setText("Pet Services");
+        panel1.add(label7, new com.intellij.uiDesigner.core.GridConstraints(0, 1, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_NONE, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
+        final com.intellij.uiDesigner.core.Spacer spacer1 = new com.intellij.uiDesigner.core.Spacer();
+        panel1.add(spacer1, new com.intellij.uiDesigner.core.GridConstraints(1, 1, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_HORIZONTAL, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_WANT_GROW, 1, null, null, null, 0, false));
+    }
+
+    /**
+     * @noinspection ALL
+     */
+    private Font $$$getFont$$$(String fontName, int style, int size, Font currentFont) {
+        if (currentFont == null) return null;
+        String resultName;
+        if (fontName == null) {
+            resultName = currentFont.getName();
+        } else {
+            Font testFont = new Font(fontName, Font.PLAIN, 10);
+            if (testFont.canDisplay('a') && testFont.canDisplay('1')) {
+                resultName = fontName;
+            } else {
+                resultName = currentFont.getName();
+            }
+        }
+        return new Font(resultName, style >= 0 ? style : currentFont.getStyle(), size >= 0 ? size : currentFont.getSize());
+    }
+
+    /**
+     * @noinspection ALL
+     */
+    public JComponent $$$getRootComponent$$$() {
+        return panel1;
+    }
+
+}
