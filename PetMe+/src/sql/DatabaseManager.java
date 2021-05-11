@@ -1,5 +1,6 @@
 package sql;
 
+import ProfileManager.UserProfile;
 import PetManager.*;
 
 import utils.Constants;
@@ -10,6 +11,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Properties;
+
 public class DatabaseManager {
     private Connection connection;
     private String authenticatedUser;
