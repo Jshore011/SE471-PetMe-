@@ -1,6 +1,6 @@
 package ui;
 import sql.DatabaseManager;
-import sql.UserProfile;
+import ProfileManager.UserProfile;
 import utils.Constants;
 
 import javax.swing.*;

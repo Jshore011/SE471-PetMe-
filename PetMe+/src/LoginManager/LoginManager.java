@@ -6,16 +6,18 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
- * A Login Mananger that handles all login functions
+ * A Login Manager that handles all login functions
  */
-public class LoginManager {
+public class LoginManager implements LoginIF{
     public PasswordHasher hasher;
 
 
     /**
-     * Creates a login mananger
+     * Creates a login manager
      * @param email user's email
      * @param password user's password
      * @param salt the user's salt
@@ -25,7 +27,7 @@ public class LoginManager {
     }
 
     /**
-     * Creates a login mananger from a pre-cached credential file
+     * Creates a login manager from a pre-cached credential file
      */
     public LoginManager() {
         this.hasher = new PasswordHasher();
@@ -65,12 +67,18 @@ public class LoginManager {
 
     /**
      * Logs in a user and validates the hash
-     * @param man Database mananger to request hash from
+     * @param man Database manager to request hash from
      * @return true if user is validated
      * @throws SQLException exception on unsuccessful hash fetch
      */
-    public boolean loginUser(DatabaseManager man) throws SQLException {
-        String sqlhash = man.getHashForUser(this.hasher.email);
+    @Override
+    public boolean loginUser(DatabaseManager man) {
+        String sqlhash = null;
+        try {
+            sqlhash = man.getHashForUser(this.hasher.email);
+        } catch (SQLException ex) {
+            Logger.getLogger(LoginManager.class.getName()).log(Level.SEVERE, null, ex);
+        }
 
         String hash = this.hasher.hash;
         if (hash == null) {
