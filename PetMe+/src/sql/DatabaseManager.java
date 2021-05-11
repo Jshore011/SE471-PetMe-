@@ -1,7 +1,6 @@
 package sql;
 
 import PetManager.*;
-import ProfileManager.UserProfile;
 
 import utils.Constants;
 import utils.DateUtils;

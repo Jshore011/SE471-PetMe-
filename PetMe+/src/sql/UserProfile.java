@@ -1,4 +1,4 @@
-package ProfileManager;
+package sql;
 
 import utils.Constants;
 

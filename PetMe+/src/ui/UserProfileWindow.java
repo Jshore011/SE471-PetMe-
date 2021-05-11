@@ -1,6 +1,6 @@
 package ui;
 import sql.DatabaseManager;
-import ProfileManager.UserProfile;
+import sql.UserProfile;
 import utils.Constants;
 
 import javax.swing.*;
@@ -125,7 +125,7 @@ public class UserProfileWindow {
                 user.lightmode = false;
 
                 try {
-                    UIManager.setLookAndFeel("com.jtattoo.plaf.mint.MintLookAndFeel");
+                    UIManager.setLookAndFeel("com.jtattoo.plaf.hifi.HiFiLookAndFeel");
                     Main.updateAllWindowsLookAndFeel();
                 } catch (Exception ex) {
                     ex.printStackTrace();
@@ -142,7 +142,7 @@ public class UserProfileWindow {
                 user.lightmode = true;
 
                 try {
-                    UIManager.setLookAndFeel("com.jtattoo.plaf.mint.MintLookAndFeel");
+                    UIManager.setLookAndFeel("com.jtattoo.plaf.acryl.AcrylLookAndFeel");
                     Main.updateAllWindowsLookAndFeel();
                 } catch (Exception ex) {
                     ex.printStackTrace();

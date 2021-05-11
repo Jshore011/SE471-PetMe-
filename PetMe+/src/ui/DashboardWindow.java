@@ -2,7 +2,7 @@ package ui;
 
 import sql.DatabaseManager;
 import PetManager.*;
-import ProfileManager.UserProfile;
+import sql.UserProfile;
 
 import javax.imageio.ImageIO;
 import javax.swing.*;
@@ -38,7 +38,7 @@ public class DashboardWindow {
         try {
             this.user = sql.getUserData(sql.getUser());
             if (!this.user.lightmode) {
-                UIManager.setLookAndFeel("com.jtattoo.plaf.mint.MintLookAndFeel");
+                UIManager.setLookAndFeel("com.jtattoo.plaf.hifi.HiFiLookAndFeel");
                 SwingUtilities.updateComponentTreeUI(panel1);
             }
 
