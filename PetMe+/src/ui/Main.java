@@ -4,7 +4,7 @@ import LoginManager.LoginManager;
 import PetManager.Pet;
 import PetManager.PetManager;
 import sql.DatabaseManager;
-import ProfileManager.UserProfile;
+import sql.UserProfile;
 
 import javax.swing.*;
 import java.io.File;
@@ -24,7 +24,7 @@ public class Main {
 
     public static void main(String[] args) {
         try {
-            UIManager.setLookAndFeel("com.jtattoo.plaf.mint.MintLookAndFeel");
+            UIManager.setLookAndFeel("com.jtattoo.plaf.acryl.AcrylLookAndFeel");
         }
             catch (Exception ex) {
             ex.printStackTrace();

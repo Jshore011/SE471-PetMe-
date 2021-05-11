@@ -2,7 +2,7 @@ package ui;
 
 import sql.DatabaseManager;
 import PetManager.*;
-import ProfileManager.UserProfile;
+import sql.UserProfile;
 
 import javax.imageio.ImageIO;
 import javax.swing.*;

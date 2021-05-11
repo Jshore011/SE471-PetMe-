@@ -3,17 +3,9 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Owner/Documents/GitHub/SE471/PetMe+/src/API/GoogleLocationServiceProvider.java</file>
-            <file>file:/C:/Users/Owner/Documents/GitHub/SE471/PetMe+/src/API/Veterinary_ServiceProvider.java</file>
-            <file>file:/C:/Users/Owner/Documents/GitHub/SE471/PetMe+/src/ui/DashboardWindow.java</file>
-            <file>file:/C:/Users/Owner/Documents/GitHub/SE471/PetMe+/src/ui/PetServicesWindow.java</file>
-            <file>file:/C:/Users/Owner/Documents/GitHub/SE471/PetMe+/src/ui/DietPopUpWindow.java</file>
-            <file>file:/C:/Users/Owner/Documents/GitHub/SE471/PetMe+/src/API/Park_ServiceProvider.java</file>
-            <file>file:/C:/Users/Owner/Documents/GitHub/SE471/PetMe+/src/API/Groomers_ServiceProvider.java</file>
-            <file>file:/C:/Users/Owner/Documents/GitHub/SE471/PetMe+/src/ui/AddPetWindow.java</file>
-            <file>file:/C:/Users/Owner/Documents/GitHub/SE471/PetMe+/src/API/Location.java</file>
-            <file>file:/C:/Users/Owner/Documents/GitHub/SE471/PetMe+/src/ui/UserProfileWindow.java</file>
-            <file>file:/C:/Users/Owner/Documents/GitHub/SE471/PetMe+/src/API/LocationServiceProvider.java</file>
+            <file>file:/C:/Petmanage/Petmanage/src/ReportBuilder/ReportGenerator.java</file>
+            <file>file:/C:/Petmanage/Petmanage/src/ReportBuilder/PDFReportGenerator.java</file>
+            <file>file:/C:/Petmanage/Petmanage/src/ReportBuilder/JPEGReportGenerator.java</file>
         </group>
     </open-files>
 </project-private>
