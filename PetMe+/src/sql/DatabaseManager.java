@@ -15,6 +15,7 @@ import java.util.Properties;
 public class DatabaseManager {
     private Connection connection;
     private String authenticatedUser;
+    //UserProfile profile;
 
     /**
      * Creates a database manager and connects to the database.
@@ -142,7 +143,7 @@ public class DatabaseManager {
     /**
      * Gets user profile data, only to be used on authenticated users.
      * @param username User to grab data for
-     * @return UserProfile object reprensenting their user information
+     * @return UserProfileBuilder object representing their user information
      * @throws SQLException throws on failed fetch
      */
     public UserProfile getUserData(String username) throws SQLException {
@@ -153,13 +154,15 @@ public class DatabaseManager {
         if (!results.next()) {
             return null;
         }
-
         UserProfile profile = new UserProfile();
         profile.name = results.getString(1);
-        profile.icon = results.getString(2);
+        profile.icon= results.getString(2);
         profile.phone = results.getString(3);
         profile.lightmode = results.getInt(4) == 1;
         profile.email = username;
+        UserProfile builder = new UserProfileBuilder().setName(profile.name).setIcon(profile.icon).setPhone(profile.phone).setlightmode(profile.lightmode).setEmail(profile.email).build();
+        
+        
 
         stmt.close();
         return profile;

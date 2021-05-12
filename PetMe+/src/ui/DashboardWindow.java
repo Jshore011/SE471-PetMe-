@@ -15,6 +15,7 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import java.sql.SQLException;
 import java.util.Locale;
+import sql.UserProfileBuilder;
 
 public class DashboardWindow {
     private JPanel panel1;

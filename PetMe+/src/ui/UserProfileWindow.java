@@ -15,6 +15,7 @@ import java.time.LocalDate;
 import java.time.ZoneId;
 import java.time.Year;
 import java.util.Arrays;
+import sql.UserProfileBuilder;
 
 public class UserProfileWindow {
     private JTextField nameField;

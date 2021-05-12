@@ -8,6 +8,7 @@ import sql.UserProfile;
 
 import javax.swing.*;
 import java.io.File;
+import sql.UserProfileBuilder;
 
 // Here's the entry point & setup for the main  UI
 public class Main {
