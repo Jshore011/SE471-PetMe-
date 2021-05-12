@@ -1,18 +1,13 @@
 package sql;
 
 import PetManager.*;
-
 import utils.Constants;
 import utils.DateUtils;
 import javax.swing.*;
-import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.sql.*;
-import java.time.Instant;
 import java.time.LocalDateTime;
-import java.time.OffsetDateTime;
-import java.time.ZoneOffset;
 import java.util.ArrayList;
 import java.util.Properties;
 
@@ -30,16 +25,16 @@ public class DatabaseManager {
             ClassLoader loader = Thread.currentThread().getContextClassLoader();
             InputStream stream = loader.getResourceAsStream("config.properties");
             prop.load(stream);
-            String host = prop.getProperty("host");
-            String dbname = prop.getProperty("database_name");
-            String user = prop.getProperty("user");
-            String pass = prop.getProperty("pass");
-
+            //String host = prop.getProperty("michaelwflaherty.com");
+            //String dbname = prop.getProperty("headline_petme");
+            //String user = prop.getProperty("headline");
+            //String pass = prop.getProperty("hteqWQF4a2");
+           // System.out.println(host);
 
             // load mysql driver library for sql operations
             Class.forName("com.mysql.jdbc.Driver");
 
-            this.connection = DriverManager.getConnection("jdbc:mysql://"+host+"/"+dbname, user, pass);
+            this.connection = DriverManager.getConnection("jdbc:mysql://michaelwflaherty.com:3306/headline_petme","headline","hteqWQF4a2");
             this.createTables();
         }
         catch (IOException e)
@@ -54,7 +49,7 @@ public class DatabaseManager {
             System.out.println("Error: " + e);
         }
     }
-       
+
     public boolean deleteUser(UserProfile profile) throws SQLException {
         java.sql.PreparedStatement stmt = this.connection.prepareStatement(Constants.DELETE_USER_PETS);
         stmt.setString(1, profile.email);

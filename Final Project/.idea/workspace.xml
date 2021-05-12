@@ -2,27 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a9625bfc-7202-4974-af9e-5699bea0d553" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_1_2020_9_54_PM__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_1_2020_9_54_PM__Default_Changelist_.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/config.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PetMe+/src/utils/config.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/client/PetManager/PetLogType.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/client/PetManager/PetLogType.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/client/com/intellij/uiDesigner/core/Util.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/client/com/intellij/uiDesigner/core/Util.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/client/ui/AddPetWindow.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/client/ui/AddPetWindow.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/client/ui/DashboardWindow.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/client/ui/DashboardWindow.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/client/ui/DietPopUpWindow.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/client/ui/DietPopUpWindow.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/client/ui/ExercisePopUpWindow.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/client/ui/ExercisePopUpWindow.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/client/ui/LoginWindow.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/client/ui/LoginWindow.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/client/ui/MedicationPopUpWindow.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/client/ui/MedicationPopUpWindow.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/client/ui/PetWindow.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/client/ui/PetWindow.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/client/ui/RegistrationWindow.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/client/ui/RegistrationWindow.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/AddPetWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/AddPetWindow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/DashboardWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/DashboardWindow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/DietPopUpWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/DietPopUpWindow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/ExercisePopUpWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/ExercisePopUpWindow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/LoginWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/LoginWindow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/MedicationPopUpWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/MedicationPopUpWindow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/PetWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/PetWindow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/RegistrationWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/RegistrationWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/client/sql/DatabaseManager$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/client/sql/DatabaseManager$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/client/sql/DatabaseManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/client/sql/DatabaseManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sql/DatabaseManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sql/DatabaseManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PetBackup/nbproject/private/private.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../PetBackup/nbproject/private/private.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PetMe+/build/built-jar.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../PetMe+/build/built-jar.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PetMe+/build/classes/sql/DatabaseManager$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../PetMe+/build/classes/sql/DatabaseManager$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PetMe+/build/classes/sql/DatabaseManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/../PetMe+/build/classes/sql/DatabaseManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PetMe+/nbproject/private/private.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../PetMe+/nbproject/private/private.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PetMe+/src/sql/DatabaseManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/../PetMe+/src/sql/DatabaseManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,10 +39,16 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../SE370/Final Project" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\owner\Documents\GitHub\SE471\Final Project\res" />
+      <recent name="C:\Users\owner\Documents\GitHub\SE471\Final Project\src" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -85,26 +82,34 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
+    <state x="92" y="92" width="1736" height="856" key="DiffContextDialog" timestamp="1620784176308">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="92" y="92" width="1736" height="856" key="DiffContextDialog/1920.-109.1920.1160/0.0.1920.1040@0.0.1920.1040" timestamp="1620784176308" />
     <state x="791" y="305" key="FileChooserDialogImpl" timestamp="1620781717715">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="791" y="305" key="FileChooserDialogImpl/1920.-109.1920.1160/0.0.1920.1040@0.0.1920.1040" timestamp="1620781717715" />
-    <state width="1904" height="295" key="GridCell.Tab.0.bottom" timestamp="1620781718544">
+    <state width="1921" height="113" key="GridCell.Tab.0.bottom" timestamp="1620786201838">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1904" height="295" key="GridCell.Tab.0.bottom/1920.-109.1920.1160/0.0.1920.1040@0.0.1920.1040" timestamp="1620781718544" />
-    <state width="1904" height="295" key="GridCell.Tab.0.center" timestamp="1620781718544">
+    <state width="1921" height="113" key="GridCell.Tab.0.bottom/1920.-109.1920.1160/0.0.1920.1040@0.0.1920.1040" timestamp="1620786201838" />
+    <state width="1904" height="295" key="GridCell.Tab.0.bottom/1920.-109.1920.1160/0.0.1920.1040@1920.-109.1920.1160" timestamp="1620783540903" />
+    <state width="1921" height="113" key="GridCell.Tab.0.center" timestamp="1620786201838">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1904" height="295" key="GridCell.Tab.0.center/1920.-109.1920.1160/0.0.1920.1040@0.0.1920.1040" timestamp="1620781718544" />
-    <state width="1904" height="295" key="GridCell.Tab.0.left" timestamp="1620781718543">
+    <state width="1921" height="113" key="GridCell.Tab.0.center/1920.-109.1920.1160/0.0.1920.1040@0.0.1920.1040" timestamp="1620786201838" />
+    <state width="1904" height="295" key="GridCell.Tab.0.center/1920.-109.1920.1160/0.0.1920.1040@1920.-109.1920.1160" timestamp="1620783540902" />
+    <state width="1921" height="113" key="GridCell.Tab.0.left" timestamp="1620786201838">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1904" height="295" key="GridCell.Tab.0.left/1920.-109.1920.1160/0.0.1920.1040@0.0.1920.1040" timestamp="1620781718543" />
-    <state width="1904" height="295" key="GridCell.Tab.0.right" timestamp="1620781718544">
+    <state width="1921" height="113" key="GridCell.Tab.0.left/1920.-109.1920.1160/0.0.1920.1040@0.0.1920.1040" timestamp="1620786201838" />
+    <state width="1904" height="295" key="GridCell.Tab.0.left/1920.-109.1920.1160/0.0.1920.1040@1920.-109.1920.1160" timestamp="1620783540902" />
+    <state width="1921" height="113" key="GridCell.Tab.0.right" timestamp="1620786201838">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1904" height="295" key="GridCell.Tab.0.right/1920.-109.1920.1160/0.0.1920.1040@0.0.1920.1040" timestamp="1620781718544" />
+    <state width="1921" height="113" key="GridCell.Tab.0.right/1920.-109.1920.1160/0.0.1920.1040@0.0.1920.1040" timestamp="1620786201838" />
+    <state width="1904" height="295" key="GridCell.Tab.0.right/1920.-109.1920.1160/0.0.1920.1040@1920.-109.1920.1160" timestamp="1620783540903" />
     <state x="491" y="125" key="SettingsEditor" timestamp="1620778701880">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
