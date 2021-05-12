@@ -54,7 +54,7 @@ public class DatabaseManager {
             System.out.println("Error: " + e);
         }
     }
-
+       
     public boolean deleteUser(UserProfile profile) throws SQLException {
         java.sql.PreparedStatement stmt = this.connection.prepareStatement(Constants.DELETE_USER_PETS);
         stmt.setString(1, profile.email);
