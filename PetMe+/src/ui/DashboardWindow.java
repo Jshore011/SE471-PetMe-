@@ -38,7 +38,7 @@ public class DashboardWindow {
         try {
             this.user = sql.getUserData(sql.getUser());
             if (!this.user.lightmode) {
-                UIManager.setLookAndFeel("com.jtattoo.plaf.hifi.HiFiLookAndFeel");
+                UIManager.setLookAndFeel("com.jtattoo.plaf.mint.MintLookAndFeel");
                 SwingUtilities.updateComponentTreeUI(panel1);
             }
 
