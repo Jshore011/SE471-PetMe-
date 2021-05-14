@@ -1,21 +1,25 @@
 package PetManager;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
 /**
  * Class that represents an entire PetLog journal full of logs
  */
 public class PetLog {
-    private PetLogType type;
+
+    
+   // public PetLogType type;
     private ArrayList<LogEntry> entries;
+    public PetLogVisitor_IF visitor;
 
     /**
      * Creates a new petlog
-     * @param type type of pet log
+     * @param visitor
      * @param entries logs to insert
      */
-    public PetLog(PetLogType type, ArrayList<LogEntry> entries) {
-        this.type = type;
+    public PetLog(PetLogVisitor_IF visitor, ArrayList<LogEntry> entries) {
+        this.visitor = visitor;
         this.entries = entries;
     }
 
@@ -48,9 +52,9 @@ public class PetLog {
      * Gets the pet log type for this log
      * @return pet log type
      */
-    public PetLogType getType() {
-        return type;
-    }
+    //public PetLog getType() {
+   //     return type;
+    //}
 
     /**
      * Removes an entry from our petlog
@@ -58,5 +62,14 @@ public class PetLog {
      */
     public void removeEntry(int index) {
         this.entries.remove(index);
+    }
+    
+    public void accept(PetLogVisitor_IF visitor)
+    {
+        //for each entry in the log, accept visitor
+        for (Iterator<LogEntry> it = entries.iterator(); it.hasNext();) {
+            visitor = (PetLogVisitor_IF) it.next();
+            accept(visitor);
+        }
     }
 }

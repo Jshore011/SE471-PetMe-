@@ -29,7 +29,7 @@ public class DietPopUpWindow {
     private JPanel panel1;
     private DatabaseManager sql;
     private Pet pet;
-
+    
 
     public DietPopUpWindow(DatabaseManager sql, Pet pet) {
         this.sql = sql;
@@ -62,6 +62,7 @@ public class DietPopUpWindow {
                 DietPopUpWindow.this.pet.diet.addEntry(entry);
 
                 try {
+                    
                     DietPopUpWindow.this.sql.insertPetLog(DietPopUpWindow.this.pet, PetLogType.Diet, entry);
                 } catch (Exception ex) {
                     System.out.println("Unable to save pet log: " + ex.getMessage());

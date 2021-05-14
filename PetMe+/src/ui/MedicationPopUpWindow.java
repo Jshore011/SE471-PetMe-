@@ -28,7 +28,7 @@ public class MedicationPopUpWindow {
     private DatabaseManager sql;
     private JPanel panel1;
     private Pet pet;
-
+    
     public MedicationPopUpWindow(DatabaseManager sql, Pet pet) {
         this.sql = sql;
         this.pet = pet;
@@ -60,6 +60,7 @@ public class MedicationPopUpWindow {
                 MedicationPopUpWindow.this.pet.medicine.addEntry(entry);
 
                 try {
+                    
                     MedicationPopUpWindow.this.sql.insertPetLog(MedicationPopUpWindow.this.pet, PetLogType.Medicine, entry);
                 } catch (Exception ex) {
                     System.out.println("Unable to save pet log: " + ex.getMessage());

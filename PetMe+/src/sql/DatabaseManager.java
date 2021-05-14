@@ -209,7 +209,7 @@ public class DatabaseManager {
     public PetLogData getPetLogs(int pet_id) throws SQLException {
         PetLog diet = new PetLog(PetLogType.Diet, new ArrayList<>());
         PetLog medicine = new PetLog(PetLogType.Medicine, new ArrayList<>());
-        PetLog poop = new PetLog(PetLogType.Exercise, new ArrayList<>());
+        PetLog poop = new PetLog(PetLogType.Medicine, new ArrayList<>());
 
         // prep query & dispatch
         java.sql.PreparedStatement stmt = this.connection.prepareStatement(Constants.GET_PET_LOGS);
@@ -351,7 +351,7 @@ public class DatabaseManager {
      * @param entry Log entry to insert
      * @throws SQLException throws on failed insertion
      */
-    public void insertPetLog(Pet pet, PetLogType logType, LogEntry entry) throws SQLException {
+    public void insertPetLog(Pet pet, PetLog logType, LogEntry entry) throws SQLException {
         java.sql.PreparedStatement stmt = this.connection.prepareStatement(Constants.INSERT_PET_LOG);
 
 
@@ -414,5 +414,9 @@ public class DatabaseManager {
 
         stmt.close();
         return petService;
+    }
+
+    public void insertPetLog(Pet pet, PetLogType petLogType, LogEntry entry) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }

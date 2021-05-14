@@ -29,7 +29,7 @@ public class ExercisePopUpWindow {
     private JButton save;
     private DatabaseManager sql;
     private Pet pet;
-
+    
     public ExercisePopUpWindow(DatabaseManager sql, Pet pet) {
         this.pet = pet;
         this.sql = sql;
@@ -62,6 +62,7 @@ public class ExercisePopUpWindow {
                 ExercisePopUpWindow.this.pet.exercise.addEntry(entry);
 
                 try {
+                    
                     ExercisePopUpWindow.this.sql.insertPetLog(ExercisePopUpWindow.this.pet, PetLogType.Exercise, entry);
                 } catch (Exception ex) {
                     System.out.println("Unable to save pet log: " + ex.getMessage());
