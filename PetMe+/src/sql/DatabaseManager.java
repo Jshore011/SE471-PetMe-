@@ -15,6 +15,7 @@ import java.util.Properties;
 public class DatabaseManager {
     private Connection connection;
     private String authenticatedUser;
+    private PetLogVisitor_IF visitor;
     //UserProfile profile;
 
     /**
@@ -207,9 +208,9 @@ public class DatabaseManager {
      * @throws SQLException throws if pet logs were unable to be fetched
      */
     public PetLogData getPetLogs(int pet_id) throws SQLException {
-        PetLog diet = new PetLog(PetLogType.Diet, new ArrayList<>());
-        PetLog medicine = new PetLog(PetLogType.Medicine, new ArrayList<>());
-        PetLog poop = new PetLog(PetLogType.Medicine, new ArrayList<>());
+        DietLog diet = new DietLog(visitor, new ArrayList<>());
+        MedicineLog medicine = new MedicineLog(visitor, new ArrayList<>());
+        ExerciseLog poop = new ExerciseLog(visitor, new ArrayList<>());
 
         // prep query & dispatch
         java.sql.PreparedStatement stmt = this.connection.prepareStatement(Constants.GET_PET_LOGS);
