@@ -1,8 +1,4 @@
-package sql;
-
-import utils.Constants;
-
-import java.util.Date;
+package ProfileManager;
 
 /**
  * Settings and user information representing a user's profile
@@ -13,16 +9,8 @@ public class UserProfile {
     public String email;
     public String phone;
     public boolean lightmode;
-
-    UserProfile(String name, String icon, String phone, boolean lightmode, String email) {
-        this.name=name;
-        this.email=email;
-        this.phone=phone;
-        this.icon=icon;
-        this.lightmode=lightmode;
-    }
-
-    UserProfile() {
+    
+    UserProfile(UserProfileBuilder builder) {
         
     }
 

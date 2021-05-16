@@ -3,20 +3,20 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package sql;
+package ProfileManager;
 
 /**
  *
  * @author Owner
  */
 public class UserProfileBuilder {
-    private String name;
-    private String email;
-    private String phone;
-    private String icon;
-    private boolean lightmode;
+    public String name;
+    public String email;
+    public String phone;
+    public String icon;
+    public boolean lightmode;
     
-    UserProfileBuilder(String name, String icon, String phone, boolean lightmode, String email){
+    public UserProfileBuilder(String name, String icon, String phone, boolean lightmode, String email){
         this.name=name;
         this.email=email;
         this.phone=phone;
@@ -24,31 +24,32 @@ public class UserProfileBuilder {
         this.lightmode=lightmode;
     }
 
-    UserProfileBuilder() {
+    public UserProfileBuilder() {
     }
-    
-    UserProfileBuilder setName(String name) {
+
+
+    public UserProfileBuilder setName(String name) {
         this.name=name;
         return this;
     }
 
-    UserProfileBuilder setIcon(String icon) {
+    public UserProfileBuilder setIcon(String icon) {
         return this;
     }
 
-    UserProfileBuilder setPhone(String phone) {
+    public UserProfileBuilder setPhone(String phone) {
         return this;
     }
 
-    UserProfileBuilder setEmail(String email) {
+    public UserProfileBuilder setEmail(String email) {
         return this;
     }
     
-    UserProfileBuilder setlightmode(boolean lightmode){
+    public UserProfileBuilder setlightmode(boolean lightmode){
         return this;
     }
     
     public UserProfile build(){
-        return new UserProfile(name, icon, phone, lightmode, email);
+        return new UserProfile(this);
     }
 }

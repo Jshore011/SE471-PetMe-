@@ -1,6 +1,6 @@
 package ui;
 import sql.DatabaseManager;
-import sql.UserProfile;
+import ProfileManager.UserProfile;
 import utils.Constants;
 
 import javax.swing.*;
@@ -15,7 +15,7 @@ import java.time.LocalDate;
 import java.time.ZoneId;
 import java.time.Year;
 import java.util.Arrays;
-import sql.UserProfileBuilder;
+import ProfileManager.UserProfileBuilder;
 
 public class UserProfileWindow {
     private JTextField nameField;

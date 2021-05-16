@@ -1,5 +1,6 @@
 package sql;
 
+import ProfileManager.*;
 import PetManager.*;
 import java.io.InputStream;
 
@@ -155,7 +156,7 @@ public class DatabaseManager {
         if (!results.next()) {
             return null;
         }
-        UserProfile profile = new UserProfile();
+        UserProfileBuilder profile = new UserProfileBuilder();
         profile.name = results.getString(1);
         profile.icon= results.getString(2);
         profile.phone = results.getString(3);
@@ -163,10 +164,8 @@ public class DatabaseManager {
         profile.email = username;
         UserProfile builder = new UserProfileBuilder().setName(profile.name).setIcon(profile.icon).setPhone(profile.phone).setlightmode(profile.lightmode).setEmail(profile.email).build();
         
-        
-
         stmt.close();
-        return profile;
+        return builder;
     }
 
 
