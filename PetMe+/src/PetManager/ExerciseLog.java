@@ -14,16 +14,14 @@ import java.util.ArrayList;
  * @author owner
  */
 public class ExerciseLog extends PetLog{
-  public ArrayList<LogEntry> entries;
-    public PetLogVisitor_IF visitor;
-    public ExerciseLog(PetLogVisitor_IF visitor, ArrayList<LogEntry> entries)
-    {
-        this.visitor=visitor;
-        this.entries=entries;
-    }
+
+    public ExerciseLog(PetLogVisitor_IF visitor, ArrayList<LogEntry> entries) {
+    super(visitor, entries);
+  }
      @Override
    public void accept(PetLogVisitor_IF visitor){
        visitor.visitExercise(this);
+       super.accept(visitor);
    }
    
    @Override

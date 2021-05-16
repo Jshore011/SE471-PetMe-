@@ -2,7 +2,7 @@ package ui;
 
 import sql.DatabaseManager;
 import PetManager.*;
-import ProfileManager.UserProfile;
+import sql.UserProfile;
 
 import javax.imageio.ImageIO;
 import javax.swing.*;
@@ -15,7 +15,7 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import java.sql.SQLException;
 import java.util.Locale;
-import ProfileManager.UserProfileBuilder;
+import sql.UserProfileBuilder;
 
 public class DashboardWindow {
     private JPanel panel1;

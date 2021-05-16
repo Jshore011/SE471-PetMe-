@@ -4,11 +4,11 @@ import LoginManager.LoginManager;
 import PetManager.Pet;
 import PetManager.PetManager;
 import sql.DatabaseManager;
-import ProfileManager.UserProfile;
+import sql.UserProfile;
 
 import javax.swing.*;
 import java.io.File;
-import ProfileManager.UserProfileBuilder;
+import sql.UserProfileBuilder;
 
 // Here's the entry point & setup for the main  UI
 public class Main {

@@ -1,4 +1,4 @@
-package ProfileManager;
+package sql;
 
 /**
  * Settings and user information representing a user's profile

@@ -1,6 +1,5 @@
 package sql;
 
-import ProfileManager.*;
 import PetManager.*;
 import java.io.InputStream;
 

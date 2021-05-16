@@ -2,7 +2,7 @@ package ui;
 
 import PetManager.LogEntry;
 import PetManager.Pet;
-import PetManager.PetLogType;
+import PetManager.*;
 import sql.DatabaseManager;
 import javax.swing.JComboBox;
 import javax.swing.*;

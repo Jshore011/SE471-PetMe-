@@ -6,7 +6,7 @@ import java.util.Iterator;
 /**
  * Class that represents an entire PetLog journal full of logs
  */
-public class PetLog {
+public class PetLog extends LogEntry {
 
     
    // public PetLogType type;
