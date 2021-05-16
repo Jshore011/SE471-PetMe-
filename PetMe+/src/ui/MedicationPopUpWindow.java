@@ -1,5 +1,6 @@
 package ui;
 
+import PetManager.DietLog;
 import PetManager.LogEntry;
 import PetManager.Pet;
 import PetManager.PetLogType;
@@ -55,7 +56,7 @@ public class MedicationPopUpWindow {
 
                 LocalDateTime dt = LocalDateTime.of(year_num, month_num, day_num, hour_num, minute_num);
                 String comments = commentBox.getText();
-
+                //DietLog diet = new DietLog();
                 LogEntry entry = new LogEntry(dt, comments);
                 MedicationPopUpWindow.this.pet.medicine.addEntry(entry);
 

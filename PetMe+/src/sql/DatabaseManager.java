@@ -220,7 +220,7 @@ public class DatabaseManager {
             // java-ize mysql data
             LocalDateTime date = DateUtils.epochMilliToDate(results.getLong(1));
             String text = results.getString(2);
-            PetLogType type = PetLogType.fromString(results.getString(3));
+            PetLog type = PetLog.fromString(results.getString(3));
             // store based on type
             switch (type) {
                 case Diet:
