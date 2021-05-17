@@ -10,6 +10,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.Date;
 import java.time.*;
+import java.util.ArrayList;
 import java.util.Locale;
 import javax.swing.JComboBox;
 import javax.swing.plaf.FontUIResource;
@@ -29,7 +30,7 @@ public class DietPopUpWindow {
     private JPanel panel1;
     private DatabaseManager sql;
     private Pet pet;
-    
+    private PetLogVisitor_IF visitor;
 
     public DietPopUpWindow(DatabaseManager sql, Pet pet) {
         this.sql = sql;
@@ -55,15 +56,15 @@ public class DietPopUpWindow {
                 if (ampm.equalsIgnoreCase("PM")) {
                     hour += 12;
                 }
-
+                 
+                DietLog diet = new DietLog(visitor, new ArrayList<>());
                 String comments = commentBox.getText();
                 LocalDateTime dt = LocalDateTime.of(year, month, day, hour, minute);
-                LogEntry entry = new LogEntry(dt, comments);
-                DietPopUpWindow.this.pet.diet.addEntry(entry);
+                DietPopUpWindow.this.pet.diet.addDietEntry(diet);
 
                 try {
                     
-                    DietPopUpWindow.this.sql.insertPetLog(DietPopUpWindow.this.pet, PetLogType.Diet, entry);
+                    DietPopUpWindow.this.sql.insertPetLog(DietPopUpWindow.this.pet,diet.newEntry(comments, dt));
                 } catch (Exception ex) {
                     System.out.println("Unable to save pet log: " + ex.getMessage());
                 }

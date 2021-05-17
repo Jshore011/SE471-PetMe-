@@ -2,8 +2,10 @@ package ui;
 
 import PetManager.DietLog;
 import PetManager.LogEntry;
+import PetManager.MedicineLog;
 import PetManager.Pet;
 import PetManager.PetLogType;
+import PetManager.PetLogVisitor_IF;
 import sql.DatabaseManager;
 
 import javax.swing.*;
@@ -15,6 +17,7 @@ import java.awt.event.ActionListener;
 import java.sql.Date;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
+import java.util.ArrayList;
 import java.util.Locale;
 
 public class MedicationPopUpWindow {
@@ -29,7 +32,7 @@ public class MedicationPopUpWindow {
     private DatabaseManager sql;
     private JPanel panel1;
     private Pet pet;
-    
+    private PetLogVisitor_IF visitor;
     public MedicationPopUpWindow(DatabaseManager sql, Pet pet) {
         this.sql = sql;
         this.pet = pet;
@@ -53,12 +56,12 @@ public class MedicationPopUpWindow {
                 if (ampm.equalsIgnoreCase("PM")) {
                     hour_num += 12;
                 }
-
+                MedicineLog medicine = new MedicineLog(visitor, new ArrayList<>());
                 LocalDateTime dt = LocalDateTime.of(year_num, month_num, day_num, hour_num, minute_num);
                 String comments = commentBox.getText();
-                //DietLog diet = new DietLog();
-                LogEntry entry = new LogEntry(dt, comments);
-                MedicationPopUpWindow.this.pet.medicine.addEntry(entry);
+                
+                //LogEntry entry = new LogEntry(dt, comments);
+                MedicationPopUpWindow.this.pet.medicine.addMedicineEntry(medicine);
 
                 try {
                     

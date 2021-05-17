@@ -1,7 +1,6 @@
 package sql;
 
 import PetManager.*;
-import java.io.InputStream;
 
 import utils.Constants;
 import utils.DateUtils;
@@ -11,12 +10,10 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Properties;
-
 public class DatabaseManager {
     private Connection connection;
     private String authenticatedUser;
     private PetLogVisitor_IF visitor;
-    //UserProfile profile;
 
     /**
      * Creates a database manager and connects to the database.
@@ -27,18 +24,20 @@ public class DatabaseManager {
             // load configuration file containing database creds
             Properties prop = new Properties();
             ClassLoader loader = Thread.currentThread().getContextClassLoader();
-            InputStream stream = loader.getResourceAsStream("config.properties");
-            prop.load(stream);
-            //String host = prop.getProperty("michaelwflaherty.com");
-            //String dbname = prop.getProperty("headline_petme");
-            //String user = prop.getProperty("headline");
-            //String pass = prop.getProperty("hteqWQF4a2");
-            //System.out.println(host);
+//            InputStream stream = loader.getResourceAsStream("config.properties");
+//            prop.load(stream);
+//            String host = prop.getProperty("localhost:3306");
+//            String dbname = prop.getProperty("pet_manager");
+//            String user = prop.getProperty("root");
+//            String pass = prop.getProperty("");
+
 
             // load mysql driver library for sql operations
             Class.forName("com.mysql.jdbc.Driver");
 
-            this.connection = DriverManager.getConnection("jdbc:mysql://michaelwflaherty.com:3306/headline_petme","headline","hteqWQF4a2");
+//            this.connection = DriverManager.getConnection("jdbc:mysql://"+host+"/"+dbname, user, pass);
+            //this.connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/pet_manager", "root", "P@$$w0rd");
+            this.connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/pet_manager", "root", "");
             this.createTables();
         }
         catch (SQLException e) {
@@ -144,10 +143,10 @@ public class DatabaseManager {
     /**
      * Gets user profile data, only to be used on authenticated users.
      * @param username User to grab data for
-     * @return UserProfileBuilder object representing their user information
+     * @return UserProfile object reprensenting their user information
      * @throws SQLException throws on failed fetch
      */
-    public UserProfile getUserData(String username) throws SQLException {
+    public UserProfileBuilder getUserData(String username) throws SQLException {
         java.sql.PreparedStatement stmt = this.connection.prepareStatement(Constants.GET_PROFILE);
         stmt.setString(1, username);
 
@@ -155,16 +154,16 @@ public class DatabaseManager {
         if (!results.next()) {
             return null;
         }
+
         UserProfileBuilder profile = new UserProfileBuilder();
         profile.name = results.getString(1);
-        profile.icon= results.getString(2);
+        profile.icon = results.getString(2);
         profile.phone = results.getString(3);
         profile.lightmode = results.getInt(4) == 1;
         profile.email = username;
-        UserProfile builder = new UserProfileBuilder().setName(profile.name).setIcon(profile.icon).setPhone(profile.phone).setlightmode(profile.lightmode).setEmail(profile.email).build();
-        
+
         stmt.close();
-        return builder;
+        return profile;
     }
 
 
@@ -216,24 +215,24 @@ public class DatabaseManager {
         ResultSet results = stmt.executeQuery();
 
         // for every single pet log entry in the database
-        while (results.next()) {
+       // while (results.next()) {
             // java-ize mysql data
-            LocalDateTime date = DateUtils.epochMilliToDate(results.getLong(1));
-            String text = results.getString(2);
-            PetLog type = PetLog.fromString(results.getString(3));
-            // store based on type
-            switch (type) {
-                case Diet:
-                    diet.addEntry(new LogEntry(date, text));
-                    break;
-                case Medicine:
-                    medicine.addEntry(new LogEntry(date, text));
-                    break;
-                case Exercise:
-                    poop.addEntry(new LogEntry(date, text));
-                    break;
-            }
-        }
+         //   LocalDateTime date = DateUtils.epochMilliToDate(results.getLong(1));
+         //   String text = results.getString(2);
+         //   PetLogType type = PetLogType.fromString(results.getString(3));
+        //    // store based on type
+       //     switch (type) {
+        //        case DietLog:
+         //           diet.addEntry(LogEntry(date, text));
+          //          break;
+           //     case Medicine:
+          //          medicine.addEntry(new LogEntry(date, text));
+           //         break;
+            //    case Exercise:
+            //        poop.addEntry(new LogEntry(date, text));
+            //        break;
+            //}
+       // }
         // free our mem and ret
         stmt.close();
         results.close();
@@ -350,14 +349,14 @@ public class DatabaseManager {
      * @param entry Log entry to insert
      * @throws SQLException throws on failed insertion
      */
-    public void insertPetLog(Pet pet, PetLog logType, LogEntry entry) throws SQLException {
+    public void insertPetLog(Pet pet, PetLogVisitor_IF visitor, LogEntry entry) throws SQLException {
         java.sql.PreparedStatement stmt = this.connection.prepareStatement(Constants.INSERT_PET_LOG);
 
 
         stmt.setString(1, pet.owner);
         stmt.setLong(2, DateUtils.dateToEpochMilli(entry.date));
         stmt.setString(3, entry.text);
-        stmt.setString(4, logType.toString());
+        stmt.setString(4, visitor.toString());
         stmt.setInt(5, pet.id);
 
         stmt.executeUpdate();
@@ -413,9 +412,5 @@ public class DatabaseManager {
 
         stmt.close();
         return petService;
-    }
-
-    public void insertPetLog(Pet pet, PetLogType petLogType, LogEntry entry) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }

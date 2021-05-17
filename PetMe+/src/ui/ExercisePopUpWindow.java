@@ -15,6 +15,7 @@ import java.lang.reflect.Array;
 import java.sql.Date;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
+import java.util.ArrayList;
 import java.util.Locale;
 
 public class ExercisePopUpWindow {
@@ -29,7 +30,7 @@ public class ExercisePopUpWindow {
     private JButton save;
     private DatabaseManager sql;
     private Pet pet;
-    
+    private PetLogVisitor_IF visitor;
     public ExercisePopUpWindow(DatabaseManager sql, Pet pet) {
         this.pet = pet;
         this.sql = sql;
@@ -53,13 +54,11 @@ public class ExercisePopUpWindow {
                 if (ampm.equalsIgnoreCase("PM")) {
                     hour_num += 12;
                 }
-
+                ExerciseLog exercise = new ExerciseLog(visitor, new ArrayList<>());
                 LocalDateTime dt = LocalDateTime.of(year_num, month_num, day_num, hour_num, minute_num);
-
                 String comments = commentBoxExercise.getText();
-
-                LogEntry entry = new LogEntry(dt, comments);
-                ExercisePopUpWindow.this.pet.exercise.addEntry(entry);
+                //LogEntry entry = new LogEntry(dt, comments);
+                ExercisePopUpWindow.this.pet.exercise.addExerciseEntry(exercise);
 
                 try {
                     

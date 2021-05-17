@@ -41,13 +41,26 @@ public class PetLog extends LogEntry {
     }
 
     /**
-     * Adds a new entry to the pet log
+     * Adds a new diet entry to the pet log
      * @param entry entry to add
      */
-    public void addEntry(LogEntry entry) {
+    public void addDietEntry(DietLog entry) {
         this.entries.add(entry);
     }
-
+/**
+     * Adds a new exercise entry to the pet log
+     * @param entry entry to add
+     */
+    public void addExerciseEntry(ExerciseLog entry) {
+        this.entries.add(entry);
+    }
+    /**
+     * Adds a new diet entry to the pet log
+     * @param entry entry to add
+     */
+    public void addMedicineEntry(MedicineLog entry) {
+        this.entries.add(entry);
+    }
     /**
      * Gets the pet log type for this log
      * @return pet log type
