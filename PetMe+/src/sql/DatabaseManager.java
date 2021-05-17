@@ -349,14 +349,14 @@ public class DatabaseManager {
      * @param entry Log entry to insert
      * @throws SQLException throws on failed insertion
      */
-    public void insertPetLog(Pet pet, PetLogVisitor_IF visitor, LogEntry entry) throws SQLException {
+    public void insertPetLog(Pet pet, PetLogType logType, LogEntry entry) throws SQLException {
         java.sql.PreparedStatement stmt = this.connection.prepareStatement(Constants.INSERT_PET_LOG);
 
 
         stmt.setString(1, pet.owner);
         stmt.setLong(2, DateUtils.dateToEpochMilli(entry.date));
         stmt.setString(3, entry.text);
-        stmt.setString(4, visitor.toString());
+        stmt.setString(4, logType.toString());
         stmt.setInt(5, pet.id);
 
         stmt.executeUpdate();

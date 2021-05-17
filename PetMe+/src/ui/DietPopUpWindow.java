@@ -60,6 +60,7 @@ public class DietPopUpWindow {
                 DietLog diet = new DietLog(visitor, new ArrayList<>());
                 String comments = commentBox.getText();
                 LocalDateTime dt = LocalDateTime.of(year, month, day, hour, minute);
+                diet.newEntry(comments, dt);
                 DietPopUpWindow.this.pet.diet.addDietEntry(diet);
 
                 try {

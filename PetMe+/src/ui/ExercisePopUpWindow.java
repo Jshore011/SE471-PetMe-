@@ -57,12 +57,12 @@ public class ExercisePopUpWindow {
                 ExerciseLog exercise = new ExerciseLog(visitor, new ArrayList<>());
                 LocalDateTime dt = LocalDateTime.of(year_num, month_num, day_num, hour_num, minute_num);
                 String comments = commentBoxExercise.getText();
-                //LogEntry entry = new LogEntry(dt, comments);
+                exercise.newEntry(comments, dt);
                 ExercisePopUpWindow.this.pet.exercise.addExerciseEntry(exercise);
 
                 try {
                     
-                    ExercisePopUpWindow.this.sql.insertPetLog(ExercisePopUpWindow.this.pet, PetLogType.Exercise, entry);
+                    ExercisePopUpWindow.this.sql.insertPetLog(ExercisePopUpWindow.this.pet, visitor);
                 } catch (Exception ex) {
                     System.out.println("Unable to save pet log: " + ex.getMessage());
                 }

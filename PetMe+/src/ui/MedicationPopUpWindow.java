@@ -59,7 +59,7 @@ public class MedicationPopUpWindow {
                 MedicineLog medicine = new MedicineLog(visitor, new ArrayList<>());
                 LocalDateTime dt = LocalDateTime.of(year_num, month_num, day_num, hour_num, minute_num);
                 String comments = commentBox.getText();
-                
+                medicine.newEntry(comments, dt);
                 //LogEntry entry = new LogEntry(dt, comments);
                 MedicationPopUpWindow.this.pet.medicine.addMedicineEntry(medicine);
 

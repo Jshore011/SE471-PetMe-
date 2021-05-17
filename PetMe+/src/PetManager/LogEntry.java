@@ -17,11 +17,11 @@ public abstract class LogEntry {
     public LogEntry() {
         
     }
-    public DietLog newEntry(String text, LocalDateTime date)
+    public void newEntry(String text, LocalDateTime date)
     {
         this.date=date;
         this.text=text;
-        return null;
+        
     }
     abstract public void accept(PetLogVisitor_IF visitor);
 }
