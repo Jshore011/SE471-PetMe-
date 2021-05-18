@@ -56,10 +56,13 @@ public class DietPopUpWindow {
                 if (ampm.equalsIgnoreCase("PM")) {
                     hour += 12;
                 }
-                 
+                
+                visitor = new PetLogVisitor();
                 DietLog diet = new DietLog(visitor, new ArrayList<>());
+                visitor.visitDiet(diet);
                 String comments = commentBox.getText();
                 LocalDateTime dt = LocalDateTime.of(year, month, day, hour, minute);
+                diet.accept(visitor);
                 diet.newEntry(comments, dt);
                 DietPopUpWindow.this.pet.diet.addDietEntry(diet);
 

@@ -30,9 +30,5 @@ public class MedicineLog extends PetLog{
     return "Medicine";
   }
 
-    @Override
-    public void newEntry(String comments, LocalDateTime dt) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
   
 }

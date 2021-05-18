@@ -54,9 +54,12 @@ public class ExercisePopUpWindow {
                 if (ampm.equalsIgnoreCase("PM")) {
                     hour_num += 12;
                 }
+                visitor = new PetLogVisitor();
                 ExerciseLog exercise = new ExerciseLog(visitor, new ArrayList<>());
+                visitor.visitExercise(exercise);
                 LocalDateTime dt = LocalDateTime.of(year_num, month_num, day_num, hour_num, minute_num);
                 String comments = commentBoxExercise.getText();
+                exercise.accept(visitor);
                 exercise.newEntry(comments, dt);
                 ExercisePopUpWindow.this.pet.exercise.addExerciseEntry(exercise);
 

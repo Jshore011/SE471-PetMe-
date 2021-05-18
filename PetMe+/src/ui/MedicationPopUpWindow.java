@@ -4,6 +4,7 @@ import PetManager.DietLog;
 import PetManager.LogEntry;
 import PetManager.MedicineLog;
 import PetManager.Pet;
+import PetManager.PetLogVisitor;
 
 import PetManager.PetLogVisitor_IF;
 import sql.DatabaseManager;
@@ -56,11 +57,14 @@ public class MedicationPopUpWindow {
                 if (ampm.equalsIgnoreCase("PM")) {
                     hour_num += 12;
                 }
+                visitor = new PetLogVisitor();
                 MedicineLog medicine = new MedicineLog(visitor, new ArrayList<>());
+                visitor.visitMedication(medicine);
                 LocalDateTime dt = LocalDateTime.of(year_num, month_num, day_num, hour_num, minute_num);
                 String comments = commentBox.getText();
+                medicine.accept(visitor);
                 medicine.newEntry(comments, dt);
-                //LogEntry entry = new LogEntry(dt, comments);
+                
                 MedicationPopUpWindow.this.pet.medicine.addMedicineEntry(medicine);
 
                 try {

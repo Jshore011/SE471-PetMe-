@@ -33,10 +33,9 @@ public class DatabaseManager {
             String pass = prop.getProperty("pass");
             // load mysql driver library for sql operations
             Class.forName("com.mysql.jdbc.Driver");
-               System.out.println(host);
+               //System.out.println(host);
             this.connection = DriverManager.getConnection("jdbc:mysql://michaelwflaherty.com:3306/headline_petme","headline","hteqWQF4a2");
-            //this.connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/pet_manager", "root", "P@$$w0rd");
-            //this.connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/pet_manager", "root", "");
+          
             this.createTables();
         }
         catch (SQLException e) {
