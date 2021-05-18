@@ -5,6 +5,7 @@
  */
 package PetManager;
 
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 
 
@@ -28,6 +29,10 @@ public class ExerciseLog extends PetLog{
   public String toString() {
     return "Exercise";
   }
+
+    public void newEntry(String comments, LocalDateTime dt) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
    
 }

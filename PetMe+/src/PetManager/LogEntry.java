@@ -19,9 +19,11 @@ public abstract class LogEntry {
     }
     public void newEntry(String text, LocalDateTime date)
     {
+   
         this.date=date;
         this.text=text;
         
+       
     }
     abstract public void accept(PetLogVisitor_IF visitor);
 }

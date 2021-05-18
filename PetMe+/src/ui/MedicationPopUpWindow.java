@@ -4,7 +4,7 @@ import PetManager.DietLog;
 import PetManager.LogEntry;
 import PetManager.MedicineLog;
 import PetManager.Pet;
-import PetManager.PetLogType;
+
 import PetManager.PetLogVisitor_IF;
 import sql.DatabaseManager;
 
@@ -65,7 +65,7 @@ public class MedicationPopUpWindow {
 
                 try {
                     
-                    MedicationPopUpWindow.this.sql.insertPetLog(MedicationPopUpWindow.this.pet, PetLogType.Medicine, entry);
+                    MedicationPopUpWindow.this.sql.insertMedicinePetLog(MedicationPopUpWindow.this.pet, medicine);
                 } catch (Exception ex) {
                     System.out.println("Unable to save pet log: " + ex.getMessage());
                 }

@@ -2,6 +2,17 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/C:/Users/owner/Documents/GitHub/SE471/PetMe+/src/ui/ExercisePopUpWindow.java</file>
+            <file>file:/C:/Users/owner/Documents/GitHub/SE471/PetMe+/src/PetManager/LogEntry.java</file>
+            <file>file:/C:/Users/owner/Documents/GitHub/SE471/PetMe+/src/sql/DatabaseManager.java</file>
+            <file>file:/C:/Users/owner/Documents/GitHub/SE471/PetMe+/src/PetManager/PetManager.java</file>
+            <file>file:/C:/Users/owner/Documents/GitHub/SE471/PetMe+/src/PetManager/ExerciseLog.java</file>
+            <file>file:/C:/Users/owner/Documents/GitHub/SE471/PetMe+/src/sql/PetLogData.java</file>
+            <file>file:/C:/Users/owner/Documents/GitHub/SE471/PetMe+/src/ui/DietPopUpWindow.java</file>
+            <file>file:/C:/Users/owner/Documents/GitHub/SE471/PetMe+/src/PetManager/PetLog.java</file>
+            <file>file:/C:/Users/owner/Documents/GitHub/SE471/PetMe+/src/ui/MedicationPopUpWindow.java</file>
+            <file>file:/C:/Users/owner/Documents/GitHub/SE471/PetMe+/src/PetManager/DietLog.java</file>
+        </group>
     </open-files>
 </project-private>

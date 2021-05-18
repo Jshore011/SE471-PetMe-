@@ -62,7 +62,7 @@ public class ExercisePopUpWindow {
 
                 try {
                     
-                    ExercisePopUpWindow.this.sql.insertPetLog(ExercisePopUpWindow.this.pet, visitor);
+                    ExercisePopUpWindow.this.sql.insertExercisePetLog(ExercisePopUpWindow.this.pet, exercise);
                 } catch (Exception ex) {
                     System.out.println("Unable to save pet log: " + ex.getMessage());
                 }

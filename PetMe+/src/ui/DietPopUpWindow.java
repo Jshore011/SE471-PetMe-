@@ -65,7 +65,7 @@ public class DietPopUpWindow {
 
                 try {
                     
-                    DietPopUpWindow.this.sql.insertPetLog(DietPopUpWindow.this.pet,diet.newEntry(comments, dt));
+                    DietPopUpWindow.this.sql.insertDietPetLog(DietPopUpWindow.this.pet,diet);
                 } catch (Exception ex) {
                     System.out.println("Unable to save pet log: " + ex.getMessage());
                 }

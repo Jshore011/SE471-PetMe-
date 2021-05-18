@@ -2,20 +2,16 @@ package ui;
 
 import sql.DatabaseManager;
 import PetManager.*;
-import sql.UserProfile;
 
 import javax.imageio.ImageIO;
 import javax.swing.*;
-import javax.swing.plaf.FontUIResource;
-import javax.swing.text.StyleContext;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.sql.SQLException;
-import java.util.Locale;
-import sql.UserProfileBuilder;
+import sql.UserProfile;
 
 public class DashboardWindow {
     private JPanel panel1;

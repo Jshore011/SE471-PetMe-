@@ -5,6 +5,7 @@
  */
 package PetManager;
 
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 
 
@@ -28,5 +29,9 @@ public class MedicineLog extends PetLog{
   public String toString() {
     return "Medicine";
   }
+
+    public void newEntry(String comments, LocalDateTime dt) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
   
 }

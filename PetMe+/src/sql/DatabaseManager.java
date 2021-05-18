@@ -343,20 +343,62 @@ public class DatabaseManager {
     }
 
     /**
-     * Inserts a new pet log for a given pet
+     * Inserts a new Medicine pet log for a given pet
      * @param pet pet to insert log for
      * @param logType log type
      * @param entry Log entry to insert
      * @throws SQLException throws on failed insertion
      */
-    public void insertPetLog(Pet pet, PetLogType logType, LogEntry entry) throws SQLException {
+    public void insertMedicinePetLog(Pet pet, MedicineLog medicine) throws SQLException {
         java.sql.PreparedStatement stmt = this.connection.prepareStatement(Constants.INSERT_PET_LOG);
 
 
         stmt.setString(1, pet.owner);
-        stmt.setLong(2, DateUtils.dateToEpochMilli(entry.date));
-        stmt.setString(3, entry.text);
-        stmt.setString(4, logType.toString());
+        stmt.setLong(2, DateUtils.dateToEpochMilli(medicine.date));
+        stmt.setString(3,medicine.text);
+        stmt.setString(4, medicine.toString());
+        stmt.setInt(5, pet.id);
+
+        stmt.executeUpdate();
+        stmt.close();
+    }
+    
+    /**
+     * Inserts a new Medicine pet log for a given pet
+     * @param pet pet to insert log for
+     * @param logType log type
+     * @param entry Log entry to insert
+     * @throws SQLException throws on failed insertion
+     */
+    public void insertExercisePetLog(Pet pet,ExerciseLog exercise) throws SQLException {
+        java.sql.PreparedStatement stmt = this.connection.prepareStatement(Constants.INSERT_PET_LOG);
+
+
+        stmt.setString(1, pet.owner);
+        stmt.setLong(2, DateUtils.dateToEpochMilli(exercise.date));
+        stmt.setString(3,exercise.text);
+        stmt.setString(4, exercise.toString());
+        stmt.setInt(5, pet.id);
+
+        stmt.executeUpdate();
+        stmt.close();
+    }
+    
+    /**
+     * Inserts a new Diet pet log for a given pet
+     * @param pet pet to insert log for
+     * @param logType log type
+     * @param entry Log entry to insert
+     * @throws SQLException throws on failed insertion
+     */
+    public void insertDietPetLog(Pet pet, DietLog diet) throws SQLException {
+        java.sql.PreparedStatement stmt = this.connection.prepareStatement(Constants.INSERT_PET_LOG);
+
+
+        stmt.setString(1, pet.owner);
+        stmt.setLong(2, DateUtils.dateToEpochMilli(diet.date));
+        stmt.setString(3,diet.text);
+        stmt.setString(4, diet.toString());
         stmt.setInt(5, pet.id);
 
         stmt.executeUpdate();
