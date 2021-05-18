@@ -1,6 +1,7 @@
 package sql;
 
 import PetManager.*;
+import java.io.InputStream;
 
 import utils.Constants;
 import utils.DateUtils;
@@ -24,18 +25,18 @@ public class DatabaseManager {
             // load configuration file containing database creds
             Properties prop = new Properties();
             ClassLoader loader = Thread.currentThread().getContextClassLoader();
-//            InputStream stream = loader.getResourceAsStream("config.properties");
-//            prop.load(stream);
-//            String host = prop.getProperty("localhost:3306");
-//            String dbname = prop.getProperty("pet_manager");
-//            String user = prop.getProperty("root");
-//            String pass = prop.getProperty("");
+            InputStream stream = loader.getResourceAsStream("config.properties");
+            prop.load(stream);
+            String host = prop.getProperty("host");
+            String dbname = prop.getProperty("database_name");
+            String user = prop.getProperty("user");
+            String pass = prop.getProperty("pass");
             // load mysql driver library for sql operations
             Class.forName("com.mysql.jdbc.Driver");
-
-//            this.connection = DriverManager.getConnection("jdbc:mysql://"+host+"/"+dbname, user, pass);
+               System.out.println(host);
+            this.connection = DriverManager.getConnection("jdbc:mysql://michaelwflaherty.com:3306/headline_petme","headline","hteqWQF4a2");
             //this.connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/pet_manager", "root", "P@$$w0rd");
-            this.connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/pet_manager", "root", "");
+            //this.connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/pet_manager", "root", "");
             this.createTables();
         }
         catch (SQLException e) {
