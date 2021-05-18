@@ -30,8 +30,6 @@ public class DatabaseManager {
 //            String dbname = prop.getProperty("pet_manager");
 //            String user = prop.getProperty("root");
 //            String pass = prop.getProperty("");
-
-
             // load mysql driver library for sql operations
             Class.forName("com.mysql.jdbc.Driver");
 
