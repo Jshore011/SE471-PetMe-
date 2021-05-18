@@ -48,7 +48,7 @@ public class DatabaseManager {
         }
     }
 
-    public boolean deleteUser(UserProfile profile) throws SQLException {
+    public boolean deleteUser(UserProfileBuilder profile) throws SQLException {
         java.sql.PreparedStatement stmt = this.connection.prepareStatement(Constants.DELETE_USER_PETS);
         stmt.setString(1, profile.email);
         boolean success = stmt.execute();
@@ -172,7 +172,7 @@ public class DatabaseManager {
      * @param user User profile to update
      * @throws SQLException throws exception on failed update
      */
-    public void insertUserData(UserProfile user) throws SQLException {
+    public void insertUserData(UserProfileBuilder user) throws SQLException {
         java.sql.PreparedStatement stmt = this.connection.prepareStatement(Constants.UPDATE_USER_PROFILE);
         stmt.setString(1, user.name);
         stmt.setString(2, user.phone);

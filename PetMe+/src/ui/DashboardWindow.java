@@ -11,7 +11,7 @@ import java.awt.event.ActionListener;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.sql.SQLException;
-import sql.UserProfile;
+import sql.*;
 
 public class DashboardWindow {
     private JPanel panel1;
@@ -26,7 +26,7 @@ public class DashboardWindow {
     private JPanel imagepanel;
     private DatabaseManager sql;
     private PetManager pm;
-    private UserProfile user;
+    private UserProfileBuilder user;
     public DefaultListModel<String> listModel;
 
     public DashboardWindow(DatabaseManager sql) {

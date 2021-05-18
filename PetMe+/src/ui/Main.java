@@ -8,7 +8,7 @@ import sql.UserProfile;
 
 import javax.swing.*;
 import java.io.File;
-import sql.UserProfileBuilder;
+import sql.*;
 
 // Here's the entry point & setup for the main  UI
 public class Main {
@@ -80,7 +80,7 @@ public class Main {
         petWindow = PetWindow.spawn(sql, p);
     }
 
-    public static void openUserProfileWindow(DatabaseManager sql, UserProfile user, DashboardWindow dash) {
+    public static void openUserProfileWindow(DatabaseManager sql, UserProfileBuilder user, DashboardWindow dash) {
         userProfileWindow = UserProfileWindow.spawn(sql, user, dash);
     }
 

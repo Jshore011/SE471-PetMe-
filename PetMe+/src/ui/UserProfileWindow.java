@@ -1,6 +1,6 @@
 package ui;
 import sql.DatabaseManager;
-import sql.UserProfile;
+import sql.*;
 import utils.Constants;
 
 import javax.swing.*;
@@ -29,10 +29,10 @@ public class UserProfileWindow {
     private JRadioButton lightModeRadioButton;
     private JButton deleteAccountDataButton;
     private DatabaseManager sql;
-    private UserProfile user;
+    private UserProfileBuilder user;
 
 
-    public UserProfileWindow(DatabaseManager sql, UserProfile user, DashboardWindow dash) {
+    public UserProfileWindow(DatabaseManager sql, UserProfileBuilder user, DashboardWindow dash) {
         this.sql = sql;
         this.user = user;
 
@@ -152,7 +152,7 @@ public class UserProfileWindow {
         });
     }
 
-    public static JFrame spawn(DatabaseManager sql, UserProfile user, DashboardWindow dash) {
+    public static JFrame spawn(DatabaseManager sql, UserProfileBuilder user, DashboardWindow dash) {
         JFrame frame = new JFrame("PetMe+ Edit Profile");
         frame.setContentPane(new UserProfileWindow(sql, user, dash).panel1);
         frame.setSize(450, 350);
